@@ -11,7 +11,7 @@ This guide walks you through setting up your own Cline rules system, using this 
 ## Step 1: Understand the System
 
 Before setting up rules, read [Local vs Global Rules](local-vs-global-rules.md) to understand:
-- How global rules work (`~/Documents/Cline/`)
+- How global rules work (`~/Documents/Cline/.clinerules/`)
 - How project-specific rules work (`.clinerules/`)
 - When to use each type
 
@@ -19,13 +19,14 @@ Before setting up rules, read [Local vs Global Rules](local-vs-global-rules.md) 
 
 ### Create the Global Rules Directory
 ```bash
-mkdir -p ~/Documents/Cline
+mkdir -p ~/Documents/Cline/.clinerules
+mkdir -p ~/Documents/Cline/.clinerules/workflows
 ```
 
 ### Start with Basic Global Rules
 Create these foundational files:
 
-**~/Documents/Cline/coding-standards.md**
+**~/Documents/Cline/.clinerules/coding-standards.md**
 ```markdown
 # Coding Standards
 
@@ -42,7 +43,7 @@ Create these foundational files:
 - Write self-documenting code
 ```
 
-**~/Documents/Cline/documentation.md**
+**~/Documents/Cline/.clinerules/documentation.md**
 ```markdown
 # Documentation Requirements
 
@@ -69,9 +70,10 @@ Look at my examples in `my-global-rules/` and adapt them to your preferences:
 ## Step 3: Set Up Project-Specific Rules
 
 ### For New Projects
-1. Create the rules directory:
+1. Create the rules and workflows directories:
    ```bash
    mkdir .clinerules
+   mkdir .clinerules/workflows
    ```
 
 2. Add project-specific files:

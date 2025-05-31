@@ -12,7 +12,7 @@ Cline supports two types of rule configurations:
 ## Global Rules
 
 ### Location
-- **Directory**: `~/Documents/Cline/`
+- **Directory**: `~/Documents/Cline/.clinerules/`
 - **Format**: Markdown files (`.md`)
 - **Introduced**: Cline v3.17 (Global Workflows feature)
 
@@ -34,7 +34,7 @@ Cline supports two types of rule configurations:
 
 ### Example Global Rules Structure
 ```
-~/Documents/Cline/
+~/Documents/Cline/.clinerules/
 ├── coding-standards.md          # Language-agnostic coding rules
 ├── documentation-requirements.md # How to document code
 ├── security-guidelines.md       # Security best practices
@@ -80,7 +80,7 @@ your-project/
 ## Rule Hierarchy and Precedence
 
 ### How Rules Are Applied
-1. **Global rules** are loaded first from `~/Documents/Cline/`
+1. **Global rules** are loaded first from `~/Documents/Cline/.clinerules/`
 2. **Local rules** are loaded second from `.clinerules/`
 3. **Local rules can extend or override global rules** for project-specific needs
 
@@ -126,7 +126,7 @@ If you currently use Cline's "Custom Instructions" feature:
 When you find local rules that apply to multiple projects:
 
 1. **Generalize the rule** → Remove project-specific references
-2. **Move to global rules** → Add to `~/Documents/Cline/`
+2. **Move to global rules** → Add to `~/Documents/Cline/.clinerules/`
 3. **Update local rules** → Remove redundant content
 4. **Test across projects** → Ensure compatibility
 
