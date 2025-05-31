@@ -1,0 +1,7 @@
+# Git directory
+.git
+
+# VSCode workspace files
+*.code-workspace
+
+
