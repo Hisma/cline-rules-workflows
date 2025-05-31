@@ -1,5 +1,12 @@
 # Technology Stack
 
+## Framework Verification
+**Last Verified**: 2025-05-31
+**Verification Method**: Brave Search + Puppeteer + Context7 (if applicable)
+**Next Review**: 2025-06-30
+
+*All frameworks and libraries below have been verified using the [Verify Tech Stack Workflow](../templates/global/workflows/verify-tech-stack.md)*
+
 ## Documentation Format
 **Markdown** - Primary documentation format for all content
 
@@ -12,14 +19,17 @@
 ## Research and Verification Tools
 
 ### MCP Servers
-- **Brave Search**: Primary research tool for fact-finding and current information
-- **Puppeteer**: Web verification and content extraction from official sources
-- **Context7**: Documentation lookup for technical libraries and frameworks
+- **Brave Search**: Primary research tool for current best practices (see [MCP Server Requirements](../templates/global/rules/mcp-server-requirements.md))
+- **Puppeteer**: Content extraction from official documentation sources
+- **Context7**: Framework documentation (not needed for this documentation-only project)
+
+*All MCP servers must be configured before using research workflows*
 
 ### Research Methodology
-- **Primary Sources**: Official documentation, specifications, and authoritative sources
-- **Cross-Verification**: Multiple source validation for accuracy
-- **Currency Checks**: Regular updates to ensure information remains current
+- **Primary Sources**: Official Cline documentation, GitHub repositories, and authoritative sources
+- **Cross-Verification**: Multiple source validation for accuracy of Cline features and capabilities
+- **Currency Checks**: Regular updates to ensure information reflects current Cline versions
+- **Community Validation**: Verification through Cline community feedback and testing
 
 ## Development Tools
 
@@ -29,91 +39,104 @@
 - **Branching Strategy**: Feature branches for major updates, main for stable content
 
 ### Content Management
-- **File Organization**: Structured directory hierarchy
-- **Naming Conventions**: Consistent file and directory naming
-- **Cross-References**: Internal linking and reference management
+- **File Organization**: Structured directory hierarchy with docs/ and templates/ separation
+- **Naming Conventions**: Consistent file and directory naming following template patterns
+- **Cross-References**: Internal linking between documentation and template examples
 
 ## Quality Assurance
 
 ### Validation Tools
-- **Link Checking**: Automated verification of external links
+- **Link Checking**: Automated verification of external links to Cline documentation
 - **Spell Check**: Grammar and spelling validation
 - **Markdown Linting**: Consistent formatting and structure
-- **Fact Verification**: Regular accuracy reviews using research tools
+- **Fact Verification**: Regular accuracy reviews using MCP research tools
+- **Template Testing**: Verification that templates work as documented
 
 ### Review Process
-- **Peer Review**: Subject matter expert validation
-- **Community Feedback**: User testing and feedback incorporation
-- **Regular Audits**: Scheduled content accuracy and completeness reviews
+- **Community Feedback**: User testing and feedback incorporation from Cline users
+- **Regular Audits**: Monthly content accuracy and completeness reviews
+- **Template Validation**: Testing templates with actual Cline implementations
 
 ## MCP Integration Patterns
 
 ### Brave Search Usage
 ```markdown
-# Research Pattern
-1. Initial broad search for topic overview
-2. Targeted searches for specific technical details
-3. Cross-reference multiple authoritative sources
+# Research Pattern for Cline Documentation
+1. Search for "Cline rules workflows latest documentation"
+2. Verify current Cline version capabilities
+3. Cross-reference with official Cline GitHub repository
 4. Document search queries and results for reproducibility
 ```
 
 ### Puppeteer Content Extraction
 ```javascript
-// Standard pattern for extracting page content
-puppeteer_evaluate: "document.body.innerText"
+// Extract content from Cline documentation
+puppeteer_evaluate: "document.querySelector('.documentation-content').innerText"
 
-// For specific content sections
-puppeteer_evaluate: "document.querySelector('.documentation').innerText"
+// Extract version information
+puppeteer_evaluate: "document.querySelector('.version-info').innerText"
 
-// For structured data extraction
-puppeteer_evaluate: "Array.from(document.querySelectorAll('h2')).map(h => h.textContent)"
+// Extract feature lists
+puppeteer_evaluate: "Array.from(document.querySelectorAll('.feature-list li')).map(li => li.textContent)"
 ```
 
 ### Research Workflow Integration
-- **Search First**: Use Brave Search for initial research
-- **Verify with Puppeteer**: Extract content from official sources
-- **Document Sources**: Maintain citation trail
-- **Update Regularly**: Scheduled re-verification of facts
+- **Search First**: Use Brave Search for current Cline capabilities and best practices
+- **Verify with Puppeteer**: Extract content from official Cline documentation
+- **Document Sources**: Maintain citation trail to official sources
+- **Update Regularly**: Monthly re-verification of Cline features and capabilities
 
 ## Documentation Standards
 
 ### Content Structure
 - **Hierarchical Organization**: Clear heading structure (H1-H6)
-- **Consistent Templates**: Standardized formats for different content types
-- **Cross-References**: Internal and external linking strategies
-- **Code Examples**: Syntax highlighting and executable examples
+- **Consistent Templates**: Standardized formats for rules and workflows documentation
+- **Cross-References**: Internal linking between docs/ and templates/ directories
+- **Code Examples**: Syntax highlighting for Markdown and configuration examples
 
 ### Style Guidelines
-- **Clear Language**: Accessible to target audience
-- **Consistent Terminology**: Standardized vocabulary and definitions
-- **Visual Elements**: Appropriate use of diagrams, tables, and lists
-- **Actionable Content**: Step-by-step instructions and examples
+- **Clear Language**: Accessible to developers new to Cline customization
+- **Consistent Terminology**: Standardized vocabulary for rules, workflows, global, and workspace concepts
+- **Visual Elements**: Appropriate use of diagrams for directory structures and workflows
+- **Actionable Content**: Step-by-step instructions with copy-paste commands
 
 ## Collaboration Tools
 
 ### Communication
-- **Issue Tracking**: GitHub Issues for content requests and bug reports
-- **Pull Requests**: Collaborative editing and review process
-- **Discussions**: Community feedback and improvement suggestions
+- **GitHub Issues**: Content requests and bug reports for documentation and templates
+- **Pull Requests**: Collaborative editing and community contributions
+- **Discussions**: Community feedback and template improvement suggestions
 
 ### Documentation Maintenance
-- **Regular Updates**: Scheduled content review cycles
-- **Deprecation Notices**: Clear marking of outdated information
-- **Version History**: Changelog maintenance and release notes
-- **Migration Guides**: When content structure changes significantly
+- **Regular Updates**: Monthly content review cycles aligned with Cline releases
+- **Template Evolution**: Quarterly review and update of templates based on community feedback
+- **Version History**: Changelog maintenance for template updates
+- **Migration Guides**: When template structure changes significantly
 
 ## Performance Considerations
 
 ### Content Optimization
-- **File Size**: Optimized images and media
-- **Load Times**: Efficient content organization
-- **Search Optimization**: Clear headings and keyword usage
-- **Mobile Friendly**: Responsive content design
+- **File Size**: Optimized for quick loading and easy navigation
+- **Load Times**: Efficient content organization with clear table of contents
+- **Search Optimization**: Clear headings and keyword usage for findability
+- **Mobile Friendly**: Responsive content design for various devices
 
 ### Research Efficiency
-- **Cached Results**: Avoid redundant research queries
-- **Batch Operations**: Efficient use of MCP tools
-- **Source Prioritization**: Focus on most authoritative sources first
-- **Update Scheduling**: Strategic timing for content refreshes
+- **Cached Results**: Avoid redundant research queries for stable Cline features
+- **Batch Operations**: Efficient use of MCP tools for comprehensive updates
+- **Source Prioritization**: Focus on official Cline documentation first
+- **Update Scheduling**: Strategic timing aligned with Cline release cycles
 
-This tech stack emphasizes accuracy, maintainability, and collaborative documentation creation while leveraging modern research and verification tools.
+## Project-Specific Technologies
+- **Cline VSCode Extension**: Primary target platform for rules and workflows
+- **VSCode**: Development environment where Cline operates
+- **Node.js/NPX**: For MCP server installation and management
+- **JSON**: Configuration format for MCP server settings
+
+## Notes
+- This tech stack is specifically designed for Cline rules and workflows documentation
+- Templates are tested with actual Cline implementations
+- MCP server integration is considered essential for effective documentation creation
+- Regular updates ensure alignment with current Cline capabilities and best practices
+
+This tech stack emphasizes accuracy, maintainability, and practical utility for Cline users while leveraging modern research and verification tools.

@@ -1,116 +1,113 @@
 # Current Requirements & Focus
 
 ## Current Sprint/Milestone
-**Documentation Repository Setup & Template Creation** - Establishing comprehensive Cline rules documentation with proper structure, accurate information, and reusable templates.
+**Documentation Alignment & Template Consistency** - Updating all documentation to reflect current template implementations and ensuring consistency between educational content and practical templates.
 
 ## Priority Features
-1. **Accurate Rules vs Workflows Documentation**
-   - Description: Clear distinction between Cline rules and workflows with correct directory structures
-   - Acceptance Criteria: All paths and examples match actual Cline implementation
-   - Technical Notes: Must reflect the correct `.clinerules/workflows/` structure discovered through research
+1. **README Update**
+   - Description: Revise README to properly reflect dual educational + research-driven methodology focus
+   - Acceptance Criteria: Clear explanation of how rules/workflows work, template overview, MCP integration guidance
+   - Technical Notes: High-level focus with links to detailed documentation, position MCP servers as essential
 
-2. **Research-Driven Content Creation**
-   - Description: All documentation backed by verified sources using MCP tools
-   - Acceptance Criteria: Every technical claim verified through Brave Search and Puppeteer
-   - Technical Notes: Document research methodology and maintain source citations
+2. **Documentation Audit**
+   - Description: Ensure docs/ folder aligns with current template implementations
+   - Acceptance Criteria: All documentation references current template structure, includes MCP integration patterns
+   - Technical Notes: Update template paths, add research-driven workflow examples, verify all links work
 
-3. **Reusable Project Templates**
-   - Description: Create templates for different project types (web-app, documentation, etc.)
-   - Acceptance Criteria: Templates can be easily copied and customized for new projects
-   - Technical Notes: Organized in `my-project-templates/` with clear naming conventions
+3. **Template Application**
+   - Description: Apply docsite-workspace template to this project as working example
+   - Acceptance Criteria: Project uses its own recommended rules and workflows structure
+   - Technical Notes: Customize templates for this specific Cline rules and workflows documentation project
 
 ## Current Technical Debt
-- Verify all existing documentation against current Cline implementation
-- Ensure consistency across all template files
-- Add proper cross-references between related documentation
-- Validate all external links and references
+- Outdated template references in documentation (docsite vs docsite-workspace)
+- Missing MCP integration guidance in setup documentation
+- Inconsistent terminology between docs and templates
+- Broken internal links due to template structure changes
 
 ## Immediate Blockers
 - None currently identified
-- Research methodology established with working MCP integrations
-- Template structure defined and being implemented
 
-## Code Quality Focus Areas
-- **Markdown Consistency**: Standardized formatting across all files
-- **Content Accuracy**: All technical information verified through research
-- **Template Completeness**: Each template includes all necessary sections
-- **Cross-Reference Integrity**: Internal links work correctly
+## Quality Focus Areas
+- **Content Accuracy**: All Cline features and capabilities must be current and verified through MCP research
+- **Documentation Completeness**: Cover both basic concepts and advanced research-driven methodologies
+- **User Experience**: Clear learning path from basic rules/workflows to advanced template usage
+- **Technical Quality**: All template examples must work as documented, links must be current
 
 ## Performance Targets
-- **Research Efficiency**: Complete fact-checking within reasonable time using MCP tools
-- **Content Accessibility**: Clear, scannable documentation structure
-- **Template Usability**: New projects can be set up in under 10 minutes using templates
-- **Update Frequency**: Monthly accuracy reviews and updates
+- **Research Efficiency**: Monthly verification of Cline capabilities using MCP tools
+- **Content Accessibility**: Documentation readable by developers new to Cline customization
+- **Update Frequency**: Templates reviewed quarterly, documentation updated monthly
+- **Template Effectiveness**: Users can successfully implement templates without additional support
 
 ## Security Considerations
-- **Source Verification**: Only use authoritative sources for technical information
-- **Link Safety**: Verify all external links before inclusion
-- **Content Integrity**: Maintain version control for all documentation changes
-- **Attribution**: Proper citation of all sources and references
+- **Source Verification**: All Cline information verified against official documentation and GitHub repository
+- **Link Safety**: External links verified for safety and currency
+- **Content Integrity**: All changes tracked in Git with clear commit messages
+- **Attribution**: Proper citation of official Cline sources and community contributions
 
 ## User Experience Priorities
-- **Clear Navigation**: Logical document organization and cross-references
-- **Actionable Content**: Step-by-step instructions that actually work
-- **Comprehensive Coverage**: Address common use cases and edge cases
-- **Beginner Friendly**: Accessible to users new to Cline
+- **Clear Navigation**: Easy progression from basic concepts to advanced implementations
+- **Actionable Content**: Step-by-step instructions with copy-paste commands for template setup
+- **Comprehensive Coverage**: Both global and workspace scoping thoroughly explained
+- **Accessibility**: Content accessible to developers with varying Cline experience levels
 
 ## Integration Work
-- **MCP Server Integration**: Brave Search and Puppeteer for research workflows
-- **Template System**: Standardized project setup templates
-- **Documentation Validation**: Automated checking of content accuracy
-- **Community Feedback**: Issue tracking and pull request workflows
+- **MCP Server Integration**: Essential for research-driven development, must be positioned as required not optional
+- **Documentation Validation**: Regular accuracy checks using Brave Search and Puppeteer
+- **Community Feedback**: GitHub issues and discussions for template improvements
+- **Template Testing**: Verify templates work with actual Cline implementations
 
 ## Testing Requirements
-- **Content Verification**: All instructions tested in real environments
-- **Template Validation**: Each template tested with actual project setup
-- **Link Checking**: Regular verification of all external references
-- **User Testing**: Community feedback on documentation clarity
+- **Content Verification**: Test all setup instructions and template implementations
+- **Link Checking**: Verify all internal and external links work correctly
+- **User Testing**: Community feedback on template effectiveness and documentation clarity
+- **Template Validation**: Ensure templates work as documented in real Cline environments
 
 ## Documentation Updates
-- **Setup Guides**: Complete step-by-step instructions for all scenarios
-- **Template Documentation**: Clear explanation of how to use each template
-- **Research Methodology**: Document the process for verifying information
-- **Contribution Guidelines**: How others can help improve the documentation
+- **Getting Started Guide**: Update with current template structure and MCP requirements
+- **Rules vs Workflows**: Align examples with current template implementations
+- **Setup Guides**: Include MCP integration and current template paths
+- **Best Practices**: Add research-driven methodology guidance
 
 ## Deployment Considerations
-- **Version Control**: All changes tracked in Git with meaningful commit messages
-- **Release Process**: Structured approach to major documentation updates
-- **Backup Strategy**: Regular backups of all documentation content
-- **Distribution**: Easy access to templates and documentation
+- **Version Control**: Clear commit messages for template and documentation updates
+- **Release Process**: Coordinate template updates with documentation changes
+- **Backup Strategy**: Git repository serves as primary backup and version control
+- **Distribution**: GitHub repository with clear README and navigation
 
 ## Monitoring & Observability
-- **Content Accuracy**: Regular fact-checking using research tools
-- **User Feedback**: Track issues and suggestions from community
-- **Usage Metrics**: Monitor which templates and guides are most used
-- **Update Tracking**: Log when content was last verified and updated
+- **Content Accuracy**: Monthly reviews using MCP verification workflows
+- **User Feedback**: GitHub issues and community discussions
+- **Usage Metrics**: Track template adoption and documentation effectiveness
+- **Update Tracking**: Changelog maintenance for significant template changes
 
 ## Team Coordination
-- **Research Standards**: Consistent methodology for fact-checking
-- **Review Process**: Peer review for all major content changes
-- **Template Maintenance**: Regular updates to keep templates current
-- **Community Engagement**: Responsive to user feedback and contributions
+- **Research Standards**: Use MCP tools for all fact-checking and verification
+- **Review Process**: Community validation of template effectiveness
+- **Content Maintenance**: Regular updates aligned with Cline release cycles
+- **Community Engagement**: Encourage contributions and template improvements
 
 ## Upcoming Changes
-- **Advanced Workflows**: More sophisticated automation examples
-- **Additional Templates**: Templates for more project types
-- **Integration Examples**: Real-world usage examples with MCP servers
-- **Video Guides**: Supplementary visual documentation
+- **Phase 2 Documentation Audit**: Complete review of all docs/ files after README update
+- **Template Documentation**: Create detailed guides for template customization
+- **Advanced Workflow Examples**: Add more sophisticated MCP integration patterns
 
 ## Success Metrics
-- **Accuracy Rate**: Percentage of technical information that remains current
-- **User Adoption**: Number of people using the templates and guides
-- **Community Contributions**: Pull requests and issue reports from users
-- **Problem Resolution**: Reduction in support questions due to clear documentation
+- **Documentation Accuracy**: All Cline information current and verified
+- **Template Adoption**: Users successfully implement provided templates
+- **Community Engagement**: Active contributions and feedback on templates
+- **Reduced Support Questions**: Clear documentation reduces need for additional help
 
 ## Notes & Context
-- This documentation repository serves as both a reference and a template
-- Emphasis on research-driven content creation using modern MCP tools
-- Focus on practical, actionable guidance rather than theoretical concepts
-- Community-oriented approach with clear contribution pathways
+- This project serves as a working example of the docsite-workspace template
+- MCP server integration is considered essential for effective Cline usage
+- Templates are designed to be customized for specific project needs
+- Regular updates ensure alignment with current Cline capabilities
 
 ---
 
-**Last Updated**: Current development cycle
-**Next Review**: After template completion and initial community feedback
+**Last Updated**: 2025-05-31
+**Next Review**: 2025-06-30
 
 *This document should be updated regularly to reflect current priorities and progress.*

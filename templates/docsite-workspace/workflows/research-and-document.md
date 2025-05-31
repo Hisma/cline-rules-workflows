@@ -3,9 +3,11 @@
 This workflow guides you through researching a technical topic and creating accurate, well-sourced documentation using MCP tools.
 
 ## Prerequisites
-- Brave Search MCP server configured
-- Puppeteer MCP server configured
+- Brave Search MCP server configured (see [MCP Server Requirements](../global/rules/mcp-server-requirements.md))
+- Puppeteer MCP server configured (for content extraction)
+- Context7 MCP server configured (only needed if researching specific frameworks)
 - Topic or question to research
+- Understanding of your documentation project's standards (see rules files)
 
 ## Workflow Steps
 
@@ -76,7 +78,40 @@ This workflow guides you through researching a technical topic and creating accu
 </use_mcp_tool>
 ```
 
-### 3. Cross-Verification
+### 3. Framework Documentation (if applicable)
+
+**If researching specific frameworks or libraries, use Context7 for official documentation:**
+
+```xml
+<use_mcp_tool>
+<server_name>Context7</server_name>
+<tool_name>resolve-library-id</tool_name>
+<arguments>
+{
+  "libraryName": "[framework name]"
+}
+</arguments>
+</use_mcp_tool>
+```
+
+**Then get the latest documentation:**
+
+```xml
+<use_mcp_tool>
+<server_name>Context7</server_name>
+<tool_name>get-library-docs</tool_name>
+<arguments>
+{
+  "context7CompatibleLibraryID": "[library ID from previous step]",
+  "topic": "[specific topic you're researching]"
+}
+</arguments>
+</use_mcp_tool>
+```
+
+**Note**: Context7 is most useful for complex frameworks. For simple documentation projects using basic HTML/CSS/Markdown, you may not need Context7.
+
+### 4. Cross-Verification
 
 **Search for additional sources to verify information:**
 
@@ -108,9 +143,9 @@ This workflow guides you through researching a technical topic and creating accu
 </use_mcp_tool>
 ```
 
-### 4. Structure Documentation
+### 5. Structure Documentation
 
-**Create a new documentation file with this structure:**
+**Create a new documentation file following your project's standards:**
 
 ```markdown
 # [Topic Title]
@@ -139,7 +174,7 @@ This workflow guides you through researching a technical topic and creating accu
 [Date when information was last checked]
 ```
 
-### 5. Fact-Checking Process
+### 6. Fact-Checking Process
 
 **For each major claim or instruction:**
 
@@ -159,9 +194,9 @@ This workflow guides you through researching a technical topic and creating accu
 - **Status**: [Current/Outdated/Needs Review]
 ```
 
-### 6. Quality Review
+### 7. Quality Review
 
-**Before finalizing, check:**
+**Before finalizing, check against project standards:**
 
 - [ ] All technical claims have sources
 - [ ] Instructions are clear and actionable
@@ -169,8 +204,10 @@ This workflow guides you through researching a technical topic and creating accu
 - [ ] Links are current and accessible
 - [ ] Content is organized logically
 - [ ] Language is appropriate for target audience
+- [ ] Follows project style guidelines (see tech stack rules)
+- [ ] Meets project quality standards (see current requirements)
 
-### 7. Documentation Maintenance
+### 8. Documentation Maintenance
 
 **Set up for future updates:**
 
@@ -253,6 +290,14 @@ This workflow guides you through researching a technical topic and creating accu
 - [Questions that remain unanswered]
 ```
 
+## Integration with Project Rules
+
+This workflow should be used in conjunction with your project's rules:
+
+- **Project Overview**: Ensure research aligns with project purpose and target users
+- **Tech Stack**: Follow established documentation standards and MCP integration patterns
+- **Current Requirements**: Address current priorities and quality focus areas
+
 ## Best Practices
 
 1. **Always start with official sources** - Look for official documentation first
@@ -271,4 +316,12 @@ This workflow guides you through researching a technical topic and creating accu
 - **Missing context** - Ensure you understand the full context of information
 - **Over-reliance on single sources** - Cross-verify important claims
 
-This workflow ensures that all documentation is research-backed, accurate, and maintainable over time.
+## Template Customization Notes
+
+- Adapt MCP tool usage to your available servers
+- Modify documentation structure to match your project's style
+- Add project-specific verification steps
+- Include domain-specific research techniques
+- Update quality checklist based on your project's standards
+
+This workflow ensures that all documentation is research-backed, accurate, and maintainable over time while following your project's specific standards and requirements.

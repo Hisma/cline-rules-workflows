@@ -5,8 +5,17 @@ This guide walks you through setting up your own Cline rules system, using this 
 ## Prerequisites
 
 - Cline VSCode extension installed (v3.17+ for global rules support)
+- MCP servers configured (essential for effective usage)
 - Basic understanding of Markdown
 - Familiarity with your development workflow
+
+### MCP Server Setup (Required)
+Before creating rules, ensure you have these MCP servers configured:
+- **Brave Search** - For research and fact-checking
+- **Puppeteer** - For content extraction
+- **Context7** - For framework documentation (optional)
+
+See the [official MCP setup guide](https://docs.cline.bot/mcp/configuring-mcp-servers) for configuration instructions.
 
 ## Step 1: Understand the System
 
@@ -61,11 +70,11 @@ Create these foundational files:
 ```
 
 ### Customize Based on Your Workflow
-Look at my examples in `my-global-rules/` and adapt them to your preferences:
+Look at the templates in `templates/global/rules/` and adapt them to your preferences:
 - Coding standards you follow
 - Documentation practices you prefer
 - Security guidelines you implement
-- Workflow patterns you use
+- MCP server requirements you need
 
 ## Step 3: Set Up Project-Specific Rules
 
@@ -83,11 +92,11 @@ Look at my examples in `my-global-rules/` and adapt them to your preferences:
    touch .clinerules/03-current-requirements.md
    ```
 
-### Use My Templates as Reference
-Browse `my-project-templates/` for examples:
-- **web-app/**: Rules for web applications
-- **mobile-app/**: Rules for mobile projects  
-- **data-science/**: Rules for ML/data projects
+### Use Templates as Reference
+Browse `templates/` for examples:
+- **docsite-workspace/**: Rules for documentation projects
+- **web-app-workspace/**: Rules for web applications
+- **global/**: Universal rules for all projects
 
 Copy and modify any templates that match your project type.
 

@@ -1,95 +1,170 @@
-# My Cline Rules Setup
+# Cline Rules and Workflows
 
-This is my personal repository for managing Cline rules, along with documentation explaining how global vs local rules work. Feel free to use this as a reference for setting up your own Cline rules system.
+A comprehensive guide and template collection for customizing Cline's behavior through rules and workflows. Learn how these systems work and get started with ready-to-use templates for different project types.
 
-## What This Repository Contains
+## What Are Rules and Workflows?
 
-**Educational Content**: Complete guides on how Cline's rule system works
-**My Personal Setup**: The actual rules and templates I use in my development workflow
-**Reference Material**: Examples you can adapt for your own projects
+**Rules** provide persistent context to Cline about your preferences, standards, and project requirements. They're automatically loaded and inform every conversation.
 
-This isn't meant to be a "clone and install" repository, but rather a learning resource and reference for building your own Cline rules system.
+**Workflows** provide step-by-step processes for complex tasks. They're invoked on-demand when you need to execute specific procedures.
+
+Both systems support **global** (all projects) and **workspace** (project-specific) scoping.
+
+## MCP Server Requirements
+
+Effective use of Cline rules and workflows requires MCP (Model Context Protocol) servers. These are essential tools that every Cline user should configure:
+
+- **Context7** - Framework documentation and API references
+- **Brave Search** - Web research and fact-checking
+- **Puppeteer** - Content extraction and web automation
+
+**Setup Guide**: [Configuring MCP Servers](https://docs.cline.bot/mcp/configuring-mcp-servers)
+
+Quick verification: Check your MCP configuration in Cline settings to ensure these servers are active.
+
+## Template Overview
+
+This repository provides templates for different project types:
+
+### Global Templates (`templates/global/`)
+Apply to all your projects:
+- **Rules**: Coding standards, documentation requirements, MCP server setup
+- **Workflows**: Research processes, tech stack verification, code review
+
+### Workspace Templates
+Project-specific implementations:
+- **Documentation Sites** (`templates/docsite-workspace/`) - For technical documentation projects
+- **Web Applications** (`templates/web-app-workspace/`) - For web development projects
+
+## Quick Start
+
+### 1. Set Up Global Rules and Workflows
+```bash
+# Create global directory
+mkdir -p ~/Documents/Cline/.clinerules/workflows
+
+# Copy global templates
+cp templates/global/rules/* ~/Documents/Cline/.clinerules/
+cp templates/global/workflows/* ~/Documents/Cline/.clinerules/workflows/
+```
+
+### 2. Set Up Project-Specific Rules and Workflows
+
+**For Documentation Projects:**
+```bash
+mkdir -p .clinerules/workflows
+cp templates/docsite-workspace/rules/* .clinerules/
+cp templates/docsite-workspace/workflows/* .clinerules/workflows/
+```
+
+**For Web Applications:**
+```bash
+mkdir -p .clinerules/workflows
+cp templates/web-app-workspace/rules/* .clinerules/
+cp templates/web-app-workspace/workflows/* .clinerules/workflows/
+```
+
+### 3. Customize Templates
+Edit the copied files to match your specific project needs and preferences.
+
+## How It Works
+
+### Rules (Automatic)
+- **Global**: `~/Documents/Cline/.clinerules/` - Loaded for all projects
+- **Workspace**: `.clinerules/` - Loaded for current project only
+- **Loading**: Automatic when Cline starts, global rules first, then workspace rules
+
+### Workflows (On-Demand)
+- **Global**: `~/Documents/Cline/.clinerules/workflows/` - Available in all projects
+- **Workspace**: `.clinerules/workflows/` - Available in current project only
+- **Usage**: Invoke with `/workflow-name.md` in Cline chat
 
 ## Repository Structure
 
 ```
-cline-rules/
-├── README.md                          # This file
-├── docs/                             # Educational documentation
-│   ├── local-vs-global-rules.md      # How Cline's rule system works
-│   ├── how-to-setup-rules.md         # Step-by-step setup guide
-│   └── my-workflow.md                # My personal approach
-├── my-global-rules/                  # My actual global rules
-│   ├── coding-standards.md           # My coding preferences
-│   ├── collaboration-patterns.md     # Human-AI interaction methodology
-│   ├── documentation-requirements.md # How I document code
-│   ├── security-guidelines.md        # My security practices
-│   └── workflow-patterns.md          # My development workflows
-├── my-project-templates/             # My project-specific templates
-│   ├── web-app/                      # For web applications
-│   ├── mobile-app/                   # For mobile projects
-│   └── data-science/                 # For ML/data projects
-└── examples/                         # Real examples from my projects
-    ├── current-project-rules/        # Actual .clinerules I use
-    └── before-after-comparisons/     # How my rules evolved
+├── docs/                          # Detailed documentation
+│   ├── getting-started.md         # Comprehensive setup guide
+│   ├── rules/                     # Rules documentation
+│   ├── workflows/                 # Workflows documentation
+│   └── integration/               # How rules and workflows work together
+├── templates/                     # Ready-to-use templates
+│   ├── global/                    # Templates for all projects
+│   │   ├── rules/                 # Global rules templates
+│   │   └── workflows/             # Global workflows templates
+│   ├── docsite-workspace/         # Documentation project templates
+│   │   ├── rules/                 # Documentation-specific rules
+│   │   └── workflows/             # Documentation workflows
+│   └── web-app-workspace/         # Web application templates
+│       ├── rules/                 # Web app-specific rules
+│       └── workflows/             # Web development workflows
 ```
 
-## How to Use This Repository
+## Key Features
 
-### 1. Learn About Cline Rules
-Start by reading the [Local vs Global Rules](docs/local-vs-global-rules.md) guide to understand how Cline's rule system works.
+### Research-Driven Development
+Templates include workflows that leverage MCP servers for:
+- Comprehensive web research using Brave Search
+- Content extraction from official sources with Puppeteer
+- Framework documentation access through Context7
+- Fact-checking and verification processes
 
-### 2. Set Up Your Own Rules
-Follow the [Setup Guide](docs/how-to-setup-rules.md) to create your own global and project-specific rules.
+### Structured Templates
+- Consistent organization across project types
+- Customizable for specific needs
+- Version controlled and maintainable
+- Community-focused for sharing and collaboration
 
-### 3. Reference My Setup
-Browse through `my-global-rules/` and `my-project-templates/` to see how I organize my rules. Feel free to adapt anything that fits your workflow.
-
-### 4. Manual Setup Steps
-- **Global Rules**: Create `~/Documents/Cline/` and add your own `.md` files
-- **Project Rules**: Create `.clinerules/` in your project root and add your own `.md` files
-- **Customize**: Adapt my examples to match your coding style and preferences
-
-## Rule Types
-
-### Global Rules (`~/Documents/Cline/`)
-- Apply to ALL Cline projects automatically
-- Stored as markdown files in `~/Documents/Cline/`
-- Perfect for coding standards, documentation requirements, and general workflows
-
-### Project-Specific Rules (`.clinerules/`)
-- Apply only to the specific project
-- Stored in `.clinerules/` directory in project root
-- Perfect for project-specific requirements, tech stack rules, and current sprint guidelines
-
-## What You'll Find Here
-
-- 📚 **Educational Guides**: Complete documentation on how Cline rules work
-- 🛠️ **My Personal Rules**: The actual global rules I use across all projects
-- 📁 **Project Templates**: Starter templates for different types of projects
-- 💡 **Real Examples**: Actual rules from my current projects
-- 🔄 **Evolution**: How my rules have improved over time
+### Progressive Complexity
+- Start with basic global rules
+- Add project-specific customizations
+- Implement advanced research workflows
+- Scale to team and organizational standards
 
 ## Documentation
 
-- [Local vs Global Rules](docs/local-vs-global-rules.md) - How Cline's rule system works
-- [How to Setup Rules](docs/how-to-setup-rules.md) - Step-by-step guide for your own setup
-- [My Workflow](docs/my-workflow.md) - My personal approach and philosophy
+### Getting Started
+- **[Getting Started Guide](docs/getting-started.md)** - Comprehensive setup and usage
+- **[Rules vs Workflows](docs/integration/rules-vs-workflows.md)** - Understanding the differences
 
-## My Approach
+### Rules Documentation
+- **[How to Setup Rules](docs/rules/how-to-setup-rules.md)** - Step-by-step rules setup
+- **[Local vs Global Rules](docs/rules/local-vs-global-rules.md)** - Scoping and hierarchy
 
-I believe in:
-- **Consistency**: Global rules ensure consistent coding standards across all projects
-- **Flexibility**: Project-specific rules allow for context-appropriate guidelines
-- **Evolution**: Rules should improve based on experience and changing needs
-- **Sharing**: Open documentation helps the community learn and improve
+### Workflows Documentation
+- **[How to Setup Workflows](docs/workflows/how-to-setup-workflows.md)** - Workflow implementation
+- **[Workflow Best Practices](docs/workflows/workflow-best-practices.md)** - Effective workflow design
+- **[Creating Custom Workflows](docs/workflows/creating-custom-workflows.md)** - Building your own
 
-## License
+### Integration
+- **[Combined Development Approach](docs/integration/combined-development-approach.md)** - Using rules and workflows together
 
-MIT License - feel free to use and modify for your projects.
+## Examples
+
+This repository serves as a working example - it uses the docsite-workspace template for its own rules and workflows. Check `.clinerules/` to see the templates in action.
+
+## Best Practices
+
+1. **Start Simple** - Begin with basic global rules, add complexity gradually
+2. **Use MCP Servers** - Essential for research-driven development and accurate documentation
+3. **Customize Templates** - Adapt provided templates to your specific needs
+4. **Version Control** - Track your rules and workflows in Git
+5. **Team Coordination** - Establish shared global rules for consistency
 
 ## Support
 
-For questions about Cline itself, visit the [official Cline repository](https://github.com/cline/cline).
+- **Documentation Issues** - Check the docs/ folder for detailed guidance
+- **Template Questions** - Review template files and their comments
+- **MCP Setup** - See [official Cline MCP documentation](https://docs.cline.bot/mcp/configuring-mcp-servers)
+- **Community** - Share your successful patterns and improvements
 
-For issues with this rules repository, please open an issue on GitHub.
+## Contributing
+
+This repository provides a foundation for Cline customization. Feel free to:
+- Adapt templates for your needs
+- Share successful patterns
+- Contribute improvements
+- Create new project type templates
+
+---
+
+**Note**: This project demonstrates the docsite-workspace template in action. The `.clinerules/` directory contains the actual rules and workflows used to maintain this documentation.
