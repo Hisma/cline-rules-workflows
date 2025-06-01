@@ -12,7 +12,8 @@
 
 ### High-Level Structure
 
-```Documentation Site
+```
+Documentation Site
 ├── Content Layer (Markdown files)
 ├── Presentation Layer (Templates/Themes)
 ├── Build System (Static Site Generator)
@@ -21,7 +22,8 @@
 
 ### Information Architecture
 
-```Documentation Structure
+```
+Documentation Structure
 ├── Getting Started/
 │   ├── Installation
 │   ├── Quick Start
@@ -82,7 +84,8 @@
 
 ### Directory Structure
 
-```docs-site/
+```
+docs-site/
 ├── content/
 │   ├── getting-started/
 │   ├── guides/
