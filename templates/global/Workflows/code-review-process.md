@@ -3,6 +3,7 @@
 This workflow provides a systematic approach to conducting thorough code reviews that ensure quality, security, and maintainability.
 
 ## Prerequisites
+
 - Access to the code repository and pull request
 - Understanding of the project's coding standards
 - Familiarity with the technology stack being used
@@ -71,6 +72,7 @@ This workflow provides a systematic approach to conducting thorough code reviews
     - Approve, request changes, or ask for clarification
 
 ## Success Criteria
+
 - All code follows established standards and best practices
 - Security considerations have been addressed
 - Appropriate tests are included and passing
@@ -81,24 +83,28 @@ This workflow provides a systematic approach to conducting thorough code reviews
 ## Review Categories
 
 ### Critical Issues (Must Fix)
+
 - Security vulnerabilities
 - Breaking changes without proper migration
 - Code that doesn't work or breaks existing functionality
 - Major architectural violations
 
 ### Major Issues (Should Fix)
+
 - Performance problems
 - Missing error handling
 - Inadequate test coverage
 - Significant style guide violations
 
 ### Minor Issues (Nice to Fix)
+
 - Minor style inconsistencies
 - Opportunities for code improvement
 - Missing documentation for complex logic
 - Potential refactoring opportunities
 
 ### Suggestions (Optional)
+
 - Alternative approaches to consider
 - Future enhancement opportunities
 - Best practice recommendations
@@ -107,24 +113,28 @@ This workflow provides a systematic approach to conducting thorough code reviews
 ## Common Review Patterns
 
 ### New Feature Review
+
 - Focus on requirements fulfillment
 - Check integration with existing features
 - Verify user experience considerations
 - Ensure proper feature flagging if applicable
 
 ### Bug Fix Review
+
 - Verify the fix addresses the root cause
 - Check that the fix doesn't introduce new issues
 - Ensure appropriate tests prevent regression
 - Validate the fix in relevant environments
 
 ### Refactoring Review
+
 - Verify that functionality remains unchanged
 - Check that the refactoring improves code quality
 - Ensure adequate test coverage for refactored code
 - Validate performance implications
 
 ### Documentation Review
+
 - Check accuracy and completeness
 - Verify examples work as described
 - Ensure proper formatting and structure
@@ -133,24 +143,28 @@ This workflow provides a systematic approach to conducting thorough code reviews
 ## Troubleshooting
 
 ### Large Pull Requests
+
 - Break review into logical sections
 - Focus on high-impact areas first
 - Consider requesting smaller, incremental changes
 - Schedule multiple review sessions if needed
 
 ### Unfamiliar Technology
+
 - Research the technology stack before reviewing
 - Focus on general principles (security, performance, maintainability)
 - Ask questions about technology-specific patterns
 - Consider pairing with someone more familiar
 
 ### Disagreements on Approach
+
 - Focus on objective criteria (performance, maintainability, security)
 - Reference established team standards and guidelines
 - Suggest alternatives rather than just pointing out problems
 - Escalate to team lead or architect if needed
 
 ### Time Constraints
+
 - Prioritize critical and major issues
 - Use automated tools to catch style and basic issues
 - Focus on areas most likely to have problems
@@ -159,18 +173,21 @@ This workflow provides a systematic approach to conducting thorough code reviews
 ## Best Practices
 
 ### Providing Feedback
+
 - Be specific and provide examples
 - Explain the reasoning behind suggestions
 - Offer solutions, not just problems
 - Be respectful and constructive
 
 ### Managing Review Load
+
 - Set aside dedicated time for reviews
 - Use checklists to ensure consistency
 - Leverage automated tools for basic checks
 - Rotate review responsibilities among team members
 
 ### Continuous Improvement
+
 - Track common issues to improve processes
 - Update coding standards based on review findings
 - Share knowledge gained during reviews

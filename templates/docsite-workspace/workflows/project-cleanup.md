@@ -1,222 +1,245 @@
-# Documentation Project Cleanup Workflow
+# Project Cleanup Workflow
 
-This workflow helps you clean up and organize your documentation project, removing stale content and ensuring everything is current and well-organized.
+## Overview
+
+This workflow provides a systematic approach to cleaning up and organizing documentation projects. It ensures consistency, removes outdated content, and maintains high-quality standards.
+
+## When to Use
+
+- Before major releases or milestones
+- Monthly maintenance cycles
+- After significant content restructuring
+- When preparing for community contributions
+- Before archiving or transferring projects
 
 ## Prerequisites
-- Understanding of your documentation project structure
-- Access to project analytics or usage data (if available)
-- Backup or version control of current state
-- Time allocated for thorough review (45-90 minutes for documentation projects)
 
-## Steps
+- [ ] Project is under version control (Git)
+- [ ] MCP servers are configured (Brave Search, Puppeteer)
+- [ ] Markdown linting is set up (`.markdownlint.json` exists)
+- [ ] Backup of current state is available
 
-### 1. Run Global Cleanup First
-- Execute the global project cleanup workflow: `/project-cleanup.md`
-- Complete general file organization and cleanup tasks
-- Return here for documentation-specific cleanup
+## Cleanup Process
 
-### 2. Content Audit and Organization
+### Phase 1: Content Audit
 
-**Review Documentation Structure:**
-- Check that all content follows your project's organization standards
-- Verify navigation and cross-references work correctly
-- Ensure content hierarchy makes sense for users
-- Look for orphaned pages or broken internal links
+**Step 1: Review Documentation Structure**
 
-**Assess Content Currency:**
-- Identify documentation that references outdated versions
-- Find content that hasn't been updated in 6+ months
-- Check for deprecated features or tools still being documented
-- Verify all external links still work and point to current resources
+```bash
+# Generate current file structure
+find . -name "*.md" -type f | sort > current-structure.txt
+```
 
-### 3. Documentation-Specific Cleanup
+- [ ] Review all markdown files for relevance
+- [ ] Identify outdated or duplicate content
+- [ ] Check for broken internal links
+- [ ] Verify template compliance
 
-**Remove Outdated Content:**
-- Archive or remove documentation for deprecated features
-- Update version-specific information to current versions
-- Remove or update screenshots that show outdated interfaces
-- Clean up old examples that no longer work
+**Step 2: Link Validation**
 
-**Consolidate Duplicate Content:**
-- Look for information covered in multiple places
-- Merge similar topics into comprehensive guides
-- Remove redundant explanations or examples
-- Create cross-references instead of duplicating content
+```bash
+# Install and run link checker
+npm install -g markdown-link-check
+find . -name "*.md" -exec markdown-link-check {} \;
+```
 
-**Update Navigation and Structure:**
-- Verify table of contents reflects current content
-- Update navigation menus and sidebars
-- Fix broken internal links and references
-- Ensure consistent heading structure throughout
+- [ ] Fix broken external links
+- [ ] Update outdated references
+- [ ] Remove or replace dead links
+- [ ] Verify internal cross-references
 
-### 4. Asset and Media Cleanup
+**Step 3: Content Currency Check**
 
-**Review Images and Media:**
-- Remove unused images, screenshots, or diagrams
-- Update outdated screenshots to current versions
-- Optimize image file sizes for web performance
-- Ensure all images have appropriate alt text
+Using MCP servers to verify information:
 
-**Clean Up Code Examples:**
-- Test all code examples to ensure they still work
-- Update examples to use current syntax and best practices
-- Remove examples for deprecated APIs or methods
-- Ensure code formatting is consistent
+- [ ] Use Brave Search to verify current best practices
+- [ ] Check official documentation for updates
+- [ ] Validate code examples and configurations
+- [ ] Update version numbers and compatibility information
 
-### 5. Verify Research and Sources
+### Phase 2: Quality Assurance
 
-**Check Source Validity:**
-- Verify all external links are still active and relevant
-- Update citations to point to current versions
-- Remove references to discontinued tools or services
-- Ensure all claims are still accurate and current
+**Step 4: Markdown Linting**
 
-**Update Research Notes:**
-- Review verification notes and update dates
-- Re-verify critical technical information
-- Update maintenance schedules for important content
-- Document any changes in authoritative sources
+```bash
+# Run markdown linting
+markdownlint "**/*.md"
 
-### 6. Quality Assurance Review
+# Fix auto-fixable issues
+markdownlint "**/*.md" --fix
+```
 
-**Content Quality Check:**
-- Ensure all content meets current project standards
-- Verify writing style is consistent throughout
-- Check that technical accuracy is maintained
-- Ensure accessibility guidelines are followed
+- [ ] Fix all linting errors
+- [ ] Ensure consistent formatting
+- [ ] Verify code block language specifications
+- [ ] Check heading hierarchy
 
-**User Experience Review:**
-- Test navigation from a new user perspective
-- Verify search functionality works correctly
-- Check that content is logically organized
-- Ensure mobile-friendly formatting
+**Step 5: Content Standards Review**
 
-### 7. Documentation Maintenance Updates
+- [ ] Verify all placeholders are properly formatted (`[Description]`)
+- [ ] Check for consistent terminology usage
+- [ ] Ensure proper citation of sources
+- [ ] Validate template compliance
 
-**Update Maintenance Information:**
-- Refresh "last updated" dates on revised content
-- Update maintenance schedules for regular reviews
-- Document any structural changes made during cleanup
-- Create or update changelog entries
+**Step 6: Accessibility and Readability**
 
-**Review and Update Templates:**
-- Ensure documentation templates are current
-- Update style guides and writing standards
-- Refresh example content in templates
-- Verify template instructions are clear and current
+- [ ] Check heading structure for logical flow
+- [ ] Verify alt text for images
+- [ ] Ensure clear, actionable language
+- [ ] Test navigation paths
 
-## Documentation-Specific Checklist
+### Phase 3: Organization and Structure
 
-### Content Organization
-- [ ] All pages follow consistent structure and formatting
-- [ ] Navigation menus are current and complete
-- [ ] Internal links work correctly
-- [ ] Content hierarchy is logical and user-friendly
-- [ ] Orphaned or duplicate pages removed
+**Step 7: File Organization**
 
-### Content Currency
-- [ ] All version-specific information updated
-- [ ] External links verified and current
-- [ ] Code examples tested and working
-- [ ] Screenshots and images current
-- [ ] Deprecated content removed or archived
+```bash
+# Check directory structure
+tree -I 'node_modules|.git' > directory-structure.txt
+```
 
-### Research and Sources
-- [ ] All sources verified and current
-- [ ] Citations point to latest versions
-- [ ] Research notes updated with current dates
-- [ ] Fact-checking completed for critical information
+- [ ] Verify proper directory structure
+- [ ] Move misplaced files to correct locations
+- [ ] Update file naming for consistency
+- [ ] Remove empty or unnecessary directories
+
+**Step 8: Template Alignment**
+
+- [ ] Ensure all rules follow template structure
+- [ ] Verify workflow files are properly organized
+- [ ] Check that examples match current templates
+- [ ] Update cross-references between files
+
+**Step 9: Documentation Updates**
+
+- [ ] Update README with current information
+- [ ] Refresh getting started guides
+- [ ] Verify setup instructions are current
+- [ ] Update any changed file paths or references
+
+### Phase 4: Final Validation
+
+**Step 10: Comprehensive Testing**
+
+```bash
+# Final markdown validation
+markdownlint "**/*.md"
+
+# Check for any remaining issues
+grep -r "TODO\|FIXME\|XXX" . --include="*.md"
+```
+
+- [ ] All markdown files pass linting
+- [ ] No TODO or FIXME comments remain
+- [ ] All links are functional
+- [ ] Templates work as documented
+
+**Step 11: Version Control Cleanup**
+
+```bash
+# Review git status
+git status
+
+# Stage all changes
+git add .
+
+# Commit cleanup changes
+git commit -m "Project cleanup: update documentation, fix links, improve organization"
+```
+
+- [ ] Commit all cleanup changes
+- [ ] Tag release if appropriate
+- [ ] Update changelog if maintained
+- [ ] Push changes to remote repository
+
+## Quality Checklist
+
+### Content Quality
+
+- [ ] All information is current and accurate
+- [ ] Examples work as documented
+- [ ] Links are functional and relevant
+- [ ] Language is clear and actionable
+
+### Technical Quality
+
+- [ ] All markdown files pass linting
+- [ ] Code blocks specify appropriate languages
+- [ ] Heading hierarchy is logical
+- [ ] File organization follows templates
 
 ### User Experience
-- [ ] Navigation tested from user perspective
-- [ ] Search functionality working
-- [ ] Mobile formatting verified
-- [ ] Accessibility guidelines followed
-- [ ] Loading times acceptable
 
-### Maintenance
-- [ ] Last updated dates refreshed
-- [ ] Maintenance schedules updated
-- [ ] Changelog entries created
-- [ ] Template and style guides current
+- [ ] Navigation is intuitive
+- [ ] Getting started path is clear
+- [ ] Examples are practical and useful
+- [ ] Documentation serves target users effectively
 
-## Common Documentation Issues
+## Post-Cleanup Actions
 
-### Outdated Technical Information
-- **Symptoms**: User reports of non-working examples, references to old versions
-- **Solution**: Systematic review and testing of all technical content
-- **Prevention**: Regular maintenance schedule and user feedback monitoring
+### Documentation
 
-### Broken Navigation
-- **Symptoms**: 404 errors, missing pages in navigation, circular references
-- **Solution**: Comprehensive link checking and navigation testing
-- **Prevention**: Automated link checking and regular navigation audits
+- [ ] Update project status in overview
+- [ ] Refresh last-updated dates
+- [ ] Document any structural changes
+- [ ] Update contributor guidelines if needed
 
-### Inconsistent Formatting
-- **Symptoms**: Mixed heading styles, inconsistent code formatting, varied image sizes
-- **Solution**: Style guide enforcement and systematic formatting review
-- **Prevention**: Clear style guidelines and template usage
+### Communication
 
-### Duplicate or Conflicting Information
-- **Symptoms**: Same topic covered differently in multiple places, contradictory instructions
-- **Solution**: Content audit and consolidation of related topics
-- **Prevention**: Content planning and regular review of related topics
+- [ ] Notify team of cleanup completion
+- [ ] Share any significant changes
+- [ ] Update project roadmap if affected
+- [ ] Prepare release notes if applicable
 
-## Automation Opportunities
+### Monitoring
 
-### Automated Checks
-- Link checking tools for external references
-- Spell check and grammar validation
-- Image optimization and alt-text verification
-- Code example syntax validation
+- [ ] Set up regular cleanup schedule
+- [ ] Monitor for new issues or outdated content
+- [ ] Track user feedback on improvements
+- [ ] Plan next cleanup cycle
 
-### Regular Maintenance Scripts
-- Generate reports of pages not updated in X months
-- Check for broken internal links
-- Validate code examples against current APIs
-- Monitor external link health
+## Troubleshooting
 
-### Content Analytics
-- Track which pages are most/least visited
-- Identify content that generates support questions
-- Monitor user feedback and comments
-- Track search queries that return no results
+### Common Issues
 
-## Best Practices for Documentation Cleanup
+**Broken Links**
+- Check if target moved or was renamed
+- Update internal references
+- Replace with current alternatives
+- Remove if no longer relevant
 
-### Prevention Strategies
-- Establish regular review cycles (monthly/quarterly)
-- Use templates to maintain consistency
-- Implement peer review for all content changes
-- Set up automated monitoring for common issues
+**Linting Errors**
+- Review markdown standards rule
+- Fix heading hierarchy issues
+- Add language specifications to code blocks
+- Correct list formatting
 
-### Execution Tips
-- Focus on high-traffic content first
-- Test all changes in staging environment
-- Keep detailed notes of changes made
-- Involve subject matter experts in technical reviews
+**Outdated Content**
+- Use MCP servers to verify current information
+- Check official documentation for updates
+- Update examples and configurations
+- Remove deprecated features
 
-### Maintenance Planning
-- Schedule regular cleanup sessions
-- Assign ownership for different content areas
-- Create alerts for content that needs review
-- Plan for major updates and migrations
+**Template Misalignment**
+- Review current template structure
+- Update files to match templates
+- Fix cross-references and links
+- Ensure consistent organization
 
-## Integration with Project Standards
+## Success Metrics
 
-This cleanup workflow should align with your project's:
-- **Content standards** (see tech stack rules)
-- **Quality requirements** (see current requirements)
-- **User experience goals** (see project overview)
-- **Research methodology** (see research workflow)
+- [ ] Zero markdown linting errors
+- [ ] All links functional
+- [ ] Content verified as current
+- [ ] Template compliance achieved
+- [ ] User feedback positive
+- [ ] Navigation improved
 
-## Success Indicators
+## Notes
 
-After completing this cleanup:
-- All content is current and accurate
-- Navigation is intuitive and complete
-- User feedback indicates improved experience
-- Maintenance burden is reduced
-- Content meets all project quality standards
+- This workflow should be run regularly to maintain quality
+- Use MCP servers for fact-checking and verification
+- Document any significant changes for team awareness
+- Consider automation for routine checks
+- Maintain backup before major cleanup operations
 
-Remember: Documentation cleanup is an ongoing process, not a one-time task. Regular maintenance prevents major cleanup sessions and keeps your documentation valuable and trustworthy.
+**Remember**: The goal is to maintain high-quality, current, and useful documentation that serves users effectively.

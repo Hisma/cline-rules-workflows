@@ -10,7 +10,9 @@ This guide walks you through setting up your own Cline rules system, using this 
 - Familiarity with your development workflow
 
 ### MCP Server Setup (Required)
+
 Before creating rules, ensure you have these MCP servers configured:
+
 - **Brave Search** - For research and fact-checking
 - **Puppeteer** - For content extraction
 - **Context7** - For framework documentation (optional)
@@ -20,6 +22,7 @@ See the [official MCP setup guide](https://docs.cline.bot/mcp/configuring-mcp-se
 ## Step 1: Understand the System
 
 Before setting up rules, read [Local vs Global Rules](local-vs-global-rules.md) to understand:
+
 - How global rules work (`~/Documents/Cline/.clinerules/`)
 - How project-specific rules work (`.clinerules/`)
 - When to use each type
@@ -27,15 +30,17 @@ Before setting up rules, read [Local vs Global Rules](local-vs-global-rules.md) 
 ## Step 2: Set Up Global Rules
 
 ### Create the Global Rules Directory
+
 ```bash
 mkdir -p ~/Documents/Cline/.clinerules
 mkdir -p ~/Documents/Cline/.clinerules/workflows
 ```
-
 ### Start with Basic Global Rules
+
 Create these foundational files:
 
 **~/Documents/Cline/.clinerules/coding-standards.md**
+
 ```markdown
 # Coding Standards
 
@@ -51,8 +56,8 @@ Create these foundational files:
 - Avoid deep nesting
 - Write self-documenting code
 ```
-
 **~/Documents/Cline/.clinerules/documentation.md**
+
 ```markdown
 # Documentation Requirements
 
@@ -68,9 +73,10 @@ Create these foundational files:
 - Include troubleshooting guides
 - Update changelog regularly
 ```
-
 ### Customize Based on Your Workflow
+
 Look at the templates in `templates/global/rules/` and adapt them to your preferences:
+
 - Coding standards you follow
 - Documentation practices you prefer
 - Security guidelines you implement
@@ -79,21 +85,24 @@ Look at the templates in `templates/global/rules/` and adapt them to your prefer
 ## Step 3: Set Up Project-Specific Rules
 
 ### For New Projects
+
 1. Create the rules and workflows directories:
+
    ```bash
    mkdir .clinerules
    mkdir .clinerules/workflows
    ```
-
 2. Add project-specific files:
+
    ```bash
    touch .clinerules/01-project-overview.md
    touch .clinerules/02-tech-stack.md
    touch .clinerules/03-current-requirements.md
    ```
-
 ### Use Templates as Reference
+
 Browse `templates/` for examples:
+
 - **docsite-workspace/**: Rules for documentation projects
 - **web-app-workspace/**: Rules for web applications
 - **global/**: Universal rules for all projects
@@ -103,12 +112,14 @@ Copy and modify any templates that match your project type.
 ## Step 4: Test Your Setup
 
 ### Verify Global Rules
+
 1. Open any project in VSCode with Cline
 2. Start a new conversation
 3. Ask: "What coding standards should I follow?"
 4. Cline should reference your global rules
 
 ### Verify Project Rules
+
 1. Open a project with `.clinerules/` directory
 2. Start a new conversation
 3. Ask: "What are the specific requirements for this project?"
@@ -117,11 +128,13 @@ Copy and modify any templates that match your project type.
 ## Step 5: Iterate and Improve
 
 ### Track What Works
+
 - Note which rules Cline follows consistently
 - Identify rules that need clarification
 - Observe which rules improve code quality
 
 ### Refine Over Time
+
 - Update rules based on experience
 - Add new rules for emerging patterns
 - Remove rules that aren't helpful
@@ -140,6 +153,7 @@ Here's how I typically set up rules for a new project:
 ## Common Patterns
 
 ### Global Rules Should Cover
+
 - Language-agnostic coding standards
 - Documentation requirements
 - Security best practices
@@ -147,6 +161,7 @@ Here's how I typically set up rules for a new project:
 - Testing approaches
 
 ### Project Rules Should Cover
+
 - Specific technology stack
 - Project architecture
 - Current development priorities
@@ -156,18 +171,21 @@ Here's how I typically set up rules for a new project:
 ## Troubleshooting
 
 ### Rules Not Loading
+
 - Check file locations and naming
 - Ensure files have `.md` extension
 - Restart VSCode if needed
 - Verify Cline version (v3.17+ for global rules)
 
 ### Rules Too Verbose
+
 - Keep rules concise and actionable
 - Use bullet points instead of paragraphs
 - Focus on the most important guidelines
 - Split complex rules into separate files
 
 ### Conflicting Rules
+
 - Make rule hierarchy clear in documentation
 - Use project rules to override globals when needed
 - Be explicit about exceptions and special cases
@@ -175,18 +193,21 @@ Here's how I typically set up rules for a new project:
 ## Advanced Tips
 
 ### Rule Organization
+
 - Use numbered prefixes for loading order
 - Group related rules in the same file
 - Keep file names descriptive
 - Maintain consistent structure across projects
 
 ### Version Control
+
 - Commit your global rules to a personal repository
 - Include `.clinerules/` in your project repositories
 - Track changes to see how rules evolve
 - Share successful patterns with your team
 
 ### Team Collaboration
+
 - Establish team-wide global rules
 - Allow project-specific customizations
 - Document rule decisions and rationale

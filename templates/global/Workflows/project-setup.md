@@ -3,6 +3,7 @@
 This workflow guides you through setting up a new project with proper structure, configuration, and development environment.
 
 ## Prerequisites
+
 - Development environment installed (Node.js, Python, etc.)
 - Git configured with your credentials
 - Code editor/IDE set up
@@ -71,6 +72,7 @@ This workflow guides you through setting up a new project with proper structure,
     - Tag initial version if applicable
 
 ## Success Criteria
+
 - Project builds and runs successfully
 - All development tools are configured and working
 - Documentation is complete and accurate
@@ -81,30 +83,35 @@ This workflow guides you through setting up a new project with proper structure,
 ## Project Type Specific Steps
 
 ### Web Application
+
 - Set up frontend framework (React, Vue, Angular)
 - Configure bundler (Webpack, Vite, Parcel)
 - Set up CSS preprocessing if needed
 - Configure development and production builds
 
 ### API/Backend Service
+
 - Set up web framework (Express, FastAPI, Django)
 - Configure database connection and migrations
 - Set up API documentation (OpenAPI/Swagger)
 - Configure logging and monitoring
 
 ### Library/Package
+
 - Set up package configuration (package.json, setup.py)
 - Configure build and distribution scripts
 - Set up documentation generation
 - Configure publishing workflow
 
 ### Data Science Project
+
 - Set up Jupyter notebook environment
 - Configure data directories and gitignore
 - Set up virtual environment with data science libraries
 - Create data pipeline structure
 
 ### Documentation Project
+
 - Set up static site generator (Jekyll, Hugo, Sphinx)
 - Configure documentation theme and structure
 - Set up content organization
@@ -113,6 +120,7 @@ This workflow guides you through setting up a new project with proper structure,
 ## Common Configuration Files
 
 ### Node.js Projects
+
 ```json
 // package.json
 {
@@ -127,8 +135,8 @@ This workflow guides you through setting up a new project with proper structure,
   }
 }
 ```
-
 ### Python Projects
+
 ```python
 # requirements.txt or pyproject.toml
 # List dependencies with versions
@@ -136,8 +144,8 @@ This workflow guides you through setting up a new project with proper structure,
 # setup.py or pyproject.toml
 # Package configuration
 ```
-
 ### Universal Files
+
 ```gitignore
 # .gitignore
 node_modules/
@@ -147,28 +155,31 @@ node_modules/
 dist/
 build/
 ```
-
 ## Troubleshooting
 
 ### Dependency Installation Issues
+
 - Check Node.js/Python version compatibility
 - Clear package manager cache
 - Check for conflicting global packages
 - Verify network connectivity and registry access
 
 ### Build Configuration Problems
+
 - Verify all configuration files are valid
 - Check for missing dependencies
 - Ensure proper file paths and references
 - Test with minimal configuration first
 
 ### Development Environment Issues
+
 - Verify all required tools are installed
 - Check environment variables are set correctly
 - Ensure proper permissions on directories
 - Test each tool individually
 
 ### Git Setup Problems
+
 - Verify Git is installed and configured
 - Check SSH keys or authentication setup
 - Ensure proper remote repository access
@@ -177,24 +188,28 @@ build/
 ## Best Practices
 
 ### Project Organization
+
 - Use consistent naming conventions
 - Organize files logically by feature or type
 - Keep configuration files in project root
 - Document any non-standard organization
 
 ### Documentation
+
 - Write clear, concise README
 - Include setup and usage instructions
 - Document any special requirements
 - Keep documentation up to date
 
 ### Version Control
+
 - Make frequent, small commits
 - Use descriptive commit messages
 - Set up proper branching strategy
 - Include all necessary files in repository
 
 ### Security
+
 - Never commit sensitive information
 - Use environment variables for configuration
 - Set up dependency vulnerability scanning

@@ -3,6 +3,7 @@
 ## General Documentation Principles
 
 ### Clarity and Purpose
+
 - Write documentation for your future self and team members
 - Explain the "why" behind decisions, not just the "what"
 - Use clear, concise language that avoids unnecessary jargon
@@ -10,6 +11,7 @@
 - Keep documentation up-to-date with code changes
 
 ### Audience Awareness
+
 - Consider who will read the documentation (developers, users, stakeholders)
 - Provide appropriate level of technical detail for the audience
 - Include context that may not be obvious to newcomers
@@ -19,6 +21,7 @@
 ## Code Documentation
 
 ### Inline Comments
+
 - Comment complex business logic and algorithms
 - Explain non-obvious decisions and trade-offs
 - Document workarounds and their reasons
@@ -26,6 +29,7 @@
 - Avoid obvious comments that just restate the code
 
 ### Function and Class Documentation
+
 - Document all public APIs with clear descriptions
 - Include parameter types, return values, and exceptions
 - Provide usage examples for complex functions
@@ -33,6 +37,7 @@
 - Explain performance characteristics when relevant
 
 ### API Documentation
+
 - Document all endpoints with request/response examples
 - Specify required and optional parameters
 - Include error codes and their meanings
@@ -42,6 +47,7 @@
 ## Project Documentation
 
 ### README Files
+
 - **Purpose**: Clear description of what the project does
 - **Installation**: Step-by-step setup instructions
 - **Usage**: Basic usage examples and common scenarios
@@ -50,6 +56,7 @@
 - **License**: Legal information and usage rights
 
 ### Architecture Documentation
+
 - High-level system overview and components
 - Data flow diagrams and system interactions
 - Technology stack and rationale for choices
@@ -57,6 +64,7 @@
 - Security considerations and patterns
 
 ### Change Documentation
+
 - **Changelog**: User-facing changes organized by version
 - **Migration Guides**: Breaking changes and upgrade paths
 - **Release Notes**: New features, bug fixes, and improvements
@@ -65,6 +73,7 @@
 ## Development Documentation
 
 ### Setup and Environment
+
 - Development environment requirements
 - Local development setup instructions
 - Testing procedures and frameworks
@@ -72,6 +81,7 @@
 - Troubleshooting common setup issues
 
 ### Coding Standards
+
 - Code style guidelines and formatting rules
 - Naming conventions and patterns
 - File organization and structure
@@ -79,6 +89,7 @@
 - Tool configuration (linters, formatters, etc.)
 
 ### Testing Documentation
+
 - Testing strategy and coverage requirements
 - How to run different types of tests
 - Writing effective test cases
@@ -88,6 +99,7 @@
 ## User Documentation
 
 ### User Guides
+
 - Getting started tutorials for new users
 - Feature documentation with screenshots
 - Common workflows and use cases
@@ -95,6 +107,7 @@
 - Best practices and tips
 
 ### Technical Guides
+
 - Integration guides for developers
 - SDK and library documentation
 - Configuration reference
@@ -104,6 +117,7 @@
 ## Documentation Maintenance
 
 ### Regular Updates
+
 - Review documentation during code reviews
 - Update docs when features change or are added
 - Remove outdated information promptly
@@ -111,6 +125,7 @@
 - Gather feedback from users and improve accordingly
 
 ### Version Control
+
 - Keep documentation in version control with code
 - Use meaningful commit messages for doc changes
 - Tag documentation versions with releases
@@ -118,6 +133,7 @@
 - Archive old documentation appropriately
 
 ### Quality Standards
+
 - Use consistent formatting and style
 - Include proper grammar and spelling
 - Validate code examples and snippets
@@ -127,6 +143,7 @@
 ## Documentation Tools and Formats
 
 ### Markdown Standards
+
 - Use consistent heading hierarchy
 - Include table of contents for long documents
 - Use code blocks with proper syntax highlighting
@@ -134,6 +151,7 @@
 - Use relative links for internal references
 
 ### Diagrams and Visuals
+
 - Create architecture diagrams for complex systems
 - Use flowcharts for process documentation
 - Include screenshots for UI documentation
@@ -141,6 +159,7 @@
 - Ensure diagrams are accessible and clear
 
 ### Documentation Platforms
+
 - Choose appropriate tools for different audiences
 - Maintain consistency across documentation platforms
 - Ensure documentation is searchable and navigable
@@ -150,6 +169,7 @@
 ## Collaboration and Review
 
 ### Documentation Reviews
+
 - Include documentation in code review process
 - Review for accuracy, clarity, and completeness
 - Check for consistency with existing documentation
@@ -157,6 +177,7 @@
 - Ensure proper grammar and formatting
 
 ### Team Collaboration
+
 - Establish documentation ownership and responsibilities
 - Create templates for common documentation types
 - Share knowledge through documentation sessions
@@ -164,6 +185,7 @@
 - Recognize good documentation contributions
 
 ### User Feedback
+
 - Provide channels for documentation feedback
 - Monitor common support questions for doc gaps
 - Conduct user testing on documentation
@@ -173,6 +195,7 @@
 ## Success Metrics
 
 ### Quality Indicators
+
 - Reduced support tickets for documented features
 - Faster onboarding of new team members
 - Positive feedback from users and developers
@@ -180,6 +203,7 @@
 - Successful self-service problem resolution
 
 ### Maintenance Health
+
 - Documentation stays current with code changes
 - Regular review and update cycles
 - Active contribution from team members

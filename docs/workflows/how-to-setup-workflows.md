@@ -11,7 +11,9 @@ This guide walks you through setting up your own Cline workflows system, coverin
 - Understanding of workflow automation concepts
 
 ### MCP Server Setup (Essential for Advanced Workflows)
+
 Many effective workflows leverage MCP servers for research and verification:
+
 - **Brave Search** - For researching best practices and current information
 - **Puppeteer** - For extracting content from documentation sources
 - **Context7** - For framework-specific guidance
@@ -21,6 +23,7 @@ See the [official MCP setup guide](https://docs.cline.bot/mcp/configuring-mcp-se
 ## Understanding Workflows
 
 Before setting up workflows, read [Rules vs Workflows](../integration/rules-vs-workflows.md) to understand:
+
 - How workflows differ from rules
 - When to use global vs project-specific workflows
 - How workflows are invoked and executed
@@ -34,10 +37,10 @@ Global workflows apply across all your projects and contain reusable automation 
 ```bash
 mkdir -p ~/Documents/Cline/.clinerules/workflows
 ```
-
 ### 2. Create Your First Global Workflow
 
 **~/Documents/Cline/.clinerules/workflows/code-review.md**
+
 ```markdown
 # Code Review Workflow
 
@@ -70,10 +73,10 @@ This workflow guides you through performing a comprehensive code review.
    - Suggest improvements
    - Approve or request changes
 ```
-
 ### 3. Create Additional Global Workflows
 
 **~/Documents/Cline/.clinerules/workflows/project-setup.md**
+
 ```markdown
 # Project Setup Workflow
 
@@ -106,12 +109,12 @@ This workflow helps you set up a new project with proper structure and configura
    - Set up CI/CD pipeline basics
    - Document setup process
 ```
-
 ## MCP-Powered Workflows
 
 Advanced workflows can leverage MCP servers for research-driven development:
 
 **~/Documents/Cline/.clinerules/workflows/research-and-document.md**
+
 ```markdown
 # Research and Document Workflow
 
@@ -139,8 +142,8 @@ This workflow uses MCP servers to research and create accurate documentation.
    - Test all provided examples
    - Schedule regular re-verification
 ```
-
 **~/Documents/Cline/.clinerules/workflows/verify-tech-stack.md**
+
 ```markdown
 # Tech Stack Verification Workflow
 
@@ -168,7 +171,6 @@ This workflow verifies and updates technology stack information.
    - Add migration notes if needed
    - Document verification date and sources
 ```
-
 ## Setting Up Project-Specific Workflows
 
 Project workflows are specific to individual projects and handle project-unique processes.
@@ -176,13 +178,14 @@ Project workflows are specific to individual projects and handle project-unique 
 ### 1. Create Project Workflows Directory
 
 For each project, create:
+
 ```bash
 mkdir .clinerules/workflows
 ```
-
 ### 2. Create Project-Specific Workflows
 
 **your-project/.clinerules/workflows/deploy-staging.md**
+
 ```markdown
 # Deploy to Staging Workflow
 
@@ -220,18 +223,15 @@ This workflow handles deployment to the staging environment.
    - Update deployment tracking
    - Document any issues
 ```
-
 ## Using Workflows
 
 ### Invoking Workflows
 
 Workflows are invoked using slash commands in Cline:
 
-```
-/code-review.md          # Global workflow
+```/code-review.md          # Global workflow
 /deploy-staging.md       # Project workflow
 ```
-
 ### Workflow Best Practices
 
 1. **Keep workflows focused** - Each workflow should handle one specific process
@@ -299,7 +299,6 @@ Create workflows that adapt based on project context:
    - Staging: run full test suite
    - Development: quick deployment
 ```
-
 ### Workflow Chaining
 
 Create workflows that can call other workflows:
@@ -317,7 +316,6 @@ Create workflows that can call other workflows:
    - Run `/deploy-production.md` workflow
    - Run `/post-deploy-verification.md` workflow
 ```
-
 ## Workflow Evolution
 
 ### Track What Works

@@ -3,6 +3,7 @@
 This workflow ensures you're using the latest framework and API documentation when setting up or updating your project's tech stack.
 
 ## Prerequisites
+
 - **Context7 MCP server configured** (see [MCP Server Requirements](../rules/mcp-server-requirements.md)) - *Only needed for projects using frameworks/libraries*
 - **Brave Search MCP server configured** - *Only needed for researching framework alternatives*
 - **Puppeteer MCP server configured** - *Only needed for additional research*
@@ -14,6 +15,7 @@ This workflow ensures you're using the latest framework and API documentation wh
 ### 1. Identify Technologies to Verify
 
 **Create a list of all technologies that need verification:**
+
 - Frontend frameworks (React, Vue, Angular, etc.)
 - Backend frameworks (Express, FastAPI, Spring Boot, etc.)
 - Databases and ORMs (PostgreSQL, MongoDB, Prisma, etc.)
@@ -37,7 +39,6 @@ This workflow ensures you're using the latest framework and API documentation wh
 </arguments>
 </use_mcp_tool>
 ```
-
 **Then get the latest documentation:**
 
 ```xml
@@ -53,7 +54,6 @@ This workflow ensures you're using the latest framework and API documentation wh
 </arguments>
 </use_mcp_tool>
 ```
-
 ### 3. Document Current Information
 
 **For each technology, record:**
@@ -76,11 +76,10 @@ This workflow ensures you're using the latest framework and API documentation wh
 ```bash
 [Latest installation commands]
 ```
-
 ### Basic Usage Example
+
 ```javascript
 [Current syntax example from latest docs]
-```
 ```
 
 ### 4. Additional Research (only if needed)
@@ -103,10 +102,10 @@ This workflow ensures you're using the latest framework and API documentation wh
 </arguments>
 </use_mcp_tool>
 ```
-
 ### 5. Compare with Current Project Setup
 
 **Check your current project against latest information:**
+
 - Are you using the latest stable version?
 - Are there any deprecated patterns in your code?
 - Are there new features that could benefit your project?
@@ -115,6 +114,7 @@ This workflow ensures you're using the latest framework and API documentation wh
 ### 6. Update Tech Stack Documentation
 
 **Update your project's tech stack rules with verified information:**
+
 - Current version numbers
 - Latest syntax and patterns
 - Updated installation instructions
@@ -124,6 +124,7 @@ This workflow ensures you're using the latest framework and API documentation wh
 ### 7. Create Update Plan
 
 **If updates are needed, plan the migration:**
+
 - Identify breaking changes
 - Plan migration steps
 - Test in development environment
@@ -132,6 +133,7 @@ This workflow ensures you're using the latest framework and API documentation wh
 ## Example: Verifying React
 
 ### Step 1: Resolve React Library ID
+
 ```xml
 <use_mcp_tool>
 <server_name>github.com/upstash/context7-mcp</server_name>
@@ -143,8 +145,8 @@ This workflow ensures you're using the latest framework and API documentation wh
 </arguments>
 </use_mcp_tool>
 ```
-
 ### Step 2: Get React Documentation
+
 ```xml
 <use_mcp_tool>
 <server_name>github.com/upstash/context7-mcp</server_name>
@@ -158,8 +160,8 @@ This workflow ensures you're using the latest framework and API documentation wh
 </arguments>
 </use_mcp_tool>
 ```
-
 ### Step 3: Cross-Verify with Brave Search
+
 ```xml
 <use_mcp_tool>
 <server_name>brave-search</server_name>
@@ -172,8 +174,8 @@ This workflow ensures you're using the latest framework and API documentation wh
 </arguments>
 </use_mcp_tool>
 ```
-
 ### Step 4: Document Findings
+
 ```markdown
 ## React Verification
 
@@ -193,8 +195,8 @@ This workflow ensures you're using the latest framework and API documentation wh
 ```bash
 npm install react@latest react-dom@latest
 ```
-
 ### Basic Component Example
+
 ```jsx
 import { useState, useEffect } from 'react';
 
@@ -208,7 +210,6 @@ function MyComponent() {
   
   return <div>{data ? data.title : 'Loading...'}</div>;
 }
-```
 ```
 
 ## Technology-Specific Verification

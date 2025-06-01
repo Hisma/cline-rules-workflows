@@ -5,36 +5,41 @@ This guide covers best practices for creating, organizing, and maintaining effec
 ## Workflow Design Principles
 
 ### 1. Single Responsibility
+
 Each workflow should handle one specific process or task:
 
 **✅ Good:**
+
 - `deploy-staging.md` - Handles staging deployment only
 - `code-review.md` - Focuses on code review process
 - `setup-testing.md` - Sets up testing infrastructure
 
 **❌ Avoid:**
+
 - `deploy-and-test-and-review.md` - Too many responsibilities
 - `general-development.md` - Too broad and unfocused
 
 ### 2. Clear and Actionable Steps
+
 Every step should be specific and executable:
 
 **✅ Good:**
+
 ```markdown
 1. **Run Test Suite**
    - Execute `npm test` in project root
    - Verify all tests pass (0 failures)
    - Check test coverage is above 80%
 ```
-
 **❌ Avoid:**
+
 ```markdown
 1. **Test Everything**
    - Make sure tests work
    - Check coverage
 ```
-
 ### 3. Include Prerequisites
+
 Always specify what needs to be ready before starting:
 
 ```markdown
@@ -44,8 +49,8 @@ Always specify what needs to be ready before starting:
 - Database running on localhost:5432
 - Environment variables configured
 ```
-
 ### 4. Add Verification Steps
+
 Include checks to ensure each step completed successfully:
 
 ```markdown
@@ -55,28 +60,31 @@ Include checks to ensure each step completed successfully:
    - Check for build errors in output
    - Confirm bundle size is reasonable
 ```
-
 ## Workflow Organization
 
 ### Global vs Project Workflows
 
 **Global Workflows** (`~/Documents/Cline/.clinerules/workflows/`):
+
 - Reusable across all projects
 - Technology-agnostic processes
 - General development practices
 
 Examples:
+
 - `code-review.md`
 - `security-audit.md`
 - `documentation-update.md`
 - `dependency-update.md`
 
 **Project Workflows** (`.clinerules/workflows/`):
+
 - Specific to the current project
 - Use project-specific tools and configurations
 - Handle unique deployment or testing scenarios
 
 Examples:
+
 - `deploy-production.md`
 - `run-integration-tests.md`
 - `update-api-docs.md`
@@ -87,12 +95,14 @@ Examples:
 Use descriptive, action-oriented names:
 
 **✅ Good Names:**
+
 - `deploy-staging.md`
 - `run-security-scan.md`
 - `update-dependencies.md`
 - `generate-api-docs.md`
 
 **❌ Avoid:**
+
 - `workflow1.md`
 - `stuff.md`
 - `deploy.md` (too generic)
@@ -102,8 +112,7 @@ Use descriptive, action-oriented names:
 
 One approach is to organize workflows by category when you have many:
 
-```
-.clinerules/workflows/
+```.clinerules/workflows/
 ├── deployment/
 │   ├── deploy-staging.md
 │   ├── deploy-production.md
@@ -117,7 +126,6 @@ One approach is to organize workflows by category when you have many:
     ├── cleanup-logs.md
     └── backup-database.md
 ```
-
 *Note: This is just one organizational pattern. You might prefer a flat structure or organize by frequency of use.*
 
 ## Writing Effective Workflows
@@ -162,20 +170,22 @@ Brief description of what this workflow accomplishes.
 - How to know the workflow completed successfully
 - What should be different after completion
 ```
-
 *This is just one template approach - feel free to adapt or create your own structure that works better for your needs.*
 
 ### Language and Tone
 
 **Use Active Voice:**
+
 - ✅ "Run the test suite"
 - ❌ "The test suite should be run"
 
 **Be Specific:**
+
 - ✅ "Execute `npm run build:production`"
 - ❌ "Build the app"
 
 **Include Context:**
+
 - ✅ "Deploy to staging server (staging.example.com)"
 - ❌ "Deploy to staging"
 
@@ -193,7 +203,6 @@ Consider including guidance for when things go wrong:
      - Review deployment logs in `/var/log/deploy.log`
      - Consider rolling back: `./scripts/rollback.sh`
 ```
-
 ## Workflow Maintenance
 
 ### Regular Review
@@ -201,11 +210,13 @@ Consider including guidance for when things go wrong:
 Consider scheduling periodic reviews of your workflows:
 
 **Monthly:**
+
 - Check if workflows are still being used
 - Update any outdated commands or URLs
 - Remove workflows that are no longer relevant
 
 **After Major Changes:**
+
 - Update workflows when tools or processes change
 - Test workflows in new environments
 - Update prerequisites if dependencies change
@@ -225,7 +236,6 @@ Version: 2.1
 - v2.0: Updated to use new deployment tool
 - v1.0: Initial version
 ```
-
 ### Testing Workflows
 
 Regularly test your workflows:
@@ -259,7 +269,6 @@ Handle different scenarios within workflows:
      - Deploy to development environment
      - Skip approval requirements
 ```
-
 ### Workflow Dependencies
 
 Reference other workflows when appropriate:
@@ -270,18 +279,15 @@ Reference other workflows when appropriate:
    - Ensure all tests pass: `/run-full-test-suite.md`
    - Only proceed if both workflows complete successfully
 ```
-
 ### Environment-Specific Workflows
 
 Create variations for different environments:
 
-```
-workflows/
+```workflows/
 ├── deploy-development.md
 ├── deploy-staging.md
 └── deploy-production.md
 ```
-
 Each with environment-specific steps and requirements.
 
 ## Common Workflow Patterns
@@ -305,7 +311,6 @@ These are example patterns you might find useful:
 4. **Post-deployment Verification**
 5. **Notification and Documentation**
 ```
-
 ### Testing Workflow Pattern
 
 ```markdown
@@ -323,7 +328,6 @@ These are example patterns you might find useful:
 4. **Generate Reports**
 5. **Cleanup**
 ```
-
 ### Maintenance Workflow Pattern
 
 ```markdown
@@ -340,20 +344,23 @@ These are example patterns you might find useful:
 3. **Verification**
 4. **Cleanup and Documentation**
 ```
-
 ## Integration with Rules
 
 Workflows work well when combined with rules:
 
 ### Rules Provide Context
+
 Rules help workflows understand:
+
 - Project coding standards
 - Security requirements
 - Documentation expectations
 - Quality thresholds
 
 ### Workflows Provide Process
+
 Workflows give step-by-step guidance for:
+
 - Complex multi-step tasks
 - Deployment procedures
 - Testing protocols
@@ -362,27 +369,28 @@ Workflows give step-by-step guidance for:
 ### Example Integration
 
 **Rule (coding-standards.md):**
+
 ```markdown
 ## Testing Requirements
 - Minimum 80% code coverage
 - All tests must pass before deployment
 - Integration tests required for API changes
 ```
-
 **Workflow (deploy-staging.md):**
+
 ```markdown
 1. **Verify Test Coverage**
    - Run coverage report: `npm run coverage`
    - Ensure coverage meets project standard (80%+)
    - All tests must pass (0 failures)
 ```
-
 ## Troubleshooting Common Issues
 
 ### Workflows Not Executing
 
 **Problem:** Workflow doesn't start when invoked
 **Solutions:**
+
 - Check file location and naming
 - Verify `.md` extension
 - Ensure proper directory structure
@@ -392,6 +400,7 @@ Workflows give step-by-step guidance for:
 
 **Problem:** Workflow steps are hard to follow
 **Solutions:**
+
 - Add more specific commands
 - Include expected outputs
 - Add troubleshooting sections
@@ -401,6 +410,7 @@ Workflows give step-by-step guidance for:
 
 **Problem:** Workflows reference old tools or processes
 **Solutions:**
+
 - Schedule regular review cycles
 - Update after major project changes
 - Version control workflow files
@@ -411,17 +421,20 @@ Workflows give step-by-step guidance for:
 Consider tracking workflow effectiveness:
 
 ### Usage Patterns
+
 - Which workflows are used most frequently
 - Which workflows are never used (candidates for removal)
 - How often workflows need modification
 
 ### Quality Indicators
+
 - Reduction in process errors
 - Faster task completion
 - Improved consistency in your work
 - Fewer issues with complex tasks
 
 ### Personal Feedback
+
 - Note which workflows save you time
 - Identify workflows that need improvement
 - Track which processes become more reliable

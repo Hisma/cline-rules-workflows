@@ -3,6 +3,7 @@
 This workflow guides you through researching a technical topic and creating accurate, well-sourced documentation using MCP tools.
 
 ## Prerequisites
+
 - Brave Search MCP server configured (see [MCP Server Requirements](../global/rules/mcp-server-requirements.md))
 - Puppeteer MCP server configured (for content extraction)
 - Context7 MCP server configured (only needed if researching specific frameworks)
@@ -27,8 +28,8 @@ This workflow guides you through researching a technical topic and creating accu
 </arguments>
 </use_mcp_tool>
 ```
-
 **Analyze the search results and identify:**
+
 - Official documentation sources
 - Authoritative technical sources
 - Recent updates or changes
@@ -49,7 +50,6 @@ This workflow guides you through researching a technical topic and creating accu
 </arguments>
 </use_mcp_tool>
 ```
-
 **Extract the full page content:**
 
 ```xml
@@ -63,7 +63,6 @@ This workflow guides you through researching a technical topic and creating accu
 </arguments>
 </use_mcp_tool>
 ```
-
 **For specific sections, use targeted extraction:**
 
 ```xml
@@ -77,7 +76,6 @@ This workflow guides you through researching a technical topic and creating accu
 </arguments>
 </use_mcp_tool>
 ```
-
 ### 3. Framework Documentation (if applicable)
 
 **If researching specific frameworks or libraries, use Context7 for official documentation:**
@@ -93,7 +91,6 @@ This workflow guides you through researching a technical topic and creating accu
 </arguments>
 </use_mcp_tool>
 ```
-
 **Then get the latest documentation:**
 
 ```xml
@@ -108,7 +105,6 @@ This workflow guides you through researching a technical topic and creating accu
 </arguments>
 </use_mcp_tool>
 ```
-
 **Note**: Context7 is most useful for complex frameworks. For simple documentation projects using basic HTML/CSS/Markdown, you may not need Context7.
 
 ### 4. Cross-Verification
@@ -127,7 +123,6 @@ This workflow guides you through researching a technical topic and creating accu
 </arguments>
 </use_mcp_tool>
 ```
-
 **Check for recent changes or updates:**
 
 ```xml
@@ -142,7 +137,6 @@ This workflow guides you through researching a technical topic and creating accu
 </arguments>
 </use_mcp_tool>
 ```
-
 ### 5. Structure Documentation
 
 **Create a new documentation file following your project's standards:**
@@ -173,7 +167,6 @@ This workflow guides you through researching a technical topic and creating accu
 ## Last Verified
 [Date when information was last checked]
 ```
-
 ### 6. Fact-Checking Process
 
 **For each major claim or instruction:**
@@ -193,7 +186,6 @@ This workflow guides you through researching a technical topic and creating accu
 - **Method**: [How you verified - testing, cross-reference, etc.]
 - **Status**: [Current/Outdated/Needs Review]
 ```
-
 ### 7. Quality Review
 
 **Before finalizing, check against project standards:**
@@ -220,7 +212,6 @@ This workflow guides you through researching a technical topic and creating accu
   - Changes in official documentation
 - **Review Process**: Re-run this research workflow
 ```
-
 ## Advanced Techniques
 
 ### Extracting Structured Data
@@ -238,7 +229,6 @@ This workflow guides you through researching a technical topic and creating accu
 </arguments>
 </use_mcp_tool>
 ```
-
 ### Monitoring for Changes
 
 **Set up searches to monitor for updates:**
@@ -255,7 +245,6 @@ This workflow guides you through researching a technical topic and creating accu
 </arguments>
 </use_mcp_tool>
 ```
-
 ### Research Documentation Template
 
 **Keep track of your research process:**
@@ -289,7 +278,6 @@ This workflow guides you through researching a technical topic and creating accu
 - [Items requiring additional research]
 - [Questions that remain unanswered]
 ```
-
 ## Integration with Project Rules
 
 This workflow should be used in conjunction with your project's rules:

@@ -1,327 +1,350 @@
 # Research and Document Workflow
 
-This workflow guides you through researching a technical topic and creating accurate, well-sourced documentation using MCP tools.
+## Overview
+
+This workflow provides a systematic approach to researching topics and creating high-quality documentation using MCP servers. It ensures accuracy, completeness, and proper citation of sources.
+
+## When to Use
+
+- Creating new documentation from scratch
+- Updating existing content with current information
+- Researching best practices and current standards
+- Fact-checking existing documentation
+- Preparing comprehensive guides or tutorials
 
 ## Prerequisites
-- Brave Search MCP server configured (see [MCP Server Requirements](../global/rules/mcp-server-requirements.md))
-- Puppeteer MCP server configured (for content extraction)
-- Context7 MCP server configured (only needed if researching specific frameworks)
-- Topic or question to research
-- Understanding of your documentation project's standards (see rules files)
 
-## Workflow Steps
+- [ ] MCP servers are configured and active:
+  - Brave Search (for web research)
+  - Puppeteer (for content extraction)
+  - Context7 (for framework documentation, if applicable)
+- [ ] Markdown linting is set up (`.markdownlint.json` exists)
+- [ ] Clear research objectives defined
 
-### 1. Initial Research Phase
+## Research Process
 
-**Start with broad context search using Brave Search:**
+### Phase 1: Research Planning
 
-```xml
-<use_mcp_tool>
-<server_name>brave-search</server_name>
-<tool_name>brave_web_search</tool_name>
-<arguments>
-{
-  "query": "[your topic] overview documentation",
-  "count": 10
-}
-</arguments>
-</use_mcp_tool>
-```
+**Step 1: Define Research Scope**
 
-**Analyze the search results and identify:**
-- Official documentation sources
-- Authoritative technical sources
-- Recent updates or changes
-- Community discussions and issues
+- [ ] Identify specific topics to research
+- [ ] Define target audience and use cases
+- [ ] Establish success criteria for the documentation
+- [ ] Set timeline and milestones
 
-### 2. Deep Dive Research
-
-**For each promising source, use Puppeteer to extract detailed content:**
-
-```xml
-<use_mcp_tool>
-<server_name>puppeteer</server_name>
-<tool_name>puppeteer_navigate</tool_name>
-<arguments>
-{
-  "url": "[official documentation URL]"
-}
-</arguments>
-</use_mcp_tool>
-```
-
-**Extract the full page content:**
-
-```xml
-<use_mcp_tool>
-<server_name>puppeteer</server_name>
-<tool_name>puppeteer_evaluate</tool_name>
-<arguments>
-{
-  "script": "document.body.innerText"
-}
-</arguments>
-</use_mcp_tool>
-```
-
-**For specific sections, use targeted extraction:**
-
-```xml
-<use_mcp_tool>
-<server_name>puppeteer</server_name>
-<tool_name>puppeteer_evaluate</tool_name>
-<arguments>
-{
-  "script": "document.querySelector('.documentation-content').innerText"
-}
-</arguments>
-</use_mcp_tool>
-```
-
-### 3. Framework Documentation (if applicable)
-
-**If researching specific frameworks or libraries, use Context7 for official documentation:**
-
-```xml
-<use_mcp_tool>
-<server_name>Context7</server_name>
-<tool_name>resolve-library-id</tool_name>
-<arguments>
-{
-  "libraryName": "[framework name]"
-}
-</arguments>
-</use_mcp_tool>
-```
-
-**Then get the latest documentation:**
-
-```xml
-<use_mcp_tool>
-<server_name>Context7</server_name>
-<tool_name>get-library-docs</tool_name>
-<arguments>
-{
-  "context7CompatibleLibraryID": "[library ID from previous step]",
-  "topic": "[specific topic you're researching]"
-}
-</arguments>
-</use_mcp_tool>
-```
-
-**Note**: Context7 is most useful for complex frameworks. For simple documentation projects using basic HTML/CSS/Markdown, you may not need Context7.
-
-### 4. Cross-Verification
-
-**Search for additional sources to verify information:**
-
-```xml
-<use_mcp_tool>
-<server_name>brave-search</server_name>
-<tool_name>brave_web_search</tool_name>
-<arguments>
-{
-  "query": "[specific technical detail] official specification",
-  "count": 5
-}
-</arguments>
-</use_mcp_tool>
-```
-
-**Check for recent changes or updates:**
-
-```xml
-<use_mcp_tool>
-<server_name>brave-search</server_name>
-<tool_name>brave_web_search</tool_name>
-<arguments>
-{
-  "query": "[topic] changes updates 2024 2025",
-  "count": 5
-}
-</arguments>
-</use_mcp_tool>
-```
-
-### 5. Structure Documentation
-
-**Create a new documentation file following your project's standards:**
+**Step 2: Prepare Research Framework**
 
 ```markdown
-# [Topic Title]
-
-## Overview
-[Brief description of what this covers]
-
-## Key Concepts
-[Main concepts and terminology]
-
-## Implementation Details
-[Step-by-step instructions or explanations]
-
-### Example
-[Working code examples or demonstrations]
-
-## Common Issues
-[Known problems and solutions]
-
-## References
-- [Source 1 - Official Documentation](URL)
-- [Source 2 - Specification](URL)
-- [Source 3 - Community Resource](URL)
-
-## Last Verified
-[Date when information was last checked]
-```
-
-### 6. Fact-Checking Process
-
-**For each major claim or instruction:**
-
-1. **Identify the source** - Where did this information come from?
-2. **Verify currency** - Is this information still current?
-3. **Test if possible** - Can the instructions be followed successfully?
-4. **Cross-reference** - Do multiple sources agree?
-
-**Document your verification process:**
-
-```markdown
-## Verification Notes
-- **Claim**: [Specific technical claim]
-- **Source**: [Primary source URL]
-- **Verified**: [Date]
-- **Method**: [How you verified - testing, cross-reference, etc.]
-- **Status**: [Current/Outdated/Needs Review]
-```
-
-### 7. Quality Review
-
-**Before finalizing, check against project standards:**
-
-- [ ] All technical claims have sources
-- [ ] Instructions are clear and actionable
-- [ ] Examples work as written
-- [ ] Links are current and accessible
-- [ ] Content is organized logically
-- [ ] Language is appropriate for target audience
-- [ ] Follows project style guidelines (see tech stack rules)
-- [ ] Meets project quality standards (see current requirements)
-
-### 8. Documentation Maintenance
-
-**Set up for future updates:**
-
-```markdown
-## Maintenance Schedule
-- **Next Review**: [Date 3 months from creation]
-- **Update Triggers**: 
-  - New version releases
-  - Community reports of issues
-  - Changes in official documentation
-- **Review Process**: Re-run this research workflow
-```
-
-## Advanced Techniques
-
-### Extracting Structured Data
-
-**For API documentation or structured content:**
-
-```xml
-<use_mcp_tool>
-<server_name>puppeteer</server_name>
-<tool_name>puppeteer_evaluate</tool_name>
-<arguments>
-{
-  "script": "Array.from(document.querySelectorAll('h2')).map(h => ({title: h.textContent, content: h.nextElementSibling?.textContent}))"
-}
-</arguments>
-</use_mcp_tool>
-```
-
-### Monitoring for Changes
-
-**Set up searches to monitor for updates:**
-
-```xml
-<use_mcp_tool>
-<server_name>brave-search</server_name>
-<tool_name>brave_web_search</tool_name>
-<arguments>
-{
-  "query": "[topic] changelog release notes site:official-domain.com",
-  "count": 5
-}
-</arguments>
-</use_mcp_tool>
-```
-
-### Research Documentation Template
-
-**Keep track of your research process:**
-
-```markdown
-# Research Log: [Topic]
-
-## Research Questions
+# Research Template
+## Topic: [Topic Name]
+## Objective: [What you want to achieve]
+## Target Audience: [Who will use this information]
+## Key Questions:
 - [Question 1]
 - [Question 2]
+- [Question 3]
 
-## Sources Investigated
-1. **[Source Name]**
-   - URL: [URL]
-   - Date Accessed: [Date]
-   - Key Findings: [Summary]
-   - Reliability: [High/Medium/Low]
-
-## Search Queries Used
-- "[Query 1]" - [Results summary]
-- "[Query 2]" - [Results summary]
-
-## Verification Steps
-- [Step 1 and result]
-- [Step 2 and result]
-
-## Conclusions
-[Final conclusions based on research]
-
-## Follow-up Needed
-- [Items requiring additional research]
-- [Questions that remain unanswered]
+## Sources to Investigate:
+- Official documentation
+- Community resources
+- Best practice guides
+- Recent updates/changes
 ```
 
-## Integration with Project Rules
+### Phase 2: Primary Research
 
-This workflow should be used in conjunction with your project's rules:
+**Step 3: Web Research with Brave Search**
 
-- **Project Overview**: Ensure research aligns with project purpose and target users
-- **Tech Stack**: Follow established documentation standards and MCP integration patterns
-- **Current Requirements**: Address current priorities and quality focus areas
+Use Brave Search MCP server for comprehensive web research:
 
-## Best Practices
+```markdown
+# Search Strategy
+1. Start with broad searches: "[Topic] best practices 2024"
+2. Narrow to specific aspects: "[Topic] setup guide"
+3. Look for official sources: "[Topic] official documentation"
+4. Check for recent updates: "[Topic] latest changes"
+```
 
-1. **Always start with official sources** - Look for official documentation first
-2. **Use multiple verification methods** - Don't rely on a single source
-3. **Document your process** - Keep track of how you verified information
-4. **Test when possible** - Try to reproduce examples and instructions
-5. **Stay current** - Set up regular review cycles for important documentation
-6. **Cite sources** - Always provide links to your sources
-7. **Be transparent** - Note when information couldn't be verified or is uncertain
+Research checklist:
+- [ ] Search for official documentation and guides
+- [ ] Find current best practices and standards
+- [ ] Identify common issues and solutions
+- [ ] Look for recent updates or changes
+- [ ] Gather community insights and feedback
 
-## Common Pitfalls
+**Step 4: Content Extraction with Puppeteer**
 
-- **Outdated information** - Always check publication dates
-- **Unofficial sources** - Prefer official documentation over blog posts
-- **Incomplete testing** - Don't assume examples work without testing
-- **Missing context** - Ensure you understand the full context of information
-- **Over-reliance on single sources** - Cross-verify important claims
+Use Puppeteer MCP server to extract detailed content:
 
-## Template Customization Notes
+```javascript
+// Example extraction patterns
+// Extract main content
+puppeteer_evaluate: "document.querySelector('main').innerText"
 
-- Adapt MCP tool usage to your available servers
-- Modify documentation structure to match your project's style
-- Add project-specific verification steps
-- Include domain-specific research techniques
-- Update quality checklist based on your project's standards
+// Extract code examples
+puppeteer_evaluate: "Array.from(document.querySelectorAll('pre code')).map(el => el.textContent)"
 
-This workflow ensures that all documentation is research-backed, accurate, and maintainable over time while following your project's specific standards and requirements.
+// Extract headings for structure
+puppeteer_evaluate: "Array.from(document.querySelectorAll('h1, h2, h3')).map(h => ({level: h.tagName, text: h.textContent}))"
+```
+
+Extraction checklist:
+- [ ] Extract key concepts and definitions
+- [ ] Gather code examples and configurations
+- [ ] Collect step-by-step procedures
+- [ ] Note version requirements and compatibility
+- [ ] Document source URLs and access dates
+
+**Step 5: Framework Documentation (Context7)**
+
+If applicable, use Context7 for framework-specific research:
+
+- [ ] Search for relevant framework documentation
+- [ ] Extract API references and examples
+- [ ] Gather integration patterns
+- [ ] Note version-specific information
+
+### Phase 3: Information Synthesis
+
+**Step 6: Organize Research Findings**
+
+```markdown
+# Research Summary Template
+## Key Findings
+- [Finding 1 with source]
+- [Finding 2 with source]
+- [Finding 3 with source]
+
+## Best Practices Identified
+1. [Practice 1] - Source: [URL]
+2. [Practice 2] - Source: [URL]
+3. [Practice 3] - Source: [URL]
+
+## Common Issues and Solutions
+- **Issue**: [Description]
+  **Solution**: [Solution with source]
+
+## Version/Compatibility Notes
+- [Technology] version [X.X] and above
+- Compatible with [Platform/Tool]
+- Known issues with [Specific versions]
+```
+
+**Step 7: Fact Verification**
+
+Cross-reference findings across multiple sources:
+- [ ] Verify information against official documentation
+- [ ] Check for consistency across sources
+- [ ] Identify any conflicting information
+- [ ] Note areas requiring further research
+
+**Step 8: Gap Analysis**
+
+- [ ] Identify missing information
+- [ ] Note areas needing additional research
+- [ ] Plan follow-up research if needed
+- [ ] Document assumptions and limitations
+
+### Phase 4: Documentation Creation
+
+**Step 9: Structure Planning**
+
+```markdown
+# Documentation Outline
+1. Overview/Introduction
+2. Prerequisites
+3. Step-by-Step Instructions
+4. Examples and Use Cases
+5. Troubleshooting
+6. Additional Resources
+7. References and Sources
+```
+
+**Step 10: Content Creation**
+
+Follow markdown standards (see [Markdown Standards](../rules/05-markdown-standards.md)):
+
+- [ ] Use proper heading hierarchy
+- [ ] Specify languages for all code blocks
+- [ ] Include clear, actionable instructions
+- [ ] Provide practical examples
+- [ ] Add troubleshooting guidance
+
+**Step 11: Source Citation**
+
+```markdown
+# Citation Format
+## References
+- [Source Title](URL) - Accessed [Date]
+- [Official Documentation](URL) - Version [X.X]
+- [Community Guide](URL) - Last Updated [Date]
+
+## Research Notes
+- Research conducted: [Date]
+- MCP servers used: Brave Search, Puppeteer, Context7
+- Primary sources: [List key sources]
+```
+
+### Phase 5: Quality Assurance
+
+**Step 12: Content Review**
+
+- [ ] Verify all information is current and accurate
+- [ ] Test all code examples and procedures
+- [ ] Check that instructions are clear and complete
+- [ ] Ensure proper markdown formatting
+
+**Step 13: Markdown Validation**
+
+```bash
+# Run markdown linting
+markdownlint "path/to/new-document.md"
+
+# Fix any issues
+markdownlint "path/to/new-document.md" --fix
+```
+
+**Step 14: Link Verification**
+
+```bash
+# Check external links
+markdown-link-check "path/to/new-document.md"
+```
+
+- [ ] All external links are functional
+- [ ] Internal references are correct
+- [ ] Sources are properly cited
+
+### Phase 6: Publication and Maintenance
+
+**Step 15: Integration**
+
+- [ ] Add to appropriate documentation structure
+- [ ] Update navigation and cross-references
+- [ ] Link from relevant existing documents
+- [ ] Update table of contents if applicable
+
+**Step 16: Version Control**
+
+```bash
+# Add new documentation
+git add path/to/new-document.md
+
+# Commit with descriptive message
+git commit -m "Add comprehensive guide for [Topic] based on MCP research"
+```
+
+**Step 17: Maintenance Planning**
+
+- [ ] Set review schedule (monthly/quarterly)
+- [ ] Document research methodology for future updates
+- [ ] Note areas requiring regular verification
+- [ ] Plan for technology updates and changes
+
+## Research Quality Checklist
+
+### Source Quality
+
+- [ ] Official documentation consulted
+- [ ] Multiple sources cross-referenced
+- [ ] Recent/current information prioritized
+- [ ] Community feedback considered
+
+### Content Quality
+
+- [ ] Information is accurate and current
+- [ ] Instructions are clear and actionable
+- [ ] Examples are practical and tested
+- [ ] Troubleshooting guidance provided
+
+### Technical Quality
+
+- [ ] Markdown standards followed
+- [ ] All links functional
+- [ ] Code examples properly formatted
+- [ ] Proper citation of sources
+
+## MCP Server Usage Patterns
+
+### Brave Search Strategies
+
+```markdown
+# Effective Search Patterns
+- "[Technology] official documentation"
+- "[Technology] best practices [current year]"
+- "[Technology] setup guide tutorial"
+- "[Technology] common issues solutions"
+- "[Technology] vs alternatives comparison"
+```
+
+### Puppeteer Extraction Patterns
+
+```javascript
+// Common extraction patterns
+// Get all text content
+document.body.innerText
+
+// Extract specific sections
+document.querySelector('.documentation-content').innerHTML
+
+// Get code examples
+Array.from(document.querySelectorAll('pre')).map(pre => pre.textContent)
+
+// Extract navigation structure
+Array.from(document.querySelectorAll('nav a')).map(a => ({text: a.textContent, href: a.href}))
+```
+
+## Troubleshooting
+
+### Research Issues
+
+**Limited Information Available**
+- Expand search terms and strategies
+- Look for related technologies or concepts
+- Check community forums and discussions
+- Consider reaching out to experts
+
+**Conflicting Information**
+- Prioritize official sources
+- Check publication dates for currency
+- Look for consensus across multiple sources
+- Document conflicts and note preferred approach
+
+**Technical Examples Don't Work**
+- Verify version compatibility
+- Check for missing dependencies
+- Test in clean environment
+- Document any modifications needed
+
+### MCP Server Issues
+
+**Search Results Not Relevant**
+- Refine search terms
+- Use more specific queries
+- Try different search strategies
+- Combine multiple searches
+
+**Content Extraction Incomplete**
+- Try different CSS selectors
+- Extract in smaller chunks
+- Use multiple extraction approaches
+- Manually supplement if needed
+
+## Success Metrics
+
+- [ ] All research objectives met
+- [ ] Documentation is comprehensive and accurate
+- [ ] Sources properly cited and current
+- [ ] Content passes all quality checks
+- [ ] User feedback is positive
+- [ ] Information remains current over time
+
+## Notes
+
+- This workflow emphasizes research-driven development
+- MCP servers are essential for current, accurate information
+- Regular updates ensure documentation remains valuable
+- Proper citation builds credibility and enables verification
+- Quality standards ensure professional, useful documentation
+
+**Remember**: The goal is to create accurate, comprehensive, and useful documentation that serves users effectively while maintaining high standards for quality and currency.

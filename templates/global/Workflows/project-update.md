@@ -3,6 +3,7 @@
 This workflow guides you through updating an existing project to ensure it stays current with latest frameworks, security updates, and best practices.
 
 ## Prerequisites
+
 - **Context7 MCP server configured** (see [MCP Server Requirements](../rules/mcp-server-requirements.md)) - *Only needed for projects using frameworks/libraries*
 - **Brave Search MCP server configured** - *Only needed if researching framework alternatives*
 - **Puppeteer MCP server configured** - *Only needed for additional research*
@@ -13,18 +14,21 @@ This workflow guides you through updating an existing project to ensure it stays
 ## When to Use This Workflow
 
 ### Regular Maintenance (Monthly/Quarterly)
+
 - Dependency updates and security patches
 - Framework version updates
 - Documentation updates
 - Performance optimizations
 
 ### Major Updates
+
 - Framework major version upgrades
 - Architecture changes
 - New feature implementations
 - Technology stack changes
 
 ### Security Updates
+
 - Critical security vulnerabilities
 - Dependency security patches
 - Authentication/authorization updates
@@ -35,6 +39,7 @@ This workflow guides you through updating an existing project to ensure it stays
 ### 1. Project Assessment
 
 **Document Current State:**
+
 ```markdown
 ## Project Update Assessment - [Date]
 
@@ -53,7 +58,6 @@ This workflow guides you through updating an existing project to ensure it stays
 - [What you want to achieve with this update]
 - [Priority level: Critical/High/Medium/Low]
 ```
-
 ### 2. Framework Documentation (if applicable)
 
 **For projects using frameworks/libraries (React, Vue, Express, etc.):**
@@ -69,7 +73,6 @@ This workflow guides you through updating an existing project to ensure it stays
 </arguments>
 </use_mcp_tool>
 ```
-
 **Get latest documentation and migration guides:**
 
 ```xml
@@ -85,8 +88,8 @@ This workflow guides you through updating an existing project to ensure it stays
 </arguments>
 </use_mcp_tool>
 ```
-
 **For simple projects (basic HTML/CSS, documentation sites, static sites):**
+
 - Skip Context7 if not using complex frameworks
 - Focus on dependency updates and security patches
 - Use standard package manager update commands (`npm update`, `yarn upgrade`, etc.)
@@ -94,6 +97,7 @@ This workflow guides you through updating an existing project to ensure it stays
 ### 3. Additional Research (only if needed)
 
 **Use Brave Search + Puppeteer only when:**
+
 - Context7 doesn't support your specific framework
 - Considering switching to a different framework entirely
 - Need community insights on complex migration strategies
@@ -111,7 +115,6 @@ This workflow guides you through updating an existing project to ensure it stays
 </arguments>
 </use_mcp_tool>
 ```
-
 ### 4. Create Update Plan
 
 **Document your update strategy:**
@@ -159,16 +162,15 @@ This workflow guides you through updating an existing project to ensure it stays
 - [Backup restoration process]
 - [Communication plan for rollback]
 ```
-
 ### 5. Execute Updates
 
 **Follow your plan systematically:**
 
 1. **Create Update Branch**
+
    ```bash
    git checkout -b update/[framework]-[version]-[date]
    ```
-
 2. **Update Dependencies Gradually**
    - Start with patch updates
    - Then minor updates
@@ -218,7 +220,6 @@ This workflow guides you through updating an existing project to ensure it stays
 - [ ] Database queries optimized
 - [ ] Bundle sizes reasonable
 ```
-
 ### 7. Documentation Updates
 
 **Update all relevant documentation:**
@@ -236,6 +237,7 @@ This workflow guides you through updating an existing project to ensure it stays
    - Update troubleshooting guides
 
 3. **Change Documentation**
+
    ```markdown
    ## Update Log - [Date]
    
@@ -255,7 +257,6 @@ This workflow guides you through updating an existing project to ensure it stays
    - [Feature 1]: [Replacement or alternative]
    - [Feature 2]: [Replacement or alternative]
    ```
-
 ### 8. Deployment and Monitoring
 
 **Careful deployment process:**
@@ -281,24 +282,28 @@ This workflow guides you through updating an existing project to ensure it stays
 ## Technology-Specific Considerations
 
 ### Frontend Framework Updates
+
 - **Component API Changes**: Update component usage patterns
 - **State Management**: Update state management patterns
 - **Routing**: Update routing configuration
 - **Build Tools**: Update build configuration
 
 ### Backend Framework Updates
+
 - **API Changes**: Update endpoint implementations
 - **Middleware**: Update middleware configuration
 - **Database**: Update ORM/database patterns
 - **Authentication**: Update auth patterns
 
 ### Database Updates
+
 - **Schema Changes**: Plan and execute migrations
 - **Query Updates**: Update query patterns
 - **Performance**: Monitor query performance
 - **Backup**: Ensure backup compatibility
 
 ### Simple Projects (No Frameworks)
+
 - **Dependency Updates**: Update npm/yarn packages
 - **Security Patches**: Apply security updates
 - **Documentation**: Update README and docs
@@ -307,12 +312,14 @@ This workflow guides you through updating an existing project to ensure it stays
 ## Best Practices
 
 ### Update Frequency
+
 - **Security Updates**: Immediate (within 24-48 hours)
 - **Patch Updates**: Weekly or bi-weekly
 - **Minor Updates**: Monthly
 - **Major Updates**: Quarterly or as needed
 
 ### Risk Management
+
 - Always backup before updates
 - Test in staging environment first
 - Have rollback plan ready
@@ -320,12 +327,14 @@ This workflow guides you through updating an existing project to ensure it stays
 - Update during low-traffic periods
 
 ### Communication
+
 - Notify team of planned updates
 - Document all changes made
 - Share update results with team
 - Update project documentation
 
 ### Automation
+
 - Use dependency update tools (Dependabot, Renovate)
 - Automate testing pipelines
 - Automate deployment processes
@@ -334,18 +343,21 @@ This workflow guides you through updating an existing project to ensure it stays
 ## Troubleshooting
 
 ### Update Failures
+
 - **Dependency Conflicts**: Use resolution strategies in package manager
 - **Breaking Changes**: Follow official migration guides carefully
 - **Test Failures**: Address failing tests before proceeding
 - **Build Failures**: Check build tool configuration
 
 ### Performance Issues
+
 - **Bundle Size**: Analyze and optimize bundle size
 - **Runtime Performance**: Profile and optimize bottlenecks
 - **Memory Leaks**: Check for memory leaks in updated code
 - **Database Performance**: Optimize queries if needed
 
 ### Rollback Scenarios
+
 - **Critical Bugs**: Immediate rollback to previous version
 - **Performance Degradation**: Rollback and investigate
 - **User Experience Issues**: Rollback and plan fixes
@@ -354,6 +366,7 @@ This workflow guides you through updating an existing project to ensure it stays
 ## Success Criteria
 
 Project update is successful when:
+
 - [ ] All tests pass
 - [ ] Performance metrics maintained or improved
 - [ ] No new security vulnerabilities
@@ -366,30 +379,36 @@ Project update is successful when:
 ## Integration with Other Workflows
 
 ### Before Updates
+
 - Run [Verify Tech Stack Workflow](verify-tech-stack.md) to identify what needs updating
 - Use [Research and Document Workflow](research-and-document.md) only if considering framework changes
 
 ### During Updates
+
 - Follow [Code Review Process](code-review-process.md) for all changes
 - Use [Project Setup Workflow](project-setup.md) if major architecture changes
 
 ### After Updates
+
 - Run [Project Cleanup Workflow](project-cleanup.md) to clean up old code
 - Update project templates with lessons learned
 
 ## MCP Tool Usage Summary
 
 ### Context7 (Primary for Framework Projects)
+
 - **When**: Projects using React, Vue, Express, Django, etc.
 - **Purpose**: Get latest official documentation and migration guides
 - **Benefit**: Always current, authoritative information
 
 ### Brave Search (Secondary/Research)
+
 - **When**: Context7 doesn't support your framework OR considering framework changes
 - **Purpose**: Research alternatives, community insights
 - **Benefit**: Broader perspective, community knowledge
 
 ### Puppeteer (Rare/Specific Cases)
+
 - **When**: Need to extract specific content not available through other tools
 - **Purpose**: Deep content extraction from official sites
 - **Benefit**: Access to dynamic content

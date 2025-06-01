@@ -62,7 +62,6 @@ This workflow helps clean up and organize code before committing.
 - Build succeeds
 - Code is properly formatted
 ```
-
 ## Workflow Structure Patterns
 
 ### Basic Structure
@@ -85,7 +84,6 @@ Brief description of what this workflow does.
 ## Success Criteria
 - How to know the workflow completed successfully
 ```
-
 ### Advanced Structure
 
 For more complex workflows, consider adding:
@@ -136,12 +134,12 @@ Detailed description and when to use this workflow.
 - Detailed success indicators
 - What should be different after completion
 ```
-
 ## Workflow Types and Examples
 
 ### 1. Development Workflows
 
 **Code Review Workflow:**
+
 ```markdown
 # Code Review Workflow
 
@@ -166,8 +164,8 @@ Detailed description and when to use this workflow.
    - Suggest improvements
    - Approve or request changes
 ```
-
 **Dependency Update Workflow:**
+
 ```markdown
 # Update Dependencies Workflow
 
@@ -192,10 +190,10 @@ Detailed description and when to use this workflow.
    - Note any breaking changes
    - Commit dependency updates
 ```
-
 ### 2. Deployment Workflows
 
 **Production Deployment:**
+
 ```markdown
 # Deploy to Production Workflow
 
@@ -226,10 +224,10 @@ Detailed description and when to use this workflow.
    - Update deployment log
    - Notify stakeholders of completion
 ```
-
 ### 3. Maintenance Workflows
 
 **Database Maintenance:**
+
 ```markdown
 # Database Maintenance Workflow
 
@@ -254,7 +252,6 @@ Detailed description and when to use this workflow.
    - Test critical queries
    - Monitor performance metrics
 ```
-
 ## Advanced Workflow Techniques
 
 ### Conditional Logic
@@ -281,7 +278,6 @@ Handle different scenarios within workflows:
    - Apply appropriate security settings
    - Set correct API endpoints
 ```
-
 ### Workflow Composition
 
 Reference other workflows to build complex processes:
@@ -299,7 +295,6 @@ Reference other workflows to build complex processes:
    - Execute post-deployment workflow: `/verify-deployment.md`
    - Document release completion
 ```
-
 ### Error Handling and Recovery
 
 Include robust error handling:
@@ -319,7 +314,6 @@ Include robust error handling:
        - Retry deployment with fixes
        - Continue monitoring
 ```
-
 ## Testing Your Workflows
 
 ### Dry Run Testing
@@ -350,12 +344,14 @@ Include robust error handling:
 ### Regular Updates
 
 **Monthly Review:**
+
 - Check if workflows are still relevant
 - Update any changed commands or URLs
 - Remove workflows that are no longer used
 - Add new workflows for emerging processes
 
 **After Tool Changes:**
+
 - Update workflows when development tools change
 - Modify commands if CLI interfaces change
 - Test workflows in new environments
@@ -377,7 +373,6 @@ Changelog:
 - v1.0: Initial version
 -->
 ```
-
 ## Integration with Rules
 
 Workflows work best when combined with rules:
@@ -387,14 +382,15 @@ Workflows work best when combined with rules:
 Rules provide context that workflows can reference:
 
 **Rule (in coding-standards.md):**
+
 ```markdown
 ## Testing Standards
 - Minimum 80% code coverage required
 - All tests must pass before deployment
 - Integration tests required for API changes
 ```
-
 **Workflow (in deploy-staging.md):**
+
 ```markdown
 1. **Verify Test Requirements**
    - Run coverage report: `npm run coverage`
@@ -402,7 +398,6 @@ Rules provide context that workflows can reference:
    - Verify all tests pass: `npm test`
    - Run integration tests if API changed
 ```
-
 ### Workflows Enforce Rules
 
 Workflows can ensure rules are followed:
@@ -414,7 +409,6 @@ Workflows can ensure rules are followed:
    - Ensure documentation is updated
    - Validate security requirements are met
 ```
-
 ## Common Pitfalls and Solutions
 
 ### Overly Complex Workflows
@@ -423,36 +417,36 @@ Workflows can ensure rules are followed:
 **Solution:** Break into smaller, focused workflows
 
 **Instead of:**
+
 ```markdown
 # Deploy, Test, and Document Everything Workflow
 ```
-
 **Use:**
+
 ```markdown
 # Deploy to Staging Workflow
 # Run Integration Tests Workflow  
 # Update Documentation Workflow
 ```
-
 ### Vague Instructions
 
 **Problem:** Steps are too general
 **Solution:** Be specific about commands and expected outcomes
 
 **Instead of:**
+
 ```markdown
 1. **Test the application**
    - Make sure everything works
 ```
-
 **Use:**
+
 ```markdown
 1. **Run Test Suite**
    - Execute: `npm test`
    - Verify: All tests pass (0 failures)
    - Check: Coverage above 80%
 ```
-
 ### Missing Error Handling
 
 **Problem:** No guidance when things go wrong
@@ -467,7 +461,6 @@ Workflows can ensure rules are followed:
      - Clear cache: `npm run clean`
      - Retry build
 ```
-
 ## Best Practices Summary
 
 1. **Start Simple** - Begin with basic workflows and add complexity gradually

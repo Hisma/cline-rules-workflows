@@ -1,153 +1,162 @@
 # Technology Stack
 
 ## Framework Verification
-**Last Verified**: [Date - Update when tech stack is verified]
-**Verification Method**: Brave Search + Puppeteer + Context7 (if applicable)
-**Next Review**: [Date - Schedule monthly reviews]
 
-*All frameworks and libraries below have been verified using the [Verify Tech Stack Workflow](../global/workflows/verify-tech-stack.md)*
+**Last Verified**: [Date]
+**Verification Method**: Brave Search + Puppeteer + Context7 (if applicable)
+**Next Review**: [Date + 1 month]
+
+*All frameworks and libraries below have been verified using the [Verify Tech Stack Workflow](../workflows/verify-tech-stack.md)*
 
 ## Documentation Format
+
 **Markdown** - Primary documentation format for all content
 
 ### Key Libraries
+
 - **Standard Markdown**: CommonMark specification compliance
 - **GitHub Flavored Markdown**: Extended syntax for tables, code blocks, task lists
 - **Mermaid Diagrams**: For flowcharts, sequence diagrams, and architecture visuals
 - **LaTeX Math**: Mathematical expressions and formulas when needed
-- **[Add project-specific markdown extensions]**
 
 ## Research and Verification Tools
 
 ### MCP Servers
-- **Brave Search**: Primary research tool for current best practices (see [MCP Server Requirements](../global/rules/mcp-server-requirements.md))
+
+- **Brave Search**: Primary research tool for current best practices (see [MCP Server Requirements](../rules/mcp-server-requirements.md))
 - **Puppeteer**: Content extraction from official documentation sources
-- **Context7**: Framework documentation (only needed if using complex frameworks - often not needed for documentation sites)
+- **Context7**: Framework documentation (if applicable for your project)
 
 *All MCP servers must be configured before using research workflows*
-- **[Add other MCP servers as needed]**
 
 ### Research Methodology
-- **Primary Sources**: Official documentation, specifications, and authoritative sources
+
+- **Primary Sources**: Official documentation, GitHub repositories, and authoritative sources
 - **Cross-Verification**: Multiple source validation for accuracy
-- **Currency Checks**: Regular updates to ensure information remains current
-- **[Add project-specific research approaches]**
+- **Currency Checks**: Regular updates to ensure information reflects current versions
+- **Community Validation**: Verification through community feedback and testing
 
 ## Development Tools
 
 ### Version Control
+
 - **Git**: All documentation versioned and tracked
 - **GitHub**: Repository hosting with issue tracking and pull requests
 - **Branching Strategy**: Feature branches for major updates, main for stable content
-- **[Customize based on your workflow]**
 
 ### Content Management
-- **File Organization**: Structured directory hierarchy
-- **Naming Conventions**: Consistent file and directory naming
-- **Cross-References**: Internal linking and reference management
-- **[Add project-specific organization patterns]**
 
-## Static Site Generation (if applicable)
-- **[Site Generator]**: [Jekyll, Hugo, Sphinx, etc.]
-- **Theme**: [Theme name and customizations]
-- **Build Process**: [Description of build and deployment]
-- **Hosting**: [GitHub Pages, Netlify, etc.]
+- **File Organization**: Structured directory hierarchy with docs/ and templates/ separation
+- **Naming Conventions**: Consistent file and directory naming following template patterns
+- **Cross-References**: Internal linking between documentation and template examples
 
 ## Quality Assurance
 
 ### Validation Tools
+
 - **Link Checking**: Automated verification of external links
 - **Spell Check**: Grammar and spelling validation
-- **Markdown Linting**: Consistent formatting and structure
-- **Fact Verification**: Regular accuracy reviews using research tools
-- **[Add project-specific QA tools]**
+- **Markdown Linting**: Consistent formatting and structure (see [Markdown Standards](05-markdown-standards.md))
+- **Fact Verification**: Regular accuracy reviews using MCP research tools
+- **Template Testing**: Verification that templates work as documented
 
 ### Review Process
-- **Peer Review**: Subject matter expert validation
+
 - **Community Feedback**: User testing and feedback incorporation
-- **Regular Audits**: Scheduled content accuracy and completeness reviews
-- **[Customize review workflow]**
+- **Regular Audits**: Monthly content accuracy and completeness reviews
+- **Template Validation**: Testing templates with actual implementations
 
 ## MCP Integration Patterns
 
 ### Brave Search Usage
+
 ```markdown
-# Research Pattern
-1. Initial broad search for topic overview
-2. Targeted searches for specific technical details
-3. Cross-reference multiple authoritative sources
+# Research Pattern for [Project Type] Documentation
+1. Search for "[Technology] latest documentation"
+2. Verify current version capabilities
+3. Cross-reference with official GitHub repository
 4. Document search queries and results for reproducibility
 ```
 
 ### Puppeteer Content Extraction
+
 ```javascript
-// Standard pattern for extracting page content
-puppeteer_evaluate: "document.body.innerText"
+// Extract content from official documentation
+puppeteer_evaluate: "document.querySelector('.documentation-content').innerText"
 
-// For specific content sections
-puppeteer_evaluate: "document.querySelector('.documentation').innerText"
+// Extract version information
+puppeteer_evaluate: "document.querySelector('.version-info').innerText"
 
-// For structured data extraction
-puppeteer_evaluate: "Array.from(document.querySelectorAll('h2')).map(h => h.textContent)"
+// Extract feature lists
+puppeteer_evaluate: "Array.from(document.querySelectorAll('.feature-list li')).map(li => li.textContent)"
 ```
 
 ### Research Workflow Integration
-- **Search First**: Use Brave Search for initial research
-- **Verify with Puppeteer**: Extract content from official sources
-- **Document Sources**: Maintain citation trail
-- **Update Regularly**: Scheduled re-verification of facts
+
+- **Search First**: Use Brave Search for current capabilities and best practices
+- **Verify with Puppeteer**: Extract content from official documentation
+- **Document Sources**: Maintain citation trail to official sources
+- **Update Regularly**: Monthly re-verification of features and capabilities
 
 ## Documentation Standards
 
 ### Content Structure
+
 - **Hierarchical Organization**: Clear heading structure (H1-H6)
-- **Consistent Templates**: Standardized formats for different content types
-- **Cross-References**: Internal and external linking strategies
-- **Code Examples**: Syntax highlighting and executable examples
+- **Consistent Templates**: Standardized formats for documentation
+- **Cross-References**: Internal linking between docs/ and templates/ directories
+- **Code Examples**: Syntax highlighting for configuration examples
 
 ### Style Guidelines
-- **Clear Language**: Accessible to target audience
-- **Consistent Terminology**: Standardized vocabulary and definitions
-- **Visual Elements**: Appropriate use of diagrams, tables, and lists
-- **Actionable Content**: Step-by-step instructions and examples
+
+- **Clear Language**: Accessible to developers new to the technology
+- **Consistent Terminology**: Standardized vocabulary
+- **Visual Elements**: Appropriate use of diagrams for directory structures and workflows
+- **Actionable Content**: Step-by-step instructions with copy-paste commands
 
 ## Collaboration Tools
 
 ### Communication
-- **Issue Tracking**: GitHub Issues for content requests and bug reports
-- **Pull Requests**: Collaborative editing and review process
-- **Discussions**: Community feedback and improvement suggestions
-- **[Add project-specific collaboration tools]**
+
+- **GitHub Issues**: Content requests and bug reports for documentation and templates
+- **Pull Requests**: Collaborative editing and community contributions
+- **Discussions**: Community feedback and template improvement suggestions
 
 ### Documentation Maintenance
-- **Regular Updates**: Scheduled content review cycles
-- **Deprecation Notices**: Clear marking of outdated information
-- **Version History**: Changelog maintenance and release notes
-- **Migration Guides**: When content structure changes significantly
+
+- **Regular Updates**: Monthly content review cycles aligned with technology releases
+- **Template Evolution**: Quarterly review and update of templates based on community feedback
+- **Version History**: Changelog maintenance for template updates
+- **Migration Guides**: When template structure changes significantly
 
 ## Performance Considerations
 
 ### Content Optimization
-- **File Size**: Optimized images and media
-- **Load Times**: Efficient content organization
-- **Search Optimization**: Clear headings and keyword usage
-- **Mobile Friendly**: Responsive content design
+
+- **File Size**: Optimized for quick loading and easy navigation
+- **Load Times**: Efficient content organization with clear table of contents
+- **Search Optimization**: Clear headings and keyword usage for findability
+- **Mobile Friendly**: Responsive content design for various devices
 
 ### Research Efficiency
-- **Cached Results**: Avoid redundant research queries
-- **Batch Operations**: Efficient use of MCP tools
-- **Source Prioritization**: Focus on most authoritative sources first
-- **Update Scheduling**: Strategic timing for content refreshes
+
+- **Cached Results**: Avoid redundant research queries for stable features
+- **Batch Operations**: Efficient use of MCP tools for comprehensive updates
+- **Source Prioritization**: Focus on official documentation first
+- **Update Scheduling**: Strategic timing aligned with technology release cycles
 
 ## Project-Specific Technologies
-- **[Technology 1]**: [Description and usage]
-- **[Technology 2]**: [Description and usage]
-- **[Add other relevant technologies]**
+
+- **[Primary Technology]**: [Description and version requirements]
+- **[Secondary Technology]**: [Description and integration notes]
+- **[Development Environment]**: [Setup and configuration requirements]
+- **[Build Tools]**: [Build system and deployment tools]
 
 ## Notes
-- Customize this tech stack based on your specific documentation project
-- Remove sections that don't apply to your project
-- Add technologies and tools specific to your domain
-- Update regularly as your tech stack evolves
 
-This tech stack emphasizes accuracy, maintainability, and collaborative documentation creation while leveraging modern research and verification tools.
+- This tech stack is specifically designed for [Project Type] documentation
+- Templates are tested with actual implementations
+- MCP server integration is considered essential for effective documentation creation
+- Regular updates ensure alignment with current capabilities and best practices
+
+This tech stack emphasizes accuracy, maintainability, and practical utility while leveraging modern research and verification tools.
