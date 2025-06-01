@@ -2,21 +2,35 @@
 
 Welcome to the Cline Rules & Workflows system! This guide will help you understand both components and get started with your own setup.
 
+## ⚠️ Critical: Understanding Prompt Injection
+
+**Before you start**: Rules inject their entire content into every prompt sent to the LLM. This creates significant noise and token usage if multiple rules are active.
+
+### Key Principles
+
+- **Toggle-first approach** - Load many rules, activate few
+- **Recommended baseline** - Keep `collaboration-rules.md` enabled for most tasks
+- **Maximum recommendation** - 1 global rule + 1 project rule active at any time
+- **Task-specific activation** - Enable additional rules only for current work, then disable
+- **Prefer workflows** - Use workflows over rules when possible for cleaner prompts
+
 ## What Are Rules and Workflows?
 
-### Rules
+### Rules (Use Sparingly)
 
-Rules provide **persistent context** to Cline about your preferences, standards, and project requirements. They're automatically loaded and inform every conversation.
+Rules provide **persistent context** to Cline about your preferences, standards, and project requirements. When enabled, they automatically inject into every conversation.
 
-- **Always active** - Loaded automatically when Cline starts
-- **Provide context** - Help Cline understand your coding style, standards, and preferences
-- **Persistent guidance** - Apply to all interactions without needing to be invoked
+- **⚠️ Prompt injection** - Full content added to every prompt when enabled
+- **Toggle control** - Enable/disable through Cline UI switches
+- **Persistent guidance** - Apply to all interactions while active
+- **Best practice** - Keep most disabled, enable only what you need
 
-### Workflows
+### Workflows (Preferred for Most Tasks)
 
 Workflows provide **step-by-step processes** for complex tasks. They're invoked on-demand when you need to execute a specific procedure.
 
 - **On-demand execution** - Triggered using `/workflow-name.md` commands
+- **Clean prompts** - Only inject content when explicitly invoked
 - **Process automation** - Guide you through multi-step tasks
 - **Actionable instructions** - Provide specific commands and verification steps
 
@@ -24,24 +38,25 @@ Workflows provide **step-by-step processes** for complex tasks. They're invoked 
 
 Choose your path based on what you want to set up first:
 
-### Path 1: Start with Rules (Recommended for beginners)
+### Path 1: Start with Workflows (Recommended)
 
-1. [Set up global rules](rules/how-to-setup-rules.md) - Universal standards across all projects
-2. [Create project rules](rules/local-vs-global-rules.md) - Project-specific context
-3. [Add workflows later](workflows/how-to-setup-workflows.md) - Process automation
+1. [Set up workflows](workflows/how-to-setup-workflows.md) - Clean, on-demand process automation
+2. [Enable collaboration-rules.md](rules/how-to-setup-rules.md) - The recommended baseline global rule
+3. [Add minimal additional rules](rules/how-to-setup-rules.md) - Only essential context (1-2 rules max)
+4. [Use toggle strategy](integration/rules-vs-workflows.md) - Enable additional rules only when needed
 
-### Path 2: Start with Workflows (For process-focused users)
+### Path 2: Minimal Rules Setup (For context-focused users)
 
-1. [Set up workflows](workflows/how-to-setup-workflows.md) - Process automation
-2. [Add rules for context](rules/how-to-setup-rules.md) - Standards and preferences
-3. [Combine both](integration/rules-vs-workflows.md) - Integrated approach
+1. [Set up 1-2 global rules](rules/how-to-setup-rules.md) - Essential standards only
+2. [Keep most rules disabled](rules/local-vs-global-rules.md) - Toggle-first approach
+3. [Add workflows for processes](workflows/how-to-setup-workflows.md) - Clean automation
 
-### Path 3: Set up Both Together (For experienced users)
+### Path 3: Library Approach (For experienced users)
 
-1. [Understand the differences](integration/rules-vs-workflows.md) - How they work together
-2. [Set up global rules](rules/how-to-setup-rules.md) - Foundation standards
-3. [Set up global workflows](workflows/how-to-setup-workflows.md) - Common processes
-4. [Create project-specific versions](integration/combined-development-approach.md) - Tailored approach
+1. [Understand prompt injection](integration/rules-vs-workflows.md) - Critical knowledge
+2. [Create rule library](rules/how-to-setup-rules.md) - Many rules, most disabled
+3. [Create workflow library](workflows/how-to-setup-workflows.md) - Process automation
+4. [Master toggle strategy](integration/combined-development-approach.md) - Selective activation
 
 ## Directory Structure Overview
 
@@ -169,27 +184,40 @@ Before creating rules and workflows, set up MCP (Model Context Protocol) servers
 - **Current Best Practices** - Stay updated with latest framework changes
 - **Fact Checking** - Validate technical claims and procedures
 
+## Recommended Baseline: collaboration-rules.md
+
+**For most users, the single most valuable rule is `collaboration-rules.md`.**
+
+This global rule establishes effective collaboration patterns between you and Cline:
+
+- **Focuses on process** - How to work together, not technical specifics
+- **Minimal prompt noise** - Designed to be always-on without overwhelming prompts
+- **Universal applicability** - Useful across all project types and tasks
+- **Collaboration foundation** - Establishes clear communication and workflow patterns
+
+**Recommendation**: Enable `collaboration-rules.md` as your baseline rule, then add task-specific rules only when needed.
+
 ## First Steps
 
 ### 1. Choose Your Starting Point
 
 **New to Cline Rules & Workflows?**
 
-- Start with [Rules Setup](rules/how-to-setup-rules.md)
-- Create 2-3 basic global rules
-- Test with a simple project
+- Start with [Workflows Setup](workflows/how-to-setup-workflows.md) - Clean, on-demand processes
+- Enable `collaboration-rules.md` as your baseline global rule
+- Practice toggle strategy with simple tasks
 
 **Already using Cline?**
 
-- Review [Rules vs Workflows](integration/rules-vs-workflows.md)
-- Identify your most common processes
-- Convert them to workflows
+- **Critical**: Review [Rules vs Workflows](integration/rules-vs-workflows.md) - Understand prompt injection
+- Audit current rules - disable most, keep only essential ones active
+- Convert persistent processes to workflows for cleaner prompts
 
 **Working on a team?**
 
-- Establish team-wide global rules first
-- Create project-specific rules for current project
-- Add workflows for common team processes
+- Establish toggle-first culture - educate team on prompt injection
+- Create shared workflow library for common processes
+- Limit active rules to 1-2 team standards maximum
 
 ## Templates and Examples
 
@@ -216,26 +244,26 @@ This repository provides templates to get you started:
 
 ## Best Practices
 
-### Starting Out
+### Starting Out (Toggle-First Mindset)
 
-1. **Begin simple** - Start with 1-2 rules or workflows
-2. **Focus on pain points** - Address your biggest frustrations first
-3. **Test frequently** - Use your rules and workflows regularly
-4. **Iterate based on use** - Refine based on real experience
+1. **Begin with workflows** - Start with 2-3 workflows, avoid rules initially
+2. **Create rule library** - Build many rules but keep them disabled
+3. **Practice toggling** - Enable rules only for specific tasks, then disable
+4. **Monitor prompt size** - Check context window usage regularly
 
-### Growing Your System
+### Growing Your System (Selective Activation)
 
-1. **Add gradually** - Don't try to create everything at once
-2. **Stay organized** - Use clear naming and organization
-3. **Document changes** - Track what works and what doesn't
-4. **Share learnings** - Help others benefit from your experience
+1. **Build library, activate selectively** - Create many options, use few at once
+2. **Prefer workflows over rules** - Convert persistent rules to on-demand workflows
+3. **Document toggle strategies** - Track which combinations work for different tasks
+4. **Educate team members** - Share toggle-first approach and prompt injection awareness
 
-### Maintenance
+### Maintenance (Clean Prompts)
 
-1. **Review regularly** - Monthly check of relevance and accuracy
-2. **Update as needed** - Keep current with tool and process changes
-3. **Remove unused items** - Clean up rules and workflows you don't use
-4. **Version control** - Track changes to see evolution
+1. **Regular toggle audits** - Monthly review of what's actually enabled
+2. **Disable unused rules** - Turn off rules that aren't actively needed
+3. **Optimize for efficiency** - Prefer workflows for most tasks
+4. **Track prompt impact** - Monitor token usage and conversation quality
 
 ## Getting Help
 

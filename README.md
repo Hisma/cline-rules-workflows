@@ -2,11 +2,34 @@
 
 A comprehensive guide and template collection for customizing Cline's behavior through rules and workflows. Learn how these systems work and get started with ready-to-use templates for different project types.
 
+## ⚠️ Important: Prompt Injection & Toggle Usage
+
+**Rules inject their entire content into every prompt sent to the LLM.** This creates significant noise and token usage if you have multiple rules active simultaneously.
+
+### Best Practices for Rule Management
+
+- **Use toggles strategically** - Only activate rules you need for your current task
+- **Recommended maximum**: 1 global rule + 1 project rule active at any time
+- **Think library, not always-on** - Load many rules, but activate selectively
+- **Toggle frequently** - Turn rules on/off as your focus changes
+
+### Example Toggle Strategy
+
+- **General tasks**: Enable "collaboration-rules" global rule (recommended baseline)
+- **Starting a project**: Enable "project-setup" workflow + "collaboration-rules" rule
+- **Writing documentation**: Enable "markdown-standards" rule + "research-and-document" workflow
+- **Code review**: Enable "collaboration-rules" rule + "code-review-process" workflow
+- **Debugging**: Enable only "collaboration-rules" rule for clean collaboration
+
+### Recommended Baseline Rule
+
+**`collaboration-rules.md`** - This global rule establishes how you and Cline work together effectively. It's designed to be the one rule you keep enabled for most tasks, as it focuses on collaboration patterns rather than technical specifics.
+
 ## What Are Rules and Workflows?
 
-**Rules** provide persistent context to Cline about your preferences, standards, and project requirements. When enabled, they automatically inform every conversation. You can toggle individual rules on/off through the Cline UI.
+**Rules** provide persistent context to Cline about your preferences, standards, and project requirements. When enabled, they automatically inform every conversation. **Critical**: Use toggle switches to activate only what you need.
 
-**Workflows** provide step-by-step processes for complex tasks. They're invoked on-demand when you need to execute specific procedures. Like rules, individual workflows can be enabled/disabled through toggle switches in the UI.
+**Workflows** provide step-by-step processes for complex tasks. They're invoked on-demand when you need to execute specific procedures. Like rules, individual workflows can be enabled/disabled through toggle switches.
 
 Both systems support **global** (all projects) and **workspace** (project-specific) scoping.
 
@@ -63,10 +86,16 @@ Project-specific implementations:
      - **Documentation Projects**: Use templates from `templates/docsite-workspace/`
      - **Web Applications**: Use templates from `templates/web-app-workspace/`
 
-3. **Customize and Enable Templates**
+3. **Customize Templates (Keep Most Disabled)**
    - Edit the created files to match your specific project needs and preferences
-   - Use toggle switches in the UI to enable/disable rules and workflows as needed
+   - **Important**: Keep most rules/workflows disabled by default
+   - Only enable 1-2 rules maximum for your current task
    - Templates provide a starting point - adapt them to your workflow
+
+4. **Use Toggle-First Workflow**
+   - Before starting any task, consider which specific rules/workflows you need
+   - Enable only those rules, complete your task, then disable them
+   - This keeps your prompts clean and focused
 
 ### Method 2: Using Command Line (Alternative)
 
@@ -102,21 +131,25 @@ cp templates/web-app-workspace/workflows/* .clinerules/workflows/
 
 ## How It Works
 
-### Rules (Automatic)
+### Rules (Automatic - Use Sparingly)
 
 - **Global**: `~/Cline/Rules/` - Available for all projects
 - **Workspace**: `.clinerules/` - Available for current project only
-- **Loading**: When enabled, rules automatically inform conversations (global rules first, then workspace rules)
+- **Loading**: When enabled, rules automatically inject into every prompt (global rules first, then workspace rules)
+- **⚠️ Prompt Impact**: Each enabled rule adds its full content to every conversation
 - **Toggle Control**: Enable/disable individual rules using toggle switches in the UI
 - **UI Management**: Use the "Manage Cline Rules & Workflows" button (⚖️) to create, edit, and toggle rules
+- **Best Practice**: Start with all rules disabled, enable only what you need
 
-### Workflows (On-Demand)
+### Workflows (On-Demand - More Efficient)
 
 - **Global**: `~/Cline/Workflows/` - Available in all projects
 - **Workspace**: `.clinerules/workflows/` - Available in current project only
 - **Usage**: Invoke with `/workflow-name.md` in Cline chat (only enabled workflows are available)
+- **Prompt Impact**: Only inject content when explicitly invoked
 - **Toggle Control**: Enable/disable individual workflows using toggle switches in the UI
 - **UI Management**: Use the "Manage Cline Rules & Workflows" button (⚖️) to create, edit, and toggle workflows
+- **Best Practice**: Prefer workflows over rules when possible for cleaner prompts
 
 ## Repository Structure
 

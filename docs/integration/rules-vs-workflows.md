@@ -1,13 +1,25 @@
 # Cline Rules vs Workflows: Complete Guide
 
-Understanding the difference between Cline Rules and Workflows is essential for effective AI-assisted development. They serve different purposes and have different storage locations.
+Understanding the difference between Cline Rules and Workflows is essential for effective AI-assisted development. **Critical**: Rules inject content into every prompt, while workflows only inject when invoked.
+
+## ⚠️ Critical: Prompt Injection Impact
+
+**Rules inject their entire content into every prompt sent to the LLM.** This creates significant noise and token usage.
+
+### Key Impact
+
+- **Rules**: Full content added to every conversation when enabled
+- **Workflows**: Content only added when explicitly invoked
+- **Recommendation**: Prefer workflows over rules for most tasks
+- **Best Practice**: Use toggle switches to enable only essential rules
+- **Baseline Rule**: `collaboration-rules.md` is the recommended always-on global rule
 
 ## Overview
 
 Cline has two distinct systems for customization:
 
-1. **Rules** - Persistent guidance and context for how Cline should behave
-2. **Workflows** - Executable sequences of actions that can be invoked on-demand
+1. **Rules** - Persistent guidance (use sparingly with toggles)
+2. **Workflows** - On-demand executable sequences (preferred approach)
 
 ## Cline Rules
 
@@ -116,12 +128,14 @@ your-project/.clinerules/
 | Aspect | Rules | Workflows |
 |--------|-------|-----------|
 | **Purpose** | Persistent guidance | Executable actions |
-| **Activation** | Automatic | Manual (slash commands) |
-| **When Used** | Every conversation | On-demand |
+| **Activation** | Toggle-controlled | Manual (slash commands) |
+| **Prompt Impact** | ⚠️ Injects into every prompt | Clean - only when invoked |
+| **When Used** | Every conversation (if enabled) | On-demand |
+| **Best Practice** | Use sparingly with toggles | Preferred for most tasks |
 | **Content** | Guidelines, context | Step-by-step instructions |
 | **Global Location** | `~/Documents/Cline/.clinerules/` | `~/Documents/Cline/.clinerules/workflows/` |
 | **Project Location** | `.clinerules/` | `.clinerules/workflows/` |
-| **Invocation** | Automatic | `/workflow-name.md` |
+| **Invocation** | Toggle switches in UI | `/workflow-name.md` |
 
 ## Directory Structure Summary
 
@@ -150,19 +164,26 @@ your-project/
 
 ## Best Practices
 
-### For Rules
+### For Rules (Toggle-First Approach)
 
-- **Global Rules**: Keep general, widely applicable
-- **Project Rules**: Be specific to project context
+- **⚠️ Prompt Impact**: Remember rules inject into every prompt when enabled
+- **Toggle Strategy**: Enable only 1-2 rules maximum at any time
+- **Library Approach**: Create many rules, but keep most disabled
+- **Task-Specific**: Enable rules only for current work, then disable
+- **Global Rules**: Keep general, widely applicable, but use sparingly
+- **Project Rules**: Be specific to project context, enable selectively
 - **Content**: Focus on "what" and "why", not "how"
 - **Organization**: Use numbered prefixes for loading order
 
-### For Workflows
+### For Workflows (Preferred Approach)
 
+- **Clean Prompts**: Workflows only inject content when invoked
+- **Prefer Over Rules**: Convert persistent guidance to on-demand workflows
 - **Global Workflows**: Universal processes (PR reviews, deployments)
 - **Project Workflows**: Project-specific automation
 - **Content**: Detailed step-by-step instructions
 - **Tools**: Leverage Cline's built-in tools and external commands
+- **Efficiency**: Use workflows for most tasks to keep prompts clean
 
 ## Examples
 
@@ -218,12 +239,15 @@ You have access to the `gh` terminal command. Please review the PR that I specif
 
 ## Summary
 
-- **Rules** = Persistent guidance (automatic)
-- **Workflows** = Executable actions (on-demand)
+- **⚠️ Critical**: Rules inject into every prompt when enabled
+- **Rules** = Persistent guidance (use toggle switches sparingly)
+- **Workflows** = Executable actions (preferred - clean prompts)
+- **Best Practice**: Maximum 1-2 rules active at any time
+- **Toggle Strategy**: Enable rules only for current task, then disable
 - **Global Rules** = `~/Documents/Cline/.clinerules`
 - **Global Workflows** = `~/Documents/Cline/.clinerules/workflows`
 - **Project Rules** = `.clinerules`
 - **Project Workflows** = `.clinerules/workflows`
 - **Invoke Workflows** = `/workflow-name.md`
 
-Understanding this distinction will help you organize your Cline customizations effectively and avoid confusion between persistent guidance and executable automation.
+Understanding this distinction and the prompt injection impact will help you organize your Cline customizations effectively while maintaining clean, focused conversations.
