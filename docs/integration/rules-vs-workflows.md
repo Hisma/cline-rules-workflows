@@ -46,7 +46,8 @@ Rules provide persistent, system-level guidance to Cline. They define:
 
 ### Example Rule Structure
 
-```~/Documents/Cline/.clinerules/
+```tree
+~/Documents/Cline/.clinerules/
 ├── coding-standards.md
 ├── documentation-requirements.md
 └── security-guidelines.md
@@ -93,7 +94,8 @@ Workflows define executable sequences of actions for repetitive tasks. They can:
 
 ### Example Workflow Structure
 
-```~/Documents/Cline/.clinerules/
+```tree
+~/Documents/Cline/.clinerules/
 ├── coding-standards.md       # Global rule
 ├── documentation.md          # Global rule
 └── workflows/                # Global workflows directory
@@ -121,13 +123,17 @@ your-project/.clinerules/
 
 ## Directory Structure Summary
 
-```~/Documents/Cline/.clinerules/
+```tree
+~/Documents/Cline/.clinerules/
 ├── coding-standards.md       # Global rule
 ├── documentation.md          # Global rule
 ├── security.md               # Global rule
 └── workflows/                # Global workflows directory
-    ├── workflow1.md          # Global workflow
-    └── workflow2.md          # Global workflow
+    ├── code-review-process.md    # Global workflow
+    ├── project-setup.md          # Global workflow
+    ├── project-update.md         # Global workflow
+    ├── update-rules-workflows.md # Global workflow
+    └── verify-tech-stack.md      # Global workflow
 
 your-project/
 ├── .clinerules/
@@ -159,7 +165,6 @@ your-project/
 
 ### Rule Example (coding-standards.md)
 
-```markdown
 # Coding Standards
 
 ## General Principles
@@ -171,10 +176,9 @@ your-project/
 - Use strict mode
 - Prefer interfaces over types
 - Always specify return types
-```
+
 ### Workflow Example (pr-review.md)
 
-```markdown
 # PR Review Workflow
 
 You have access to the `gh` terminal command. Please review the PR that I specify.
@@ -185,7 +189,7 @@ You have access to the `gh` terminal command. Please review the PR that I specif
 3. Analyze changes and provide feedback
 4. Ask user for approval decision
 5. Execute: `gh pr review <PR-number> --approve --body "message"`
-```
+
 ## Troubleshooting
 
 ### Rules Not Loading

@@ -47,7 +47,8 @@ Choose your path based on what you want to set up first:
 
 Here's how rules and workflows are organized:
 
-```# Global (applies to all projects)
+```text
+# Global (applies to all projects)
 ~/Cline/Rules/
 ├── coding-standards.md           # Global rules
 ├── collaboration-rules.md        # Global rules
@@ -58,6 +59,7 @@ Here's how rules and workflows are organized:
 ├── code-review-process.md         # Global workflows
 ├── project-setup.md               # Global workflows
 ├── project-update.md              # Global workflows
+├── update-rules-workflows.md      # Global workflows
 └── verify-tech-stack.md           # Global workflows
 
 # Project-specific (applies to current project only)

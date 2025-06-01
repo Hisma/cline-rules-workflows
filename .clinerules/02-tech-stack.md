@@ -6,7 +6,7 @@
 **Verification Method**: Brave Search + Puppeteer + Context7 (if applicable)
 **Next Review**: 2025-06-30
 
-*All frameworks and libraries below have been verified using the [Verify Tech Stack Workflow](../templates/global/workflows/verify-tech-stack.md)*
+*All frameworks and libraries below have been verified using the [Verify Tech Stack Workflow](../templates/global/Workflows/verify-tech-stack.md)*
 
 ## Documentation Format
 
@@ -23,7 +23,7 @@
 
 ### MCP Servers
 
-- **Brave Search**: Primary research tool for current best practices (see [MCP Server Requirements](../templates/global/rules/mcp-server-requirements.md))
+- **Brave Search**: Primary research tool for current best practices (see [MCP Server Requirements](../templates/global/Rules/mcp-server-requirements.md))
 - **Puppeteer**: Content extraction from official documentation sources
 - **Context7**: Framework documentation (not needed for this documentation-only project)
 
@@ -70,13 +70,12 @@
 
 ### Brave Search Usage
 
-```markdown
 # Research Pattern for Cline Documentation
 1. Search for "Cline rules workflows latest documentation"
 2. Verify current Cline version capabilities
 3. Cross-reference with official Cline GitHub repository
 4. Document search queries and results for reproducibility
-```
+
 ### Puppeteer Content Extraction
 
 ```javascript

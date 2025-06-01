@@ -31,7 +31,7 @@ This repository provides templates for different project types:
 Apply to all your projects:
 
 - **Rules**: Coding standards, documentation requirements, MCP server setup, Collaboration Rules
-- **Workflows**: Research processes, tech stack verification, code review, project set-up, project clean-up, and project updates
+- **Workflows**: Research processes, tech stack verification, code review, project set-up, project clean-up, project updates, and rules/workflows maintenance
 
 ### Workspace Templates
 
@@ -115,7 +115,8 @@ cp templates/web-app-workspace/workflows/* .clinerules/workflows/
 
 ## Repository Structure
 
-```├── docs/                          # Detailed documentation
+```text
+├── docs/                          # Detailed documentation
 │   ├── getting-started.md         # Comprehensive setup guide
 │   ├── rules/                     # Rules documentation
 │   ├── workflows/                 # Workflows documentation
@@ -133,25 +134,6 @@ cp templates/web-app-workspace/workflows/* .clinerules/workflows/
 ```
 ## Key Features
 
-### Markdown Quality Standards
-
-Documentation templates include comprehensive markdown standards:
-
-- **Automated Linting** - `.markdownlint.json` configuration for consistent formatting
-- **Code Block Languages** - Proper syntax highlighting for all code examples
-- **Heading Hierarchy** - Structured document organization
-- **Link Validation** - Ensuring all references remain current and functional
-- **Template Compliance** - Consistent formatting across all documentation
-
-### Research-Driven Development
-
-Templates include workflows that leverage MCP servers for:
-
-- Comprehensive web research using Brave Search
-- Content extraction from official sources with Puppeteer
-- Framework documentation access through Context7
-- Fact-checking and verification processes
-
 ### Structured Templates
 
 - Consistent organization across project types
@@ -165,6 +147,15 @@ Templates include workflows that leverage MCP servers for:
 - Add project-specific customizations
 - Implement advanced research workflows
 - Scale to team and organizational standards
+
+### Research-Driven Development
+
+Templates include workflows that leverage MCP servers for:
+
+- Comprehensive web research using Brave Search
+- Content extraction from official sources with Puppeteer
+- Framework documentation access through Context7
+- Fact-checking and verification processes
 
 ## Documentation
 
@@ -205,18 +196,7 @@ This repository serves as a working example - it uses the docsite-workspace temp
 ## Support
 
 - **Documentation Issues** - Check the docs/ folder for detailed guidance
-- **Template Questions** - Review template files and their comments
 - **MCP Setup** - See [official Cline MCP documentation](https://docs.cline.bot/mcp/configuring-mcp-servers)
-- **Community** - Share your successful patterns and improvements
-
-## Contributing
-
-This repository provides a foundation for Cline customization. Feel free to:
-
-- Adapt templates for your needs
-- Share successful patterns
-- Contribute improvements
-- Create new project type templates
 
 ---
 

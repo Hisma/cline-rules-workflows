@@ -41,7 +41,7 @@ Create these foundational files:
 
 **~/Documents/Cline/.clinerules/coding-standards.md**
 
-```markdown
+
 # Coding Standards
 
 ## General Principles
@@ -58,7 +58,7 @@ Create these foundational files:
 ```
 **~/Documents/Cline/.clinerules/documentation.md**
 
-```markdown
+
 # Documentation Requirements
 
 ## Code Documentation

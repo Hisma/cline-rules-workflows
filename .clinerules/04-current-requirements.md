@@ -23,10 +23,9 @@
 
 ## Current Technical Debt
 
-- Outdated template references in documentation (docsite vs docsite-workspace)
 - Missing MCP integration guidance in setup documentation
 - Inconsistent terminology between docs and templates
-- Broken internal links due to template structure changes
+- Some internal links may need verification due to template structure changes
 
 ## Immediate Blockers
 

@@ -2,292 +2,289 @@
 
 ## Architecture Overview
 
-**Architecture Pattern**: [Documentation Site, Static Site, Content Management]
-**Last Updated**: [Date of last architecture review]
-**Next Review**: [Scheduled architecture review date]
+**Architecture Pattern**: Documentation Repository with Template Collection
+**Last Updated**: 2025-05-31
+**Next Review**: 2025-06-30
 
-*This document describes the structure and organization of the documentation site*
+*This document describes the structure and organization of the Cline Rules and Workflows documentation project*
 
-## Site Architecture
+## Project Architecture
 
 ### High-Level Structure
 
-```Documentation Site
-├── Content Layer (Markdown files)
-├── Presentation Layer (Templates/Themes)
-├── Build System (Static Site Generator)
-└── Deployment Layer (Hosting Platform)
+```text
+Cline Rules & Workflows Documentation
+├── Content Layer (.clinerules/, docs/)
+├── Template Collection (templates/)
+├── Version Control (Git/GitHub)
+└── Research Integration (MCP Servers)
 ```
+
 ### Information Architecture
 
-```Documentation Structure
-├── Getting Started/
-│   ├── Installation
-│   ├── Quick Start
-│   └── Basic Concepts
-├── User Guides/
-│   ├── Feature Documentation
-│   ├── Tutorials
-│   └── How-to Guides
-├── Reference/
-│   ├── API Documentation
-│   ├── Configuration
-│   └── Troubleshooting
-└── Developer Resources/
-    ├── Contributing
-    ├── Architecture
-    └── Development Setup
+```text
+Project Structure
+├── Documentation (docs/)
+│   ├── Getting Started
+│   ├── Rules Setup & Usage
+│   ├── Workflows Creation
+│   └── Integration Guides
+├── Template Collection (templates/)
+│   ├── Global Templates
+│   ├── Workspace-Specific Templates
+│   └── Project Examples
+├── Project Rules (.clinerules/)
+│   ├── Project Overview
+│   ├── Tech Stack
+│   ├── Architecture (this file)
+│   ├── Current Requirements
+│   └── Standards & Guidelines
+└── Configuration Files
+    ├── .markdownlint.json
+    ├── .gitignore
+    └── README.md
 ```
+
 ## Content Architecture
 
 ### Content Organization
 
-- **Hierarchical Structure**: [How content is organized in folders and categories]
-- **Navigation Strategy**: [How users navigate through the documentation]
-- **Cross-References**: [How content links to related information]
-- **Search Strategy**: [How content is made discoverable]
+- **Hierarchical Structure**: Clear separation between educational content (docs/) and practical templates (templates/)
+- **Navigation Strategy**: Progressive learning path from basic concepts to advanced implementations
+- **Cross-References**: Extensive linking between documentation and corresponding templates
+- **Search Strategy**: Clear headings, consistent terminology, and comprehensive README navigation
 
 ### Content Types
 
-- **Conceptual Documentation**: [Explanatory content about concepts and principles]
-- **Procedural Documentation**: [Step-by-step guides and tutorials]
-- **Reference Documentation**: [API docs, configuration options, troubleshooting]
-- **Examples and Samples**: [Code examples, templates, and sample projects]
+- **Educational Documentation**: Explanatory content about Cline rules and workflows concepts
+- **Setup Guides**: Step-by-step instructions for implementing rules and workflows
+- **Template Collection**: Ready-to-use rule and workflow templates for different project types
+- **Integration Examples**: Practical examples showing MCP server integration and research-driven development
 
 ### Content Lifecycle
 
-1. **Content Creation** → Research and Writing
-2. **Review Process** → Technical and Editorial Review
-3. **Publication** → Build and Deployment
-4. **Maintenance** → Updates and Improvements
-5. **Archival** → Deprecation and Removal
+1. **Research Phase** → MCP-driven fact-checking and verification
+2. **Content Creation** → Documentation writing with template development
+3. **Template Testing** → Validation with actual Cline implementations
+4. **Community Review** → Feedback incorporation and improvements
+5. **Maintenance** → Regular updates aligned with Cline releases
 
 ## Technical Architecture
 
-### Static Site Generation
+### Documentation System
 
-- **Generator**: [Jekyll, Hugo, Gatsby, Next.js, VitePress, etc.]
-- **Build Process**: [How content is transformed into static HTML]
-- **Asset Processing**: [How images, CSS, and JavaScript are handled]
-- **Performance Optimization**: [Minification, compression, caching]
+- **Format**: Pure Markdown with GitHub Flavored Markdown extensions
+- **Processing**: No build system - direct consumption by users and Cline
+- **Asset Management**: Inline code examples, directory trees, and configuration snippets
+- **Version Control**: Git-based with clear commit messages and branching strategy
 
-### Content Management
+### Template Management
 
-- **Source Format**: [Markdown, MDX, or other content formats]
-- **Frontmatter Schema**: [Metadata structure for content files]
-- **Asset Management**: [How images and files are organized and referenced]
-- **Version Control**: [How content changes are tracked and managed]
+- **Structure**: Organized by scope (global vs workspace) and project type
+- **Customization**: Placeholder-based templates for easy adaptation
+- **Validation**: Regular testing to ensure templates work with current Cline versions
+- **Distribution**: Direct file copying from repository to user projects
 
 ### Directory Structure
 
-```docs-site/
-├── content/
-│   ├── getting-started/
-│   ├── guides/
-│   ├── reference/
-│   └── examples/
-├── assets/
-│   ├── images/
-│   ├── styles/
-│   └── scripts/
+```text
+cline-rules-workflows/
+├── .clinerules/
+│   ├── 01-project-overview.md
+│   ├── 02-tech-stack.md
+│   ├── 03-architecture.md (this file)
+│   ├── 04-current-requirements.md
+│   └── 05-markdown-standards.md
+├── docs/
+│   ├── getting-started.md
+│   ├── rules/
+│   │   ├── how-to-setup-rules.md
+│   │   └── local-vs-global-rules.md
+│   ├── workflows/
+│   │   ├── how-to-setup-workflows.md
+│   │   ├── creating-custom-workflows.md
+│   │   └── workflow-best-practices.md
+│   └── integration/
+│       ├── rules-vs-workflows.md
+│       └── combined-development-approach.md
 ├── templates/
-│   ├── layouts/
-│   ├── components/
-│   └── partials/
-├── config/
-│   ├── site-config
-│   ├── navigation
-│   └── build-settings
-└── public/
-    └── generated-site/
+│   ├── global/
+│   │   ├── Rules/
+│   │   │   ├── coding-standards.md
+│   │   │   ├── collaboration-rules.md
+│   │   │   ├── documentation-requirements.md
+│   │   │   └── mcp-server-requirements.md
+│   │   └── Workflows/
+│   │       ├── code-review-process.md
+│   │       ├── project-setup.md
+│   │       ├── project-update.md
+│   │       └── verify-tech-stack.md
+│   ├── docsite-workspace/
+│   │   ├── rules/ (5 template files)
+│   │   └── workflows/ (3 template files)
+│   └── web-app-workspace/
+│       ├── rules/ (4 template files)
+│       └── workflows/ (2 template files)
+├── .markdownlint.json
+├── .gitignore
+└── README.md
 ```
+
+## Research and Verification Architecture
+
+### MCP Integration Strategy
+
+- **Primary Research**: Brave Search for current Cline capabilities and best practices
+- **Content Verification**: Puppeteer for extracting information from official sources
+- **Documentation Support**: Context7 for framework-specific information when needed
+- **Fact-Checking Workflow**: Regular verification cycles to ensure accuracy
+
+### Research Methodology
+
+- **Source Prioritization**: Official Cline documentation → GitHub repository → Community resources
+- **Cross-Verification**: Multiple source validation for all Cline features and capabilities
+- **Currency Maintenance**: Monthly reviews to ensure information reflects current versions
+- **Documentation Trail**: Clear citation of sources and research queries
+
+### Quality Assurance Integration
+
+- **Automated Validation**: Markdown linting with .markdownlint.json configuration
+- **Link Verification**: Regular checking of external links to Cline resources
+- **Template Testing**: Validation that all templates work with actual Cline implementations
+- **Community Feedback**: GitHub issues and discussions for continuous improvement
+
 ## User Experience Architecture
 
-### Navigation Design
+### Learning Path Design
 
-- **Primary Navigation**: [Main site navigation structure]
-- **Secondary Navigation**: [Section-specific navigation]
-- **Breadcrumbs**: [Hierarchical navigation aids]
-- **Search Interface**: [How users search for content]
+- **Progressive Complexity**: Start with basic concepts, advance to sophisticated implementations
+- **Practical Focus**: Every concept paired with actionable templates and examples
+- **Self-Contained Modules**: Each section can be understood independently
+- **Cross-Reference Network**: Extensive linking between related concepts and templates
 
-### Responsive Design
+### Template Usage Flow
 
-- **Mobile Strategy**: [How the site adapts to mobile devices]
-- **Tablet Experience**: [Medium screen optimization]
-- **Desktop Layout**: [Full-featured desktop experience]
-- **Accessibility**: [WCAG compliance and accessibility features]
+1. **Concept Learning** → Read documentation in docs/ folder
+2. **Template Selection** → Choose appropriate template from templates/ folder
+3. **Customization** → Adapt template placeholders to specific project needs
+4. **Implementation** → Copy files to .clinerules/ or .clineprojects/ as appropriate
+5. **Validation** → Test with actual Cline usage and iterate
 
-### Performance Considerations
+### Accessibility Considerations
 
-- **Page Load Speed**: [Target load times and optimization strategies]
-- **Image Optimization**: [Responsive images and format optimization]
-- **Code Splitting**: [How JavaScript and CSS are optimized]
-- **Caching Strategy**: [Browser and CDN caching]
+- **Clear Structure**: Consistent heading hierarchy and navigation
+- **Plain Language**: Accessible to developers new to Cline customization
+- **Complete Examples**: Full, working examples rather than partial snippets
+- **Multiple Formats**: Both conceptual explanations and practical templates
 
 ## Content Workflow
 
-### Authoring Process
+### Research-Driven Development
 
-1. **Content Planning** → Outline and Structure
-2. **Research Phase** → Information Gathering
-3. **Writing Process** → Content Creation
-4. **Review Cycle** → Technical and Editorial Review
-5. **Publication** → Build and Deployment
+1. **Information Gathering** → Use MCP servers to research current Cline capabilities
+2. **Content Planning** → Outline documentation and identify template needs
+3. **Parallel Development** → Create educational content and practical templates simultaneously
+4. **Cross-Validation** → Ensure documentation and templates align perfectly
+5. **Community Testing** → Validate with actual Cline users and implementations
 
-### Review and Approval
+### Maintenance Process
 
-- **Technical Review**: [Subject matter expert validation]
-- **Editorial Review**: [Language, style, and clarity review]
-- **Accessibility Review**: [Ensuring content is accessible]
-- **User Testing**: [Validation with actual users]
+- **Monthly Reviews**: Verify Cline feature accuracy using MCP research workflows
+- **Quarterly Updates**: Review and update templates based on Cline releases
+- **Continuous Integration**: Incorporate community feedback and improvements
+- **Version Alignment**: Ensure all content reflects current Cline capabilities
 
-### Content Maintenance
+### Quality Control
 
-- **Regular Updates**: [How content is kept current]
-- **Link Checking**: [Ensuring external links remain valid]
-- **Analytics Review**: [Using data to improve content]
-- **User Feedback**: [How user feedback is incorporated]
-
-## Search and Discovery
-
-### Search Implementation
-
-- **Search Engine**: [Algolia, Elasticsearch, built-in search]
-- **Indexing Strategy**: [What content is indexed and how]
-- **Search Interface**: [How users interact with search]
-- **Result Ranking**: [How search results are prioritized]
-
-### Content Discoverability
-
-- **SEO Optimization**: [How content is optimized for search engines]
-- **Internal Linking**: [Strategy for linking related content]
-- **Tags and Categories**: [Content classification system]
-- **Related Content**: [How related articles are suggested]
-
-## Deployment Architecture
-
-### Build Pipeline
-
-1. **Content Changes** → Version Control Trigger
-2. **Build Process** → Static Site Generation
-3. **Quality Checks** → Link validation, accessibility testing
-4. **Deployment** → Push to hosting platform
-5. **Cache Invalidation** → CDN cache refresh
-
-### Hosting Strategy
-
-- **Primary Hosting**: [Netlify, Vercel, GitHub Pages, AWS S3, etc.]
-- **CDN Configuration**: [Global content distribution]
-- **Domain Management**: [Custom domain setup and SSL]
-- **Backup Strategy**: [Content and site backups]
-
-### Environment Management
-
-- **Development Environment**: [Local development setup]
-- **Staging Environment**: [Preview and testing environment]
-- **Production Environment**: [Live documentation site]
-- **Branch Previews**: [Preview builds for feature branches]
-
-## Analytics and Monitoring
-
-### User Analytics
-
-- **Page Views**: [Most popular content and user paths]
-- **Search Analytics**: [What users search for and success rates]
-- **User Behavior**: [How users navigate and interact with content]
-- **Performance Metrics**: [Page load times and user experience metrics]
-
-### Content Performance
-
-- **Content Effectiveness**: [Which content helps users achieve goals]
-- **Search Performance**: [How well content ranks in search results]
-- **Feedback Analysis**: [User ratings and feedback trends]
-- **Conversion Tracking**: [How documentation drives desired actions]
-
-### Technical Monitoring
-
-- **Site Uptime**: [Availability monitoring and alerting]
-- **Performance Monitoring**: [Page speed and Core Web Vitals]
-- **Error Tracking**: [404s, broken links, and other issues]
-- **Build Monitoring**: [Build success rates and deployment health]
-
-## Content Strategy
-
-### Content Planning
-
-- **Content Audit**: [Regular review of existing content]
-- **Gap Analysis**: [Identifying missing or outdated content]
-- **User Research**: [Understanding user needs and pain points]
-- **Content Roadmap**: [Planned content creation and updates]
-
-### Style and Standards
-
-- **Writing Style Guide**: [Tone, voice, and writing standards]
-- **Technical Standards**: [Code examples, formatting, and conventions]
-- **Visual Standards**: [Image guidelines, diagrams, and visual elements]
-- **Accessibility Standards**: [Ensuring content is accessible to all users]
-
-### Localization Strategy
-
-- **Multi-language Support**: [If applicable, how multiple languages are handled]
-- **Cultural Adaptation**: [How content is adapted for different regions]
-- **Translation Workflow**: [Process for translating and maintaining content]
-- **Regional Deployment**: [How localized content is deployed]
+- **Technical Accuracy**: All Cline features verified through official sources
+- **Template Validation**: Regular testing of templates with actual Cline implementations
+- **Documentation Consistency**: Standardized formatting and terminology
+- **Link Maintenance**: Regular verification of external references
 
 ## Integration Architecture
 
-### External Integrations
+### Cline Integration
 
-- **API Documentation**: [How API docs are generated and integrated]
-- **Code Examples**: [How code samples are maintained and tested]
-- **Issue Tracking**: [Integration with bug tracking and feedback systems]
-- **Community Platforms**: [Integration with forums, chat, or community tools]
+- **Direct Usage**: Templates designed for direct copying to user projects
+- **Scope Flexibility**: Support for both global (.clinerules/) and workspace (.clineprojects/) scoping
+- **Version Compatibility**: Regular updates to maintain compatibility with current Cline versions
+- **Feature Coverage**: Comprehensive coverage of Cline rules and workflows capabilities
 
-### Development Integration
+### Development Workflow Integration
 
-- **Documentation in Code**: [How code comments become documentation]
-- **Automated Updates**: [How documentation stays in sync with code changes]
-- **Version Synchronization**: [How docs versions align with product versions]
-- **Release Notes**: [How release information is incorporated]
+- **Git-Based**: All content versioned and tracked with clear commit messages
+- **Community Collaboration**: GitHub issues, pull requests, and discussions
+- **Template Evolution**: Regular updates based on community feedback and Cline developments
+- **Documentation Synchronization**: Ensure docs and templates always align
 
-## Maintenance and Evolution
+### MCP Server Integration
 
-### Regular Maintenance
+- **Research Automation**: Automated fact-checking and verification workflows
+- **Content Validation**: Regular accuracy reviews using Brave Search and Puppeteer
+- **Source Documentation**: Clear trails of research queries and verification methods
+- **Update Scheduling**: Strategic timing aligned with Cline release cycles
 
-- **Content Updates**: [Schedule for reviewing and updating content]
-- **Technical Updates**: [Keeping the site platform and dependencies current]
-- **Performance Optimization**: [Regular performance reviews and improvements]
-- **Security Updates**: [Keeping the site secure and up-to-date]
+## Scalability and Evolution
 
-### Evolution Strategy
+### Content Scalability
 
-- **User Feedback Integration**: [How user feedback drives site improvements]
-- **Technology Upgrades**: [How the site platform evolves over time]
-- **Feature Development**: [Adding new capabilities and features]
-- **Scalability Planning**: [How the site grows with increased content and users]
+- **Modular Design**: Each template and documentation section is self-contained
+- **Template Expansion**: Easy addition of new workspace types and project patterns
+- **Documentation Growth**: Clear structure supports addition of new concepts and guides
+- **Community Contributions**: Structured approach for incorporating community templates
 
-## Disaster Recovery
+### Technical Evolution
 
-### Backup Strategy
+- **Cline Compatibility**: Architecture designed to evolve with Cline feature updates
+- **Template Versioning**: Support for multiple template versions as Cline evolves
+- **Research Tool Integration**: Flexible MCP server integration for enhanced research capabilities
+- **Community Feedback Integration**: Structured approach for incorporating user suggestions
 
-- **Content Backups**: [Version control and additional backup strategies]
-- **Site Backups**: [Full site backups and restoration procedures]
-- **Database Backups**: [If applicable, database backup strategies]
-- **Asset Backups**: [Images, files, and other assets]
+### Maintenance Strategy
 
-### Recovery Procedures
+- **Regular Reviews**: Monthly accuracy checks and quarterly comprehensive reviews
+- **Community Engagement**: Active solicitation and incorporation of user feedback
+- **Template Testing**: Continuous validation with real Cline implementations
+- **Documentation Alignment**: Ensure educational content and templates always match
 
-- **Content Recovery**: [How to restore lost or corrupted content]
-- **Site Recovery**: [How to restore the site after outages or issues]
-- **Rollback Procedures**: [How to revert problematic changes]
-- **Communication Plan**: [How to communicate during outages or issues]
+## Performance and Efficiency
+
+### Content Optimization
+
+- **File Organization**: Logical structure for quick navigation and discovery
+- **Clear Navigation**: Comprehensive README and consistent internal linking
+- **Efficient Learning**: Progressive complexity with practical examples
+- **Template Accessibility**: Easy discovery and implementation of appropriate templates
+
+### Research Efficiency
+
+- **MCP Integration**: Automated research and verification workflows
+- **Source Caching**: Avoid redundant research for stable Cline features
+- **Batch Operations**: Efficient use of research tools for comprehensive updates
+- **Strategic Scheduling**: Align research cycles with Cline development patterns
+
+## Security and Reliability
+
+### Content Integrity
+
+- **Source Verification**: All information verified against official Cline sources
+- **Version Control**: Complete history of all changes with clear attribution
+- **Link Safety**: Regular verification of external links for safety and currency
+- **Template Validation**: Ensure all templates are safe and follow best practices
+
+### Reliability Measures
+
+- **Multiple Source Validation**: Cross-reference information across multiple authoritative sources
+- **Community Validation**: User testing and feedback for template effectiveness
+- **Regular Updates**: Proactive maintenance to prevent information decay
+- **Error Handling**: Clear documentation of limitations and troubleshooting guidance
 
 ## Notes
 
-- Replace all bracketed placeholders with project-specific information
-- Update this document when making significant architectural changes
-- Review this document regularly to ensure it stays current
-- Use this as a reference for content creators and site maintainers
-- Include diagrams and visual representations where helpful
+- This architecture emphasizes practical utility over theoretical completeness
+- Templates are designed to be immediately usable with minimal customization
+- MCP server integration is considered essential for maintaining accuracy
+- The dual educational + template approach serves both learning and implementation needs
+- Regular community feedback drives continuous improvement and evolution
 
-This architecture document should evolve with the documentation site and serve as a living reference for the content and development team.
+This architecture supports the project's goal of providing comprehensive, accurate, and immediately actionable guidance for Cline rules and workflows implementation.

@@ -19,7 +19,7 @@ Let's create a simple workflow to get started:
 
 ### Example: Code Cleanup Workflow
 
-```markdown
+
 # Code Cleanup Workflow
 
 This workflow helps clean up and organize code before committing.
@@ -68,7 +68,7 @@ This workflow helps clean up and organize code before committing.
 
 Every workflow should have these core elements:
 
-```markdown
+
 # Workflow Title
 
 Brief description of what this workflow does.
@@ -88,7 +88,7 @@ Brief description of what this workflow does.
 
 For more complex workflows, consider adding:
 
-```markdown
+
 # Advanced Workflow Title
 
 Detailed description and when to use this workflow.
@@ -140,7 +140,7 @@ Detailed description and when to use this workflow.
 
 **Code Review Workflow:**
 
-```markdown
+
 # Code Review Workflow
 
 ## Steps
@@ -166,7 +166,7 @@ Detailed description and when to use this workflow.
 ```
 **Dependency Update Workflow:**
 
-```markdown
+
 # Update Dependencies Workflow
 
 ## Steps
@@ -194,7 +194,7 @@ Detailed description and when to use this workflow.
 
 **Production Deployment:**
 
-```markdown
+
 # Deploy to Production Workflow
 
 ## Prerequisites
@@ -226,9 +226,31 @@ Detailed description and when to use this workflow.
 ```
 ### 3. Maintenance Workflows
 
+**Rules and Workflows Maintenance:**
+
+
+# Update Rules & Workflows Workflow
+
+## Steps
+1. **Project Assessment**
+   - Review project structure and recent changes
+   - Identify what has evolved since rules were last updated
+   - Note new requirements or constraints
+
+2. **Rules Alignment Review**
+   - Update all files in .clinerules/ to reflect current reality
+   - Refresh technical information and priorities
+   - Ensure project descriptions match current state
+
+3. **Workflow Updates**
+   - Review and update workflows as needed
+   - Fix outdated procedures and tool references
+   - Verify workflows align with current processes
+```
+
 **Database Maintenance:**
 
-```markdown
+
 # Database Maintenance Workflow
 
 ## Steps
@@ -258,7 +280,7 @@ Detailed description and when to use this workflow.
 
 Handle different scenarios within workflows:
 
-```markdown
+
 ## Steps
 
 1. **Determine Environment**
@@ -282,7 +304,7 @@ Handle different scenarios within workflows:
 
 Reference other workflows to build complex processes:
 
-```markdown
+
 ## Steps
 
 1. **Pre-release Preparation**
@@ -299,7 +321,7 @@ Reference other workflows to build complex processes:
 
 Include robust error handling:
 
-```markdown
+
 3. **Deploy Application**
    - Execute deployment script: `./deploy.sh production`
    - Monitor deployment progress
@@ -361,7 +383,7 @@ Include robust error handling:
 
 Track workflow evolution:
 
-```markdown
+
 # Workflow Name
 
 <!-- 
@@ -383,7 +405,7 @@ Rules provide context that workflows can reference:
 
 **Rule (in coding-standards.md):**
 
-```markdown
+
 ## Testing Standards
 - Minimum 80% code coverage required
 - All tests must pass before deployment
@@ -391,7 +413,7 @@ Rules provide context that workflows can reference:
 ```
 **Workflow (in deploy-staging.md):**
 
-```markdown
+
 1. **Verify Test Requirements**
    - Run coverage report: `npm run coverage`
    - Ensure coverage meets project standard (check coding-standards.md)
@@ -402,7 +424,7 @@ Rules provide context that workflows can reference:
 
 Workflows can ensure rules are followed:
 
-```markdown
+
 2. **Code Quality Check**
    - Verify code follows project standards (see coding-standards.md)
    - Check for proper error handling
@@ -418,12 +440,12 @@ Workflows can ensure rules are followed:
 
 **Instead of:**
 
-```markdown
+
 # Deploy, Test, and Document Everything Workflow
 ```
 **Use:**
 
-```markdown
+
 # Deploy to Staging Workflow
 # Run Integration Tests Workflow  
 # Update Documentation Workflow
@@ -435,13 +457,13 @@ Workflows can ensure rules are followed:
 
 **Instead of:**
 
-```markdown
+
 1. **Test the application**
    - Make sure everything works
 ```
 **Use:**
 
-```markdown
+
 1. **Run Test Suite**
    - Execute: `npm test`
    - Verify: All tests pass (0 failures)
@@ -452,7 +474,7 @@ Workflows can ensure rules are followed:
 **Problem:** No guidance when things go wrong
 **Solution:** Include troubleshooting and recovery steps
 
-```markdown
+
 2. **Build Application**
    - Run: `npm run build`
    - **If build fails:**

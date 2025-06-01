@@ -122,6 +122,13 @@ I maintain global workflows for processes that apply across all projects:
 - Check for security vulnerabilities
 - Optimize project structure
 
+**update-rules-workflows.md** - Rules and workflows maintenance
+
+- Review project structure and recent changes
+- Update .clinerules/ files to reflect current reality
+- Refresh technical information and priorities
+- Ensure project descriptions match current state
+
 ### Project Workflows Structure
 
 **Web Application Projects:**

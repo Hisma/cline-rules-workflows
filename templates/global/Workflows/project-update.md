@@ -40,7 +40,7 @@ This workflow guides you through updating an existing project to ensure it stays
 
 **Document Current State:**
 
-```markdown
+
 ## Project Update Assessment - [Date]
 
 ### Current Tech Stack
@@ -119,7 +119,7 @@ This workflow guides you through updating an existing project to ensure it stays
 
 **Document your update strategy:**
 
-```markdown
+
 ## Update Plan - [Date]
 
 ### Phase 1: Preparation
@@ -192,7 +192,7 @@ This workflow guides you through updating an existing project to ensure it stays
 
 **Comprehensive testing approach:**
 
-```markdown
+
 ## Testing Checklist
 
 ### Automated Tests
@@ -238,7 +238,7 @@ This workflow guides you through updating an existing project to ensure it stays
 
 3. **Change Documentation**
 
-   ```markdown
+   
    ## Update Log - [Date]
    
    ### Updated Components

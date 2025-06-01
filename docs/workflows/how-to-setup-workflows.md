@@ -41,7 +41,7 @@ mkdir -p ~/Documents/Cline/.clinerules/workflows
 
 **~/Documents/Cline/.clinerules/workflows/code-review.md**
 
-```markdown
+
 # Code Review Workflow
 
 This workflow guides you through performing a comprehensive code review.
@@ -77,7 +77,7 @@ This workflow guides you through performing a comprehensive code review.
 
 **~/Documents/Cline/.clinerules/workflows/project-setup.md**
 
-```markdown
+
 # Project Setup Workflow
 
 This workflow helps you set up a new project with proper structure and configuration.
@@ -115,7 +115,7 @@ Advanced workflows can leverage MCP servers for research-driven development:
 
 **~/Documents/Cline/.clinerules/workflows/research-and-document.md**
 
-```markdown
+
 # Research and Document Workflow
 
 This workflow uses MCP servers to research and create accurate documentation.
@@ -144,7 +144,7 @@ This workflow uses MCP servers to research and create accurate documentation.
 ```
 **~/Documents/Cline/.clinerules/workflows/verify-tech-stack.md**
 
-```markdown
+
 # Tech Stack Verification Workflow
 
 This workflow verifies and updates technology stack information.
@@ -171,6 +171,31 @@ This workflow verifies and updates technology stack information.
    - Add migration notes if needed
    - Document verification date and sources
 ```
+
+**~/Documents/Cline/.clinerules/workflows/update-rules-workflows.md**
+
+
+# Update Rules & Workflows
+
+This workflow guides you through updating your project's .clinerules/ files to ensure they remain aligned with your project's current state and needs.
+
+## Steps
+
+1. **Project Assessment**
+   - Review project structure and recent changes
+   - Identify what has evolved since rules were last updated
+   - Note new requirements or constraints
+
+2. **Rules Alignment Review**
+   - Update all files in .clinerules/ to reflect current reality
+   - Refresh technical information and priorities
+   - Ensure project descriptions match current state
+
+3. **Workflow Updates**
+   - Review and update workflows as needed
+   - Fix outdated procedures and tool references
+   - Verify workflows align with current processes
+```
 ## Setting Up Project-Specific Workflows
 
 Project workflows are specific to individual projects and handle project-unique processes.
@@ -186,7 +211,7 @@ mkdir .clinerules/workflows
 
 **your-project/.clinerules/workflows/deploy-staging.md**
 
-```markdown
+
 # Deploy to Staging Workflow
 
 This workflow handles deployment to the staging environment.
@@ -284,7 +309,7 @@ Workflows are invoked using slash commands in Cline:
 
 Create workflows that adapt based on project context:
 
-```markdown
+
 # Conditional Deploy Workflow
 
 ## Steps
@@ -303,7 +328,7 @@ Create workflows that adapt based on project context:
 
 Create workflows that can call other workflows:
 
-```markdown
+
 # Full Release Workflow
 
 ## Steps

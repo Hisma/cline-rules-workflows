@@ -67,7 +67,8 @@ This rule ensures all markdown content follows consistent formatting standards a
 
 ### Directory Structures and File Trees
 
-```project/
+```tree
+project/
 ├── docs/
 │   ├── getting-started.md
 │   └── api/
@@ -154,7 +155,7 @@ interface Config {
 ```
 
 **Markdown Examples:**
-```markdown
+
 # Heading 1
 ## Heading 2
 
@@ -175,7 +176,6 @@ File paths: /path/to/file
 
 ### Proper Heading Hierarchy
 
-```markdown
 # Document Title (H1)
 
 ## Major Section (H2)
@@ -187,7 +187,6 @@ File paths: /path/to/file
 ##### Minor Section (H5)
 
 ###### Smallest Section (H6)
-```
 
 ### Heading Best Practices
 
@@ -200,65 +199,51 @@ File paths: /path/to/file
 
 ### Unordered Lists
 
-```markdown
 - First item
 - Second item
   - Nested item
   - Another nested item
 - Third item
-```
 
 ### Ordered Lists
 
-```markdown
 1. First step
 2. Second step
    1. Sub-step
    2. Another sub-step
 3. Third step
-```
 
 ### Task Lists
 
-```markdown
 - [ ] Incomplete task
 - [x] Completed task
 - [ ] Another incomplete task
-```
 
 ## Link and Reference Standards
 
 ### Internal Links
 
-```markdown
 [Link Text](relative/path/to/file.md)
 [Section Link](#heading-anchor)
 [Documentation](../docs/getting-started.md)
-```
 
 ### External Links
 
-```markdown
 [External Site](https://example.com)
 [Documentation](https://docs.example.com/guide)
-```
 
 ### Reference Links
 
-```markdown
 [Link Text][reference-id]
 
 [reference-id]: https://example.com "Optional Title"
-```
 
 ## Table Formatting
 
-```markdown
 | Column 1 | Column 2 | Column 3 |
 |----------|----------|----------|
 | Data 1   | Data 2   | Data 3   |
 | Data 4   | Data 5   | Data 6   |
-```
 
 ## Documentation-Specific Guidelines
 
@@ -266,17 +251,14 @@ File paths: /path/to/file
 
 Use square brackets for placeholders that users should replace:
 
-```markdown
 **Project Name**: [Your Project Name]
 **Version**: [Current Version]
 **Author**: [Your Name]
-```
 
 ### Section Organization
 
 Standard documentation sections:
 
-```markdown
 # Document Title
 
 ## Overview
@@ -296,13 +278,11 @@ Common issues and solutions
 
 ## Notes
 Additional information and references
-```
 
 ### Code Examples with Context
 
 Always provide context for code examples:
 
-```markdown
 **Create the configuration file:**
 
 ```json
@@ -345,46 +325,40 @@ markdownlint "**/*.md" --fix
 
 ### ❌ Incorrect Code Blocks
 
-```# Missing language specification
+```text
+# Missing language specification
 This will cause MD040 errors
 ```
 
 ### ✅ Correct Code Blocks
 
-```# Proper language specification
+```text
+# Proper language specification
 This follows the standards
 ```
 
 ### ❌ Incorrect Heading Hierarchy
 
-```markdown
 # Title
 ### Skipped H2 - This is wrong
-```
 
 ### ✅ Correct Heading Hierarchy
 
-```markdown
 # Title
 ## Proper H2
 ### Proper H3
-```
 
 ### ❌ Inconsistent List Formatting
 
-```markdown
 * Mixed bullet styles
 - Are not recommended
 + Use one style consistently
-```
 
 ### ✅ Consistent List Formatting
 
-```markdown
 - Consistent bullet style
 - Throughout the document
 - Maintains readability
-```
 
 ## Integration with Development Workflow
 

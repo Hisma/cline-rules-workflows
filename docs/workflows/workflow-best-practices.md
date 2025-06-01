@@ -25,7 +25,7 @@ Every step should be specific and executable:
 
 **✅ Good:**
 
-```markdown
+
 1. **Run Test Suite**
    - Execute `npm test` in project root
    - Verify all tests pass (0 failures)
@@ -33,7 +33,7 @@ Every step should be specific and executable:
 ```
 **❌ Avoid:**
 
-```markdown
+
 1. **Test Everything**
    - Make sure tests work
    - Check coverage
@@ -42,7 +42,7 @@ Every step should be specific and executable:
 
 Always specify what needs to be ready before starting:
 
-```markdown
+
 ## Prerequisites
 - Node.js 18+ installed
 - All dependencies installed (`npm install`)
@@ -53,7 +53,7 @@ Always specify what needs to be ready before starting:
 
 Include checks to ensure each step completed successfully:
 
-```markdown
+
 2. **Build Application**
    - Run `npm run build`
    - Verify build directory created
@@ -134,7 +134,7 @@ One approach is to organize workflows by category when you have many:
 
 Here's one pattern you can use for consistent workflow structure:
 
-```markdown
+
 # Workflow Name
 
 Brief description of what this workflow accomplishes.
@@ -193,7 +193,7 @@ Brief description of what this workflow accomplishes.
 
 Consider including guidance for when things go wrong:
 
-```markdown
+
 3. **Deploy Application**
    - Run deployment script: `./scripts/deploy.sh staging`
    - Monitor deployment logs for errors
@@ -225,7 +225,7 @@ Consider scheduling periodic reviews of your workflows:
 
 One approach is to track workflow changes:
 
-```markdown
+
 # Deploy to Production
 
 Last updated: 2024-01-15
@@ -256,7 +256,7 @@ Regularly test your workflows:
 
 Handle different scenarios within workflows:
 
-```markdown
+
 2. **Determine Deployment Target**
    - Check current branch: `git branch --show-current`
    - **If branch is 'main':**
@@ -273,7 +273,7 @@ Handle different scenarios within workflows:
 
 Reference other workflows when appropriate:
 
-```markdown
+
 1. **Pre-deployment Setup**
    - First, run the code review workflow: `/code-review.md`
    - Ensure all tests pass: `/run-full-test-suite.md`
@@ -296,7 +296,7 @@ These are example patterns you might find useful:
 
 ### Deployment Workflow Pattern
 
-```markdown
+
 # Deploy to [Environment]
 
 ## Prerequisites
@@ -313,7 +313,7 @@ These are example patterns you might find useful:
 ```
 ### Testing Workflow Pattern
 
-```markdown
+
 # Run [Test Type] Tests
 
 ## Prerequisites
@@ -330,7 +330,7 @@ These are example patterns you might find useful:
 ```
 ### Maintenance Workflow Pattern
 
-```markdown
+
 # [Maintenance Task]
 
 ## Prerequisites
@@ -344,6 +344,24 @@ These are example patterns you might find useful:
 3. **Verification**
 4. **Cleanup and Documentation**
 ```
+
+### Rules and Workflows Maintenance Pattern
+
+
+# Update Rules & Workflows
+
+## Prerequisites
+- Project has existing .clinerules/ directory
+- Understanding of current project state
+- MCP servers configured for research
+
+## Steps
+1. **Project Assessment**
+2. **Rules Alignment Review**
+3. **Workflow Updates**
+```
+
+*Example: The `update-rules-workflows.md` global workflow follows this pattern to help keep project rules and workflows aligned with evolving project reality.*
 ## Integration with Rules
 
 Workflows work well when combined with rules:
@@ -370,7 +388,7 @@ Workflows give step-by-step guidance for:
 
 **Rule (coding-standards.md):**
 
-```markdown
+
 ## Testing Requirements
 - Minimum 80% code coverage
 - All tests must pass before deployment
@@ -378,7 +396,7 @@ Workflows give step-by-step guidance for:
 ```
 **Workflow (deploy-staging.md):**
 
-```markdown
+
 1. **Verify Test Coverage**
    - Run coverage report: `npm run coverage`
    - Ensure coverage meets project standard (80%+)

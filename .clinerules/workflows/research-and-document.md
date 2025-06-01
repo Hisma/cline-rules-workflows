@@ -141,7 +141,7 @@ This workflow guides you through researching a technical topic and creating accu
 
 **Create a new documentation file following your project's standards:**
 
-```markdown
+
 # [Topic Title]
 
 ## Overview
@@ -178,7 +178,7 @@ This workflow guides you through researching a technical topic and creating accu
 
 **Document your verification process:**
 
-```markdown
+
 ## Verification Notes
 - **Claim**: [Specific technical claim]
 - **Source**: [Primary source URL]
@@ -203,7 +203,7 @@ This workflow guides you through researching a technical topic and creating accu
 
 **Set up for future updates:**
 
-```markdown
+
 ## Maintenance Schedule
 - **Next Review**: [Date 3 months from creation]
 - **Update Triggers**: 
@@ -249,7 +249,7 @@ This workflow guides you through researching a technical topic and creating accu
 
 **Keep track of your research process:**
 
-```markdown
+
 # Research Log: [Topic]
 
 ## Research Questions

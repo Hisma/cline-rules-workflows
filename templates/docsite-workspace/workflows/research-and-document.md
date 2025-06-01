@@ -34,7 +34,7 @@ This workflow provides a systematic approach to researching topics and creating 
 
 **Step 2: Prepare Research Framework**
 
-```markdown
+
 # Research Template
 ## Topic: [Topic Name]
 ## Objective: [What you want to achieve]
@@ -57,7 +57,7 @@ This workflow provides a systematic approach to researching topics and creating 
 
 Use Brave Search MCP server for comprehensive web research:
 
-```markdown
+
 # Search Strategy
 1. Start with broad searches: "[Topic] best practices 2024"
 2. Narrow to specific aspects: "[Topic] setup guide"
@@ -108,7 +108,7 @@ If applicable, use Context7 for framework-specific research:
 
 **Step 6: Organize Research Findings**
 
-```markdown
+
 # Research Summary Template
 ## Key Findings
 - [Finding 1 with source]
@@ -149,7 +149,7 @@ Cross-reference findings across multiple sources:
 
 **Step 9: Structure Planning**
 
-```markdown
+
 # Documentation Outline
 1. Overview/Introduction
 2. Prerequisites
@@ -172,7 +172,7 @@ Follow markdown standards (see [Markdown Standards](../rules/05-markdown-standar
 
 **Step 11: Source Citation**
 
-```markdown
+
 # Citation Format
 ## References
 - [Source Title](URL) - Accessed [Date]
@@ -268,7 +268,7 @@ git commit -m "Add comprehensive guide for [Topic] based on MCP research"
 
 ### Brave Search Strategies
 
-```markdown
+
 # Effective Search Patterns
 - "[Technology] official documentation"
 - "[Technology] best practices [current year]"

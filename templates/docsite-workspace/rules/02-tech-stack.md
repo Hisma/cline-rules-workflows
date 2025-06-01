@@ -70,13 +70,11 @@
 
 ### Brave Search Usage
 
-```markdown
-# Research Pattern for [Project Type] Documentation
+**Research Pattern for [Project Type] Documentation**
 1. Search for "[Technology] latest documentation"
 2. Verify current version capabilities
 3. Cross-reference with official GitHub repository
 4. Document search queries and results for reproducibility
-```
 
 ### Puppeteer Content Extraction
 

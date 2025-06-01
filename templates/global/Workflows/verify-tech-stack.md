@@ -58,7 +58,7 @@ This workflow ensures you're using the latest framework and API documentation wh
 
 **For each technology, record:**
 
-```markdown
+
 ## [Technology Name] Verification
 
 **Library ID**: [Context7 library ID]
@@ -176,7 +176,7 @@ This workflow ensures you're using the latest framework and API documentation wh
 ```
 ### Step 4: Document Findings
 
-```markdown
+
 ## React Verification
 
 **Library ID**: /facebook/react
