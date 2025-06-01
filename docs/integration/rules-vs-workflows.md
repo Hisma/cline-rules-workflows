@@ -57,6 +57,7 @@ your-project/.clinerules/
 ├── 02-tech-stack.md
 └── 03-current-requirements.md
 ```
+
 ## Cline Workflows
 
 ### Purpose
@@ -109,6 +110,7 @@ your-project/.clinerules/
     ├── build-and-test.md     # Project workflow
     └── deploy-staging.md     # Project workflow
 ```
+
 ## Key Differences
 
 | Aspect | Rules | Workflows |
@@ -145,6 +147,7 @@ your-project/
 ├── src/
 └── ...
 ```
+
 ## Best Practices
 
 ### For Rules
@@ -168,11 +171,13 @@ your-project/
 ## Coding Standards
 
 ## General Principles
+
 - Write clean, readable code
 - Use consistent naming conventions
 - Comment complex logic
 
 ## TypeScript Guidelines
+
 - Use strict mode
 - Prefer interfaces over types
 - Always specify return types
@@ -184,6 +189,7 @@ your-project/
 You have access to the `gh` terminal command. Please review the PR that I specify.
 
 ## Steps
+
 1. Get PR information: `gh pr view <PR-number> --json title,body,comments`
 2. Get the diff: `gh pr diff <PR-number>`
 3. Analyze changes and provide feedback

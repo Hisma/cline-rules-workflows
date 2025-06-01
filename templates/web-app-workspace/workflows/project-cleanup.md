@@ -198,6 +198,7 @@ npx imagemin-cli
 # Bundle analysis
 npx webpack-bundle-analyzer
 ```
+
 ### Performance Monitoring
 
 - Set up automated Lighthouse CI

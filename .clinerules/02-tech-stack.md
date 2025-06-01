@@ -70,11 +70,13 @@
 
 ### Brave Search Usage
 
+```text
 # Research Pattern for Cline Documentation
 1. Search for "Cline rules workflows latest documentation"
 2. Verify current Cline version capabilities
 3. Cross-reference with official Cline GitHub repository
 4. Document search queries and results for reproducibility
+```
 
 ### Puppeteer Content Extraction
 

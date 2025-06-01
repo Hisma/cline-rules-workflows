@@ -3,6 +3,7 @@
 This workflow helps you validate and update existing documentation to ensure accuracy and completeness.
 
 ## Prerequisites
+
 - Brave Search MCP server configured
 - Puppeteer MCP server configured
 - Documentation file to validate
@@ -12,6 +13,7 @@ This workflow helps you validate and update existing documentation to ensure acc
 ### 1. Identify Content to Validate
 
 **Review the documentation and identify:**
+
 - Technical claims that need verification
 - External links that should be checked
 - Code examples that should be tested
@@ -32,6 +34,7 @@ This workflow helps you validate and update existing documentation to ensure acc
 </arguments>
 </use_mcp_tool>
 ```
+
 **Check if the page loads successfully and content is still relevant.**
 
 ### 3. Fact-Check Technical Claims
@@ -50,9 +53,11 @@ This workflow helps you validate and update existing documentation to ensure acc
 </arguments>
 </use_mcp_tool>
 ```
+
 ### 4. Update Outdated Information
 
 **When you find outdated information:**
+
 1. Research the current correct information
 2. Update the documentation
 3. Add a note about when it was last verified
@@ -61,6 +66,7 @@ This workflow helps you validate and update existing documentation to ensure acc
 ### 5. Test Code Examples
 
 **For any code examples or instructions:**
+
 1. Try to follow the steps exactly as written
 2. Note any issues or missing steps
 3. Update examples to work with current versions

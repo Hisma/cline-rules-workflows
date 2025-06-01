@@ -44,6 +44,7 @@ Cline supports two types of rule configurations:
 ├── git-workflow.md             # Git commit and branching standards
 └── testing-standards.md        # Testing approaches and requirements
 ```
+
 ## Local Rules (Project-Specific)
 
 ### Location
@@ -81,6 +82,7 @@ Cline supports two types of rule configurations:
 ├── src/
 └── ...
 ```
+
 ## Rule Hierarchy and Precedence
 
 ### How Rules Are Applied
@@ -97,6 +99,7 @@ Cline supports two types of rule configurations:
 Local Rule (tech-stack.md):
 "This legacy project uses JavaScript. Follow existing patterns but consider TypeScript for new major features."
 ```
+
 ## File Naming and Organization
 
 ### Global Rules Naming

@@ -66,6 +66,7 @@ Use Brave Search MCP server for comprehensive web research:
 ```
 
 Research checklist:
+
 - [ ] Search for official documentation and guides
 - [ ] Find current best practices and standards
 - [ ] Identify common issues and solutions
@@ -89,6 +90,7 @@ puppeteer_evaluate: "Array.from(document.querySelectorAll('h1, h2, h3')).map(h =
 ```
 
 Extraction checklist:
+
 - [ ] Extract key concepts and definitions
 - [ ] Gather code examples and configurations
 - [ ] Collect step-by-step procedures
@@ -133,6 +135,7 @@ If applicable, use Context7 for framework-specific research:
 **Step 7: Fact Verification**
 
 Cross-reference findings across multiple sources:
+
 - [ ] Verify information against official documentation
 - [ ] Check for consistency across sources
 - [ ] Identify any conflicting information
@@ -299,18 +302,21 @@ Array.from(document.querySelectorAll('nav a')).map(a => ({text: a.textContent, h
 ### Research Issues
 
 **Limited Information Available**
+
 - Expand search terms and strategies
 - Look for related technologies or concepts
 - Check community forums and discussions
 - Consider reaching out to experts
 
 **Conflicting Information**
+
 - Prioritize official sources
 - Check publication dates for currency
 - Look for consensus across multiple sources
 - Document conflicts and note preferred approach
 
 **Technical Examples Don't Work**
+
 - Verify version compatibility
 - Check for missing dependencies
 - Test in clean environment
@@ -319,12 +325,14 @@ Array.from(document.querySelectorAll('nav a')).map(a => ({text: a.textContent, h
 ### MCP Server Issues
 
 **Search Results Not Relevant**
+
 - Refine search terms
 - Use more specific queries
 - Try different search strategies
 - Combine multiple searches
 
 **Content Extraction Incomplete**
+
 - Try different CSS selectors
 - Extract in smaller chunks
 - Use multiple extraction approaches

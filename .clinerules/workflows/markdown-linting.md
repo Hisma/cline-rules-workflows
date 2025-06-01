@@ -52,8 +52,6 @@ ls -la .markdownlint.json
 # Create the configuration file
 cat > .markdownlint.json << 'EOF'
 {
-  "default": true,
-  "MD001": true,
   "MD003": {
     "style": "atx"
   },
@@ -61,20 +59,15 @@ cat > .markdownlint.json << 'EOF'
     "indent": 2
   },
   "MD013": false,
-  "MD022": false,
-  "MD024": {
-    "siblings_only": true
-  },
+  "MD024": false,
   "MD025": {
     "front_matter_title": "^\\s*title\\s*[:=]"
   },
-  "MD031": false,
-  "MD032": false,
+  "MD026": false,
   "MD033": {
     "allowed_elements": ["br", "details", "summary", "img", "kbd", "sub", "sup"]
   },
   "MD036": false,
-  "MD040": true,
   "MD041": false,
   "MD046": {
     "style": "fenced"

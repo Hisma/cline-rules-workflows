@@ -24,6 +24,7 @@ Let's create a simple workflow to get started:
 This workflow helps clean up and organize code before committing.
 
 ## Prerequisites
+
 - Working directory is clean (no uncommitted changes)
 - All dependencies installed
 - Linting tools configured
@@ -56,6 +57,7 @@ This workflow helps clean up and organize code before committing.
    - Review changes before committing
 
 ## Success Criteria
+
 - All linting passes
 - Tests pass
 - Build succeeds
@@ -72,14 +74,17 @@ Every workflow should have these core elements:
 Brief description of what this workflow does.
 
 ## Prerequisites
+
 - What needs to be ready before starting
 
 ## Steps
+
 1. **Step Name**
    - Specific actions to take
    - How to verify success
 
 ## Success Criteria
+
 - How to know the workflow completed successfully
 
 ### Advanced Structure
@@ -91,11 +96,13 @@ For more complex workflows, consider adding:
 Detailed description and when to use this workflow.
 
 ## Prerequisites
+
 - Required tools and setup
 - Environmental requirements
 - Access permissions needed
 
 ## Overview
+
 - High-level summary of what will happen
 - Estimated time to complete
 - Any risks or considerations
@@ -103,31 +110,38 @@ Detailed description and when to use this workflow.
 ## Steps
 
 ### Phase 1: Preparation
+
 1. **Step 1**
    - Actions
    - Verification
    - Troubleshooting
 
 ### Phase 2: Execution
+
 - **Step 2**
   - Actions
   - Expected results
   - Error handling
 
 ### Phase 3: Verification
+
 - **Step 3**
   - Validation steps
   - Success indicators
 
 ## Troubleshooting
+
 ### Common Issue 1
+
 - Symptoms
 - Solution
 
 ## Rollback Procedure
+
 - How to undo changes if something goes wrong
 
 ## Success Criteria
+
 - Detailed success indicators
 - What should be different after completion
 
@@ -140,6 +154,7 @@ Detailed description and when to use this workflow.
 ## Code Review Workflow
 
 ### Steps
+
 1. **Analyze Changes**
    - Review git diff: `git diff main...feature-branch`
    - Identify modified files and their purposes
@@ -165,6 +180,7 @@ Detailed description and when to use this workflow.
 ## Update Dependencies Workflow
 
 ## Steps
+
 1. **Check Current State**
    - Review current dependencies: `npm list --depth=0`
    - Check for security vulnerabilities: `npm audit`
@@ -192,12 +208,14 @@ Detailed description and when to use this workflow.
 ## Deploy to Production Workflow
 
 ## Prerequisites
+
 - All tests passing
 - Code reviewed and approved
 - Staging deployment successful
 - Deployment window scheduled
 
 ## Steps
+
 1. **Pre-deployment Checks**
    - Verify staging environment matches production
    - Check database migration status
@@ -225,6 +243,7 @@ Detailed description and when to use this workflow.
 ## Update Rules & Workflows Workflow
 
 ## Steps
+
 1. **Project Assessment**
    - Review project structure and recent changes
    - Identify what has evolved since rules were last updated
@@ -245,6 +264,7 @@ Detailed description and when to use this workflow.
 ## Database Maintenance Workflow
 
 ## Steps
+
 1. **Backup Database**
    - Create full database backup
    - Verify backup integrity
@@ -393,6 +413,7 @@ Rules provide context that workflows can reference:
 **Rule (in coding-standards.md):**
 
 ## Testing Standards
+
 - Minimum 80% code coverage required
 - All tests must pass before deployment
 - Integration tests required for API changes
@@ -423,9 +444,11 @@ Workflows can ensure rules are followed:
 **Solution:** Break into smaller, focused workflows
 
 **Instead of:**
+
 - Deploy, Test, and Document Everything Workflow
 
 **Use:**
+
 - Deploy to Staging Workflow
 - Run Integration Tests Workflow  
 - Update Documentation Workflow

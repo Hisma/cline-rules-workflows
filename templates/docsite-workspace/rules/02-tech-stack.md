@@ -71,6 +71,7 @@
 ### Brave Search Usage
 
 **Research Pattern for [Project Type] Documentation**
+
 1. Search for "[Technology] latest documentation"
 2. Verify current version capabilities
 3. Cross-reference with official GitHub repository

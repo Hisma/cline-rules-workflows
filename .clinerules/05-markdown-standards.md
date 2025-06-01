@@ -89,14 +89,11 @@ The `.markdownlint.json` file enforces these standards:
     "indent": 2
   },
   "MD013": false,
-  "MD022": false,
   "MD024": false,
   "MD025": {
     "front_matter_title": "^\\s*title\\s*[:=]"
   },
   "MD026": false,
-  "MD031": false,
-  "MD032": false,
   "MD033": {
     "allowed_elements": ["br", "details", "summary", "img", "kbd", "sub", "sup"]
   },

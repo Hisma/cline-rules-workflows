@@ -35,11 +35,14 @@ Before setting up rules, read [Local vs Global Rules](local-vs-global-rules.md) 
 mkdir -p ~/Documents/Cline/.clinerules
 mkdir -p ~/Documents/Cline/.clinerules/workflows
 ```
+
 ### Start with Basic Global Rules
 
 Create these foundational files:
 
-**~/Documents/Cline/.clinerules/coding-standards.md**
+```bash
+~/Documents/Cline/.clinerules/coding-standards.md
+```
 
 ```text
 # Coding Standards
@@ -57,7 +60,9 @@ Create these foundational files:
 - Write self-documenting code
 ```
 
-**~/Documents/Cline/.clinerules/documentation.md**
+```bash
+~/Documents/Cline/.clinerules/documentation.md
+```
 
 ```text
 # Documentation Requirements
@@ -74,6 +79,7 @@ Create these foundational files:
 - Include troubleshooting guides
 - Update changelog regularly
 ```
+
 ### Customize Based on Your Workflow
 
 Look at the templates in `templates/global/rules/` and adapt them to your preferences:
@@ -93,6 +99,7 @@ Look at the templates in `templates/global/rules/` and adapt them to your prefer
    mkdir .clinerules
    mkdir .clinerules/workflows
    ```
+
 2. Add project-specific files:
 
    ```bash
@@ -100,6 +107,7 @@ Look at the templates in `templates/global/rules/` and adapt them to your prefer
    touch .clinerules/02-tech-stack.md
    touch .clinerules/03-current-requirements.md
    ```
+
 ### Use Templates as Reference
 
 Browse `templates/` for examples:

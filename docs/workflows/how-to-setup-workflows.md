@@ -37,9 +37,12 @@ Global workflows apply across all your projects and contain reusable automation 
 ```bash
 mkdir -p ~/Documents/Cline/.clinerules/workflows
 ```
+
 ### 2. Create Your First Global Workflow
 
-**~/Documents/Cline/.clinerules/workflows/code-review.md**
+```bash
+~/Documents/Cline/.clinerules/workflows/code-review.md
+```
 
 ## Code Review Workflow
 
@@ -74,7 +77,9 @@ This workflow guides you through performing a comprehensive code review.
 
 ### 3. Create Additional Global Workflows
 
-**~/Documents/Cline/.clinerules/workflows/project-setup.md**
+```bash
+~/Documents/Cline/.clinerules/workflows/project-setup.md
+```
 
 ## Project Setup Workflow
 
@@ -170,6 +175,7 @@ This workflow verifies and updates technology stack information.
    - Update version numbers and compatibility info
    - Add migration notes if needed
    - Document verification date and sources
+
 ```bash
 ~/Documents/Cline/.clinerules/workflows/update-rules-workflows.md
 ```
@@ -206,6 +212,7 @@ For each project, create:
 ```bash
 mkdir .clinerules/workflows
 ```
+
 ### 2. Create Project-Specific Workflows
 
 ```bash
@@ -217,6 +224,7 @@ your-project/.clinerules/workflows/deploy-staging.md
 This workflow handles deployment to the staging environment.
 
 ## Prerequisites
+
 - All tests passing
 - Code reviewed and approved
 - Staging environment available
@@ -258,6 +266,7 @@ Workflows are invoked using slash commands in Cline:
 /code-review.md          # Global workflow
 /deploy-staging.md       # Project workflow
 ```
+
 ### Workflow Best Practices
 
 1. **Keep workflows focused** - Each workflow should handle one specific process

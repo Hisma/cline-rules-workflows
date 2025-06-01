@@ -202,24 +202,28 @@ git commit -m "Project cleanup: update documentation, fix links, improve organiz
 ### Common Issues
 
 **Broken Links**
+
 - Check if target moved or was renamed
 - Update internal references
 - Replace with current alternatives
 - Remove if no longer relevant
 
 **Linting Errors**
+
 - Review markdown standards rule
 - Fix heading hierarchy issues
 - Add language specifications to code blocks
 - Correct list formatting
 
 **Outdated Content**
+
 - Use MCP servers to verify current information
 - Check official documentation for updates
 - Update examples and configurations
 - Remove deprecated features
 
 **Template Misalignment**
+
 - Review current template structure
 - Update files to match templates
 - Fix cross-references and links

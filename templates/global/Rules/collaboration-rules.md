@@ -181,6 +181,7 @@ Request clarification on specific points. "Can you clarify [specific aspect]?"
 │   ├── README.md
 │   └── (other project folders/files)
 ```
+
 ## Error Recovery
 
 ### When Stuck

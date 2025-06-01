@@ -135,6 +135,7 @@ This workflow guides you through setting up a new project with proper structure,
   }
 }
 ```
+
 ### Python Projects
 
 ```python
@@ -144,6 +145,7 @@ This workflow guides you through setting up a new project with proper structure,
 # setup.py or pyproject.toml
 # Package configuration
 ```
+
 ### Universal Files
 
 ```gitignore
@@ -155,6 +157,7 @@ node_modules/
 dist/
 build/
 ```
+
 ## Troubleshooting
 
 ### Dependency Installation Issues

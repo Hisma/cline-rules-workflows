@@ -4,15 +4,15 @@ A comprehensive guide and template collection for customizing Cline's behavior t
 
 ## What Are Rules and Workflows?
 
-**Rules** provide persistent context to Cline about your preferences, standards, and project requirements. They're automatically loaded and inform every conversation.
+**Rules** provide persistent context to Cline about your preferences, standards, and project requirements. When enabled, they automatically inform every conversation. You can toggle individual rules on/off through the Cline UI.
 
-**Workflows** provide step-by-step processes for complex tasks. They're invoked on-demand when you need to execute specific procedures.
+**Workflows** provide step-by-step processes for complex tasks. They're invoked on-demand when you need to execute specific procedures. Like rules, individual workflows can be enabled/disabled through toggle switches in the UI.
 
 Both systems support **global** (all projects) and **workspace** (project-specific) scoping.
 
 ## MCP Server Requirements
 
-Effective use of Cline rules and workflows requires MCP (Model Context Protocol) servers. These are essential tools that every Cline user should configure:
+Effective use of Cline rules and workflows requires MCP (Model Context Protocol) servers.
 
 - **Context7** - Framework documentation and API references
 - **Brave Search** - Web research and fact-checking
@@ -63,8 +63,9 @@ Project-specific implementations:
      - **Documentation Projects**: Use templates from `templates/docsite-workspace/`
      - **Web Applications**: Use templates from `templates/web-app-workspace/`
 
-3. **Customize Templates**
+3. **Customize and Enable Templates**
    - Edit the created files to match your specific project needs and preferences
+   - Use toggle switches in the UI to enable/disable rules and workflows as needed
    - Templates provide a starting point - adapt them to your workflow
 
 ### Method 2: Using Command Line (Alternative)
@@ -80,6 +81,7 @@ mkdir -p ~/Cline/Workflows
 cp templates/global/Rules/* ~/Cline/Rules/
 cp templates/global/Workflows/* ~/Cline/Workflows/
 ```
+
 **Set Up Project-Specific Rules and Workflows:**
 
 **For Documentation Projects:**
@@ -89,6 +91,7 @@ mkdir -p .clinerules/workflows
 cp templates/docsite-workspace/rules/* .clinerules/
 cp templates/docsite-workspace/workflows/* .clinerules/workflows/
 ```
+
 **For Web Applications:**
 
 ```bash
@@ -96,22 +99,24 @@ mkdir -p .clinerules/workflows
 cp templates/web-app-workspace/rules/* .clinerules/
 cp templates/web-app-workspace/workflows/* .clinerules/workflows/
 ```
+
 ## How It Works
 
 ### Rules (Automatic)
 
-- **Global**: `~/Cline/Rules/` - Loaded for all projects
-- **Workspace**: `.clinerules/` - Loaded for current project only
-- **Loading**: Automatic when Cline starts, global rules first, then workspace rules
-- **UI Management**: Use the "Manage Cline Rules & Workflows" button (⚖️) to create and edit
+- **Global**: `~/Cline/Rules/` - Available for all projects
+- **Workspace**: `.clinerules/` - Available for current project only
+- **Loading**: When enabled, rules automatically inform conversations (global rules first, then workspace rules)
+- **Toggle Control**: Enable/disable individual rules using toggle switches in the UI
+- **UI Management**: Use the "Manage Cline Rules & Workflows" button (⚖️) to create, edit, and toggle rules
 
 ### Workflows (On-Demand)
 
 - **Global**: `~/Cline/Workflows/` - Available in all projects
 - **Workspace**: `.clinerules/workflows/` - Available in current project only
-- **Usage**: Invoke with `/workflow-name.md` in Cline chat
-- **UI Management**: Use the "Manage Cline Rules & Workflows" button (⚖️) to create and edit
+- **Usage**: Invoke with `/workflow-name.md` in Cline chat (only enabled workflows are available)
 - **Toggle Control**: Enable/disable individual workflows using toggle switches in the UI
+- **UI Management**: Use the "Manage Cline Rules & Workflows" button (⚖️) to create, edit, and toggle workflows
 
 ## Repository Structure
 
@@ -132,30 +137,6 @@ cp templates/web-app-workspace/workflows/* .clinerules/workflows/
 │       ├── rules/                 # Web app-specific rules
 │       └── workflows/             # Web development workflows
 ```
-## Key Features
-
-### Structured Templates
-
-- Consistent organization across project types
-- Customizable for specific needs
-- Version controlled and maintainable
-- Community-focused for sharing and collaboration
-
-### Progressive Complexity
-
-- Start with basic global rules
-- Add project-specific customizations
-- Implement advanced research workflows
-- Scale to team and organizational standards
-
-### Research-Driven Development
-
-Templates include workflows that leverage MCP servers for:
-
-- Comprehensive web research using Brave Search
-- Content extraction from official sources with Puppeteer
-- Framework documentation access through Context7
-- Fact-checking and verification processes
 
 ## Documentation
 
@@ -183,21 +164,7 @@ Templates include workflows that leverage MCP servers for:
 
 This repository serves as a working example - it uses the docsite-workspace template for its own rules and workflows. Check `.clinerules/` to see the templates in action.
 
-## Best Practices
-
-1. **Start Simple** - Begin with basic global rules, add complexity gradually
-2. **Use MCP Servers** - Essential for research-driven development and accurate documentation
-3. **Follow Markdown Standards** - Use the provided linting configuration for clean, professional documentation
-4. **Customize Templates** - Adapt provided templates to your specific needs
-5. **Version Control** - Track your rules and workflows in Git
-6. **Team Coordination** - Establish shared global rules for consistency
-7. **Quality First** - Implement markdown linting from the start to prevent formatting issues
-
 ## Support
 
 - **Documentation Issues** - Check the docs/ folder for detailed guidance
 - **MCP Setup** - See [official Cline MCP documentation](https://docs.cline.bot/mcp/configuring-mcp-servers)
-
----
-
-**Note**: This project demonstrates the docsite-workspace template in action. The `.clinerules/` directory contains the actual rules and workflows used to maintain this documentation.

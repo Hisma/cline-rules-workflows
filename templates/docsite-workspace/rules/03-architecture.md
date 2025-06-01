@@ -18,6 +18,7 @@
 ├── Build System (Static Site Generator)
 └── Deployment Layer (Hosting Platform)
 ```
+
 ### Information Architecture
 
 ```Documentation Structure
@@ -38,6 +39,7 @@
     ├── Architecture
     └── Development Setup
 ```
+
 ## Content Architecture
 
 ### Content Organization
@@ -101,6 +103,7 @@
 └── public/
     └── generated-site/
 ```
+
 ## User Experience Architecture
 
 ### Navigation Design

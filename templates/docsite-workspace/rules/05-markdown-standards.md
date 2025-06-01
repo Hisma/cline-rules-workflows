@@ -89,14 +89,11 @@ The `.markdownlint.json` file enforces these standards:
     "indent": 2
   },
   "MD013": false,
-  "MD022": false,
   "MD024": false,
   "MD025": {
     "front_matter_title": "^\\s*title\\s*[:=]"
   },
   "MD026": false,
-  "MD031": false,
-  "MD032": false,
   "MD033": {
     "allowed_elements": ["br", "details", "summary", "img", "kbd", "sub", "sup"]
   },
@@ -114,12 +111,14 @@ The `.markdownlint.json` file enforces these standards:
 ## When to Use Ordered Lists vs Bullet Points
 
 **Use bullet points for:**
+
 - Lists of features or options
 - Examples and alternatives  
 - Non-sequential items
 - Anything where order doesn't matter
 
 **Use numbered lists only for:**
+
 - Step-by-step procedures
 - Sequential instructions
 - Processes where order matters
@@ -162,6 +161,7 @@ file.md:45 MD040/fenced-code-language Fenced code blocks should have a language 
 ## Quick Check
 
 Before saving any markdown file, ask:
+
 - Do all code blocks have language tags?
 - Are headings used for document structure (not examples)?
 - Are numbered lists only used for actual step-by-step procedures?

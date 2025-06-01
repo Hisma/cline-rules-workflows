@@ -30,6 +30,7 @@ Check your current MCP configuration in:
 ```bash
 /config/data/User/globalStorage/saoudrizwan.claude-dev/settings/cline_mcp_settings.json
 ```
+
 ### 2. Verify Required Servers
 
 Look for these server entries in the `mcpServers` object:
@@ -61,6 +62,7 @@ Look for these server entries in the `mcpServers` object:
   }
 }
 ```
+
 **No additional configuration required** - Context7 works out of the box.
 
 ### Brave Search Setup
@@ -85,6 +87,7 @@ Look for these server entries in the `mcpServers` object:
   }
 }
 ```
+
 **API Key Required:**
 
 1. Go to [Brave Search API](https://api.search.brave.com/)
@@ -115,6 +118,7 @@ Look for these server entries in the `mcpServers` object:
   }
 }
 ```
+
 **No API key required** - Works with the configuration above.
 
 ## Complete Configuration Example
@@ -163,6 +167,7 @@ Here's a complete example of the required MCP servers in your settings file:
   }
 }
 ```
+
 ## Verification Steps
 
 ### 1. Restart Cline
@@ -184,6 +189,7 @@ After adding MCP servers, restart Cline to load the new configuration.
 </arguments>
 </use_mcp_tool>
 ```
+
 **Test Brave Search:**
 
 ```xml
@@ -198,6 +204,7 @@ After adding MCP servers, restart Cline to load the new configuration.
 </arguments>
 </use_mcp_tool>
 ```
+
 **Test Puppeteer:**
 
 ```xml
@@ -211,6 +218,7 @@ After adding MCP servers, restart Cline to load the new configuration.
 </arguments>
 </use_mcp_tool>
 ```
+
 ## Troubleshooting
 
 ### MCP Server Not Found

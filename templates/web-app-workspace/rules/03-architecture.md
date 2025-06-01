@@ -16,6 +16,7 @@
      ↓              ↓              ↓              ↓
 [Static Assets] [Load Balancer] [Message Queue] [File Storage]
 ```
+
 ### Component Diagram
 
 ```Frontend Application
@@ -47,6 +48,7 @@ Backend Application
     ├── Validation
     └── Error Handling
 ```
+
 ## Frontend Architecture
 
 ### Component Structure
@@ -72,6 +74,7 @@ Backend Application
 ├── styles/             # Global styles and themes
 └── assets/             # Static assets (images, fonts)
 ```
+
 ### Data Flow
 
 1. **User Interaction** → Component Event Handler
@@ -106,6 +109,7 @@ Data Access Layer
     ↓
 Database Layer
 ```
+
 ### Directory Structure
 
 ```src/
@@ -117,6 +121,7 @@ Database Layer
 ├── config/            # Configuration files
 └── types/             # TypeScript type definitions
 ```
+
 ### Database Design
 
 - **Database Type**: [PostgreSQL, MongoDB, MySQL, etc.]
@@ -178,6 +183,7 @@ Database Layer
      ↓           ↓         ↓
 Local Testing → QA → Live Users
 ```
+
 ### Infrastructure
 
 - **Hosting Platform**: [AWS, Google Cloud, Azure, Vercel, etc.]

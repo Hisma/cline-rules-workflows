@@ -43,17 +43,20 @@ This workflow guides you through updating an existing project to ensure it stays
 ## Project Update Assessment - [Date]
 
 ### Current Tech Stack
+
 - Frontend: [Framework and version]
 - Backend: [Framework and version]
 - Database: [Type and version]
 - Key Dependencies: [List major dependencies]
 
 ### Known Issues
+
 - [List any known bugs or technical debt]
 - [Performance issues]
 - [Security concerns]
 
 ### Update Goals
+
 - [What you want to achieve with this update]
 - [Priority level: Critical/High/Medium/Low]
 
@@ -72,6 +75,7 @@ This workflow guides you through updating an existing project to ensure it stays
 </arguments>
 </use_mcp_tool>
 ```
+
 **Get latest documentation and migration guides:**
 
 ```xml
@@ -87,6 +91,7 @@ This workflow guides you through updating an existing project to ensure it stays
 </arguments>
 </use_mcp_tool>
 ```
+
 **For simple projects (basic HTML/CSS, documentation sites, static sites):**
 
 - Skip Context7 if not using complex frameworks
@@ -114,6 +119,7 @@ This workflow guides you through updating an existing project to ensure it stays
 </arguments>
 </use_mcp_tool>
 ```
+
 ### 4. Create Update Plan
 
 **Document your update strategy:**
@@ -121,41 +127,48 @@ This workflow guides you through updating an existing project to ensure it stays
 ## Update Plan - [Date]
 
 ### Phase 1: Preparation
+
 - [ ] Backup current project state
 - [ ] Create feature branch for updates
 - [ ] Document current functionality
 - [ ] Set up testing environment
 
 ### Phase 2: Dependencies
+
 - [ ] Update package.json/requirements.txt
 - [ ] Resolve dependency conflicts
 - [ ] Update lock files
 - [ ] Test basic functionality
 
 ### Phase 3: Framework Updates
+
 - [ ] Update main framework
 - [ ] Address breaking changes
 - [ ] Update code patterns
 - [ ] Update configuration files
 
 ### Phase 4: Testing and Validation
+
 - [ ] Run existing tests
 - [ ] Manual testing of key features
 - [ ] Performance testing
 - [ ] Security validation
 
 ### Phase 5: Documentation
+
 - [ ] Update README and docs
 - [ ] Update tech stack documentation
 - [ ] Document changes made
 - [ ] Update deployment instructions
 
 ### Breaking Changes to Address
+
 - [List specific breaking changes found]
 - [Migration steps for each]
 - [Testing requirements for each]
 
 ### Rollback Plan
+
 - [How to revert if updates fail]
 - [Backup restoration process]
 - [Communication plan for rollback]
@@ -169,6 +182,7 @@ This workflow guides you through updating an existing project to ensure it stays
    ```bash
    git checkout -b update/[framework]-[version]-[date]
    ```
+
 2. **Update Dependencies Gradually**
    - Start with patch updates
    - Then minor updates
@@ -193,12 +207,14 @@ This workflow guides you through updating an existing project to ensure it stays
 ## Testing Checklist
 
 ### Automated Tests
+
 - [ ] Unit tests pass
 - [ ] Integration tests pass
 - [ ] End-to-end tests pass
 - [ ] Performance tests within acceptable range
 
 ### Manual Testing
+
 - [ ] Core user flows work correctly
 - [ ] Authentication/authorization functions
 - [ ] Data persistence works
@@ -206,12 +222,14 @@ This workflow guides you through updating an existing project to ensure it stays
 - [ ] Mobile responsiveness maintained
 
 ### Security Testing
+
 - [ ] No new security vulnerabilities
 - [ ] Authentication still secure
 - [ ] Data validation working
 - [ ] HTTPS and security headers correct
 
 ### Performance Testing
+
 - [ ] Load times acceptable
 - [ ] Memory usage reasonable
 - [ ] Database queries optimized
@@ -234,21 +252,26 @@ This workflow guides you through updating an existing project to ensure it stays
    - Update troubleshooting guides
 
 3. **Change Documentation**
+
    ## Update Log - [Date]
 
    ### Updated Components
+
    - [Framework]: [old version] → [new version]
    - [Library]: [old version] → [new version]
 
    ### Breaking Changes Addressed
+
    - [Change 1]: [How it was addressed]
    - [Change 2]: [How it was addressed]
 
    ### New Features Available
+
    - [Feature 1]: [Description and usage]
    - [Feature 2]: [Description and usage]
 
    ### Deprecated Features Removed
+
    - [Feature 1]: [Replacement or alternative]
    - [Feature 2]: [Replacement or alternative]
 

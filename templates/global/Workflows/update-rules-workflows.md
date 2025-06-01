@@ -24,6 +24,7 @@ This workflow guides you through updating your project's `.clinerules/` files to
 **Objective**: Understand what has changed in your project since rules were last updated.
 
 **Actions**:
+
 1. **Review project structure** - Has the directory layout or organization changed?
 2. **Assess scope changes** - Has the project's purpose, goals, or target users evolved?
 3. **Identify new requirements** - What new needs or constraints have emerged?
@@ -31,6 +32,7 @@ This workflow guides you through updating your project's `.clinerules/` files to
 5. **Consider team changes** - Has the team structure or collaboration needs changed?
 
 **Questions to Ask**:
+
 - What aspects of the project are different from when rules were last updated?
 - Are there new challenges or opportunities that rules should address?
 - What pain points have emerged that better rules could solve?
@@ -40,6 +42,7 @@ This workflow guides you through updating your project's `.clinerules/` files to
 **Objective**: Update your `.clinerules/` files to reflect current project reality.
 
 **Process**:
+
 1. **Inventory existing rules** - Read through all files in `.clinerules/` and subdirectories
 2. **Identify outdated content** - Look for information that no longer matches your project
 3. **Update project details** - Ensure all project descriptions, goals, and context are current
@@ -48,6 +51,7 @@ This workflow guides you through updating your project's `.clinerules/` files to
 6. **Verify team and process information** - Ensure team structure and workflows are accurate
 
 **Common Areas Needing Updates**:
+
 - Project purpose and scope descriptions
 - Technology stack and framework versions
 - Architecture and system design details
@@ -61,6 +65,7 @@ This workflow guides you through updating your project's `.clinerules/` files to
 **Objective**: Ensure workflows in `.clinerules/` match current project needs and processes.
 
 **Process**:
+
 1. **Review all rule and workflow files** - Read through workflows in `.clinerules/` and subdirectories
 2. **Update outdated procedures** - Fix any commands, paths, or processes that have changed
 3. **Verify tool references** - Ensure all referenced tools and services are still in use
@@ -68,6 +73,7 @@ This workflow guides you through updating your project's `.clinerules/` files to
 5. **Check integration points** - Verify workflows align with current development processes
 
 **Common Updates Needed**:
+
 - File paths and directory references
 - Command syntax and tool usage
 - Environment setup and configuration
@@ -78,6 +84,7 @@ This workflow guides you through updating your project's `.clinerules/` files to
 ## Documentation
 
 **Record your changes**:
+
 - Update "Last Updated" dates in relevant files
 - Note major changes in commit messages
 - Consider updating project documentation to reflect rule changes

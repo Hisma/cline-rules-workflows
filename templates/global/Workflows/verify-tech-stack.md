@@ -39,6 +39,7 @@ This workflow ensures you're using the latest framework and API documentation wh
 </arguments>
 </use_mcp_tool>
 ```
+
 **Then get the latest documentation:**
 
 ```xml
@@ -54,6 +55,7 @@ This workflow ensures you're using the latest framework and API documentation wh
 </arguments>
 </use_mcp_tool>
 ```
+
 ### 3. Document Current Information
 
 **For each technology, record:**
@@ -67,14 +69,17 @@ This workflow ensures you're using the latest framework and API documentation wh
 **Documentation URL**: [Official documentation link]
 
 ### Current Best Practices
+
 - [Practice 1 from latest docs]
 - [Practice 2 from latest docs]
 - [Practice 3 from latest docs]
 
 ### Installation/Setup
+
 ```bash
 [Latest installation commands]
 ```
+
 ### Basic Usage Example
 
 ```javascript
@@ -84,6 +89,7 @@ This workflow ensures you're using the latest framework and API documentation wh
 ### 4. Additional Research (only if needed)
 
 **Use Brave Search + Puppeteer only when:**
+
 - Context7 doesn't support your specific framework
 - You need community insights beyond official documentation
 - Context7 information seems incomplete
@@ -101,6 +107,7 @@ This workflow ensures you're using the latest framework and API documentation wh
 </arguments>
 </use_mcp_tool>
 ```
+
 ### 5. Compare with Current Project Setup
 
 **Check your current project against latest information:**
@@ -144,6 +151,7 @@ This workflow ensures you're using the latest framework and API documentation wh
 </arguments>
 </use_mcp_tool>
 ```
+
 ### Step 2: Get React Documentation
 
 ```xml
@@ -159,6 +167,7 @@ This workflow ensures you're using the latest framework and API documentation wh
 </arguments>
 </use_mcp_tool>
 ```
+
 ### Step 3: Cross-Verify with Brave Search
 
 ```xml
@@ -173,6 +182,7 @@ This workflow ensures you're using the latest framework and API documentation wh
 </arguments>
 </use_mcp_tool>
 ```
+
 ### Step 4: Document Findings
 
 ## React Verification
@@ -184,15 +194,18 @@ This workflow ensures you're using the latest framework and API documentation wh
 **Documentation URL**: <https://react.dev>
 
 ### Current Best Practices
+
 - Use function components with hooks
 - Implement Server Components for better performance
 - Use Suspense for data fetching
 - Prefer built-in hooks over custom solutions
 
 ### Installation
+
 ```bash
 npm install react@latest react-dom@latest
 ```
+
 ### Basic Component Example
 
 ```jsx
@@ -213,30 +226,36 @@ function MyComponent() {
 ## Technology-Specific Verification
 
 ### Frontend Frameworks
+
 - **Focus Areas**: Component patterns, state management, routing
 - **Key Topics**: "components", "hooks", "routing", "state management"
 
 ### Backend Frameworks
+
 - **Focus Areas**: API patterns, middleware, database integration
 - **Key Topics**: "routing", "middleware", "database", "authentication"
 
 ### Databases and ORMs
+
 - **Focus Areas**: Query patterns, migrations, performance
 - **Key Topics**: "queries", "migrations", "performance", "schema"
 
 ### Testing Frameworks
+
 - **Focus Areas**: Testing patterns, assertions, mocking
 - **Key Topics**: "testing", "mocking", "assertions", "best practices"
 
 ## Best Practices
 
 ### Verification Frequency
+
 - **New Projects**: Verify all technologies before starting
 - **Existing Projects**: Monthly verification for critical dependencies
 - **Major Updates**: Verify before any major version upgrades
 - **Security Updates**: Immediate verification for security-related updates
 
 ### Documentation Standards
+
 - Always include verification date
 - Document breaking changes clearly
 - Provide migration examples
@@ -244,6 +263,7 @@ function MyComponent() {
 - Note any project-specific considerations
 
 ### Version Management
+
 - Use exact version numbers in documentation
 - Document upgrade paths for major versions
 - Test updates in development environment first
@@ -252,16 +272,19 @@ function MyComponent() {
 ## Integration with Other Workflows
 
 ### Project Setup
+
 - Run this workflow before creating tech stack documentation
 - Use verified information in project templates
 - Include verification dates in project documentation
 
 ### Research and Documentation
+
 - Use Context7 as primary source for framework information
 - Cross-reference with Brave Search for additional context
 - Verify examples and code snippets with Puppeteer
 
 ### Regular Maintenance
+
 - Schedule monthly tech stack verification
 - Include in project cleanup workflows
 - Update project templates with latest information
@@ -269,23 +292,27 @@ function MyComponent() {
 ## Troubleshooting
 
 ### MCP Server Issues
+
 - Verify MCP servers are configured (see [MCP Server Requirements](../rules/mcp-server-requirements.md))
 - Restart Cline if MCP servers aren't responding
 - Check API keys and configuration
 
 ### Library Not Found in Context7
+
 - Try alternative names or abbreviations
 - Search for the organization name (e.g., "facebook/react")
 - Use Brave Search to find the correct library identifier
 - Check if the library has been renamed or moved
 
 ### Outdated Information
+
 - Cross-reference with official documentation using Puppeteer
 - Check GitHub releases for latest version information
 - Use multiple sources to verify current best practices
 - Document any discrepancies found
 
 ### Version Conflicts
+
 - Check compatibility between different library versions
 - Review breaking changes in release notes
 - Plan migration strategy for incompatible updates
@@ -294,6 +321,7 @@ function MyComponent() {
 ## Success Criteria
 
 Tech stack verification is complete when:
+
 - [ ] All major technologies verified with Context7
 - [ ] Current versions documented
 - [ ] Best practices updated

@@ -50,6 +50,7 @@ npm run test
 npm run lint
 npm run build
 ```
+
 ### 2. Create Pull Request (if not already done)
 
 - Create PR to staging/main branch
@@ -73,6 +74,7 @@ git merge [feature-branch]
 # Push to trigger deployment
 git push origin staging
 ```
+
 ### 4. Monitor Deployment
 
 - Watch CI/CD pipeline for any failures
@@ -136,6 +138,7 @@ npm run test:performance:staging
 # Run accessibility tests
 npm run test:a11y:staging
 ```
+
 ## Rollback Procedure
 
 If issues are discovered:
@@ -148,6 +151,7 @@ git checkout staging
 git revert [problematic-commit-hash]
 git push origin staging
 ```
+
 ### Database Rollback (if needed)
 
 - Run database migration rollback scripts

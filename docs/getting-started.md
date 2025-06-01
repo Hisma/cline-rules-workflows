@@ -85,6 +85,7 @@ your-webapp/.clinerules/
     ├── deploy-to-staging.md
     └── project-cleanup.md
 ```
+
 ## Understanding the Hierarchy
 
 ### Rules Hierarchy

@@ -41,6 +41,7 @@ Every step should be specific and executable:
 Always specify what needs to be ready before starting:
 
 ## Prerequisites
+
 - Node.js 18+ installed
 - All dependencies installed (`npm install`)
 - Database running on localhost:5432
@@ -123,6 +124,7 @@ One approach is to organize workflows by category when you have many:
     ├── cleanup-logs.md
     └── backup-database.md
 ```
+
 *Note: This is just one organizational pattern. You might prefer a flat structure or organize by frequency of use.*
 
 ## Writing Effective Workflows
@@ -362,6 +364,7 @@ These are example patterns you might find useful:
 ```
 
 *Example: The `update-rules-workflows.md` global workflow follows this pattern to help keep project rules and workflows aligned with evolving project reality.*
+
 ## Integration with Rules
 
 Workflows work well when combined with rules:
@@ -389,6 +392,7 @@ Workflows give step-by-step guidance for:
 **Rule (coding-standards.md):**
 
 ## Testing Requirements
+
 - Minimum 80% code coverage
 - All tests must pass before deployment
 - Integration tests required for API changes
