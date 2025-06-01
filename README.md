@@ -65,7 +65,7 @@ Rules inject their entire content into every prompt sent to the LLM. This create
 
 Global rules apply to all workspaces and provide foundational guidance for Cline.
 
-**Best Practice**: Through extensive testing, we've found that the optimal approach is to have **only one global rule enabled at all times** (the `collaboration-rules.md` rule), and handle everything else with workflows as needed. This provides the best balance between guidance and performance.
+**Best Practice**: Through extensive testing, itt's been found that the optimal approach is to have **only one global rule enabled at all times** (the `collaboration-rules.md` rule), and handle everything else with workflows as needed. This provides the best balance between guidance and performance.
 
 - This global rule establishes how you and Cline work together effectively. It's designed to be the one rule you keep enabled for most tasks, as it focuses on human-in-the-loop collaboration patterns rather than technical specifics.
 
@@ -150,8 +150,8 @@ Project-specific workflows are tailored to particular types of projects:
 
 1. Click the "Manage Cline Rules & Workflows" button (⚖️) below the chat window
 2. Select "Global" scope for rules/workflows that apply to all projects
-3. Create new files with .md extension (e.g., collaboration-rules.md, 01-project-setup.md)
-4. Copy content from our templates in templates/global/Rules/ and templates/global/Workflows/
+3. Create new files with .md extension (e.g., collaboration-rules.md, 20-documentation-planning.md, etc)
+4. Copy content from templates in templates/global/Rules/ and templates/global/Workflows/
 
 Remember that you can place general workflows at either the global or workspace level based on your preference and project needs.
 
@@ -161,14 +161,10 @@ Remember that you can place general workflows at either the global or workspace 
 2. Select "Workspace" scope for project-specific customizations
 3. Create files based on your project type:
    - Documentation Projects: Use templates from templates/docsite-workspace/
-   - Web Applications: Use templates from templates/web-app-workspace/
 
-#### Customize Templates (Keep Most Disabled)
+#### Customize Templates
 
-1. Edit the created files to match your specific project needs and preferences
-2. **Important**: Keep most rules/workflows disabled by default
-3. Only enable one rule (collaboration-rules.md) and use workflows as needed
-4. Templates provide a starting point - adapt them to your workflow
+- Templates provide a starting point - adapt them to your specific project needs.  You can ask Cline to help customize the templates for you.
 
 #### Use Toggle-First Workflow
 
