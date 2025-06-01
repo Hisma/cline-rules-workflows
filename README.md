@@ -119,8 +119,6 @@ These documentation workflows can be used sequentially for a complete documentat
 5. Create user-facing documentation with **24-create-user-guides**
 6. Review all documentation using **25-documentation-review**
 
-A comprehensive documentation guide is also available at `docs/documentation-guide.md` with detailed best practices, templates, and quality checklists.
-
 #### Maintenance and Updates (30-39)
 
 These workflows are used for ongoing maintenance:
