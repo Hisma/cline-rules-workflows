@@ -9,8 +9,6 @@ Cline uses rules and workflows to guide its behavior and provide structured appr
 - **Rules**: Define constraints, standards, and expectations for Cline's behavior
 - **Workflows**: Provide step-by-step guides for accomplishing specific tasks
 
---
-
 ## Repository Structure
 
 ```text
