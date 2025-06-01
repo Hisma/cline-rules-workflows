@@ -1,6 +1,15 @@
 # Cline Rules and Workflows
 
-A comprehensive guide and template collection for customizing Cline's behavior through rules and workflows. Learn how these systems work and get started with ready-to-use templates for different project types.
+This repository contains a collection of rules and workflows for use with Cline, an AI assistant that helps with software development tasks.
+
+## Overview
+
+Cline uses rules and workflows to guide its behavior and provide structured approaches to common tasks. This repository serves as a central location for managing and sharing these resources.
+
+- **Rules**: Define constraints, standards, and expectations for Cline's behavior
+- **Workflows**: Provide step-by-step guides for accomplishing specific tasks
+
+--
 
 ## Repository Structure
 
@@ -44,7 +53,7 @@ Effective use of Cline rules and workflows requires MCP (Model Context Protocol)
 
 **Setup Guide**: [Configuring MCP Servers](https://docs.cline.bot/mcp/configuring-mcp-servers)
 
-- You can also run the infrastructure setup workflow `40-setup-mcp-servers.md` to quickly set up these MCPs.
+- **note**: You can run the infrastructure setup workflow `40-setup-mcp-servers.md` to quickly set up these MCPs.
 
 **Quick verification**: Check your MCP configuration in Cline settings at `MCP Servers -> Installed` to ensure these servers are active.
 
