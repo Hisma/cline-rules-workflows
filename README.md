@@ -1,33 +1,62 @@
 # Cline Rules and Workflows
 
-This repository contains a collection of rules and workflows for use with Cline, an AI assistant that helps with software development tasks.
-
-## Overview
-
-Cline uses rules and workflows to guide its behavior and provide structured approaches to common tasks. This repository serves as a central location for managing and sharing these resources.
-
-- **Rules**: Define constraints, standards, and expectations for Cline's behavior
-- **Workflows**: Provide step-by-step guides for accomplishing specific tasks
+A comprehensive guide and template collection for customizing Cline's behavior through rules and workflows. Learn how these systems work and get started with ready-to-use templates for different project types.
 
 ## Repository Structure
 
 ```text
+├── README.md                   # This file
+├── cline-rules-workflows.code-workspace  # VS Code workspace file
+├── docs/                       # Documentation directory
+│   └── documentation-guide.md  # Comprehensive documentation guide
 ├── templates/                  # Templates for different workspace types
 │   ├── docsite-workspace/      # Documentation site workspace templates
-│   │   ├── rules/              # Rules for documentation sites
 │   │   └── workflows/          # Workflows for documentation sites
-│   ├── global/                 # Global templates (apply to all workspaces)
-│   │   ├── Rules/              # Global rules
-│   │   └── Workflows/          # Global workflows (numbered by category)
-│   └── web-app-workspace/      # Web application workspace templates
-│       ├── rules/              # Rules for web applications
-│       └── workflows/          # Workflows for web applications
-└── README.md                   # This file
+│   │       ├── markdown-linting.md  # Markdown linting workflow
+│   │       └── project-cleanup.md   # Project cleanup workflow
+│   └── global/                 # Global templates (apply to all workspaces)
+│       ├── Rules/              # Global rules
+│       │   └── collaboration-rules.md  # Collaboration guidelines
+│       └── Workflows/          # General workflows (numbered by category)
+│           ├── 01-project-setup.md     # Project setup workflow
+│           ├── 02-verify-tech-stack.md # Tech stack verification
+│           ├── 10-coding-standards-workflow.md  # Coding standards
+│           ├── 11-documentation-standards-workflow.md  # Doc standards
+│           ├── 20-documentation-planning.md  # Documentation planning
+│           ├── 21-research-and-document.md   # Research process
+│           ├── 22-create-project-docs.md     # Project documentation
+│           ├── 23-create-api-docs.md         # API documentation
+│           ├── 24-create-user-guides.md      # User guides
+│           ├── 25-documentation-review.md    # Documentation review
+│           ├── 30-project-update.md          # Project updates
+│           ├── 31-update-rules-workflows.md  # Rules/workflows updates
+│           ├── 32-code-review-process.md     # Code review process
+│           └── 40-setup-mcp-servers.md       # MCP server setup
 ```
+
+## MCP Server Requirements
+
+Effective use of Cline rules and workflows requires MCP (Model Context Protocol) servers.  These are the recommended MCPs to get started:
+
+- **Context7** - Framework documentation and API references
+- **Brave Search** - Web research and fact-checking
+- **Puppeteer** - Content extraction and web automation
+
+**Setup Guide**: [Configuring MCP Servers](https://docs.cline.bot/mcp/configuring-mcp-servers)
+
+- You can also run the infrastructure setup workflow `40-setup-mcp-servers.md` to quickly set up these MCPs.
+
+**Quick verification**: Check your MCP configuration in Cline settings at `MCP Servers -> Installed` to ensure these servers are active.
 
 ## Rules
 
 Rules define constraints, standards, and expectations for Cline's behavior. They help ensure consistency and quality in Cline's outputs.
+
+### ⚠️ Important: Prompt Injection & Toggle Usage
+
+Rules inject their entire content into every prompt sent to the LLM. This creates significant noise and token usage if you have multiple rules active simultaneously.
+
+**Best Practice**: Through extensive testing, we've found that the optimal approach is to have **only one global rule enabled at all times** (the collaboration-rules.md), and handle everything else with workflows as needed. This provides the best balance between guidance and performance.
 
 ### Global Rules
 
@@ -35,23 +64,21 @@ Global rules apply to all workspaces and provide foundational guidance for Cline
 
 - **Collaboration Rules**: Guidelines for effective collaboration
 
-### Project-Specific Rules
-
-Project-specific rules are tailored to particular types of projects:
-
-- **Project Overview**: Description of the project and its goals
-- **Tech Stack**: Technologies used in the project
-- **Architecture**: System architecture and design
-- **Current Requirements**: Current project requirements
-- **Markdown Standards**: Standards for markdown files (for documentation sites)
-
 ## Workflows
 
 Workflows provide step-by-step guides for accomplishing specific tasks. They help ensure consistent approaches to common activities. Workflows are organized into categories and numbered to indicate the order in which they should typically be executed.
 
-### Global Workflows
+**Workflow Placement Tip**: Consider placing workflows at the project level (in `.clinerules/workflows/`) instead of the global level for better scope management. This is especially useful when:
+- Creating workflows specific to a particular project
+- Managing a large number of workflows
+- Organizing workflows by project context
+- Reducing cognitive load by showing only relevant workflows
 
-Global workflows are organized into categories based on their purpose and the phase of development in which they are typically used:
+While the global rule (collaboration-rules.md) provides consistent collaboration patterns across all projects, workflows can be more targeted and organized at the project level.
+
+### General Workflows
+
+These general-purpose workflows are organized into categories based on their purpose and the phase of development in which they are typically used. They can be placed at either the global level (`~/Cline/Workflows/`) or the workspace level (`.clinerules/workflows/`) based on your preference and project needs.
 
 #### Project Initialization (01-09)
 
@@ -113,28 +140,62 @@ Project-specific workflows are tailored to particular types of projects:
 - **Project Cleanup**: Steps for cleaning up a documentation site
 - **Validate Documentation**: Steps for validating documentation
 
-## Usage
+## Quick Start
 
-To use these rules and workflows with Cline:
+### Method 1: Using Cline UI (Recommended)
 
-1. Clone this repository to your local machine
-2. Copy the relevant rules and workflows to your project's `.clinerules` directory
-3. Customize the rules and workflows as needed for your project
-4. Commit the changes to your project repository
+#### Create Rules and Workflows
 
-For more detailed instructions, see the [Getting Started](docs/getting-started.md) guide.
+1. Click the "Manage Cline Rules & Workflows" button (⚖️) below the chat window
+2. Select "Global" scope for rules/workflows that apply to all projects
+3. Create new files with .md extension (e.g., collaboration-rules.md, 01-project-setup.md)
+4. Copy content from our templates in templates/global/Rules/ and templates/global/Workflows/
 
-## Contributing
+Remember that you can place general workflows at either the global or workspace level based on your preference and project needs.
 
-Contributions to this repository are welcome! Please follow these steps:
+#### Create Project-Specific Rules and Workflows
 
-1. Fork the repository
-2. Create a new branch for your changes
-3. Make your changes
-4. Submit a pull request
+1. Click the "Manage Cline Rules & Workflows" button (⚖️)
+2. Select "Workspace" scope for project-specific customizations
+3. Create files based on your project type:
+   - Documentation Projects: Use templates from templates/docsite-workspace/
+   - Web Applications: Use templates from templates/web-app-workspace/
 
-Please ensure that your contributions follow the existing patterns and include appropriate documentation.
+#### Customize Templates (Keep Most Disabled)
 
-## License
+1. Edit the created files to match your specific project needs and preferences
+2. **Important**: Keep most rules/workflows disabled by default
+3. Only enable one rule (collaboration-rules.md) and use workflows as needed
+4. Templates provide a starting point - adapt them to your workflow
 
-This repository is licensed under the MIT License. See the LICENSE file for details.
+#### Use Toggle-First Workflow
+
+1. Before starting any task, consider which specific workflows you need
+2. Keep the collaboration-rules.md rule enabled, toggle workflows as needed
+3. This keeps your prompts clean and focused
+
+### Method 2: Using Command Line (Alternative)
+
+#### Set Up Rules and Workflows:
+
+```bash
+# Create directories
+mkdir -p ~/Cline/Rules
+mkdir -p ~/Cline/Workflows
+
+# Copy templates
+cp templates/global/Rules/* ~/Cline/Rules/
+cp templates/global/Workflows/* ~/Cline/Workflows/
+```
+
+Remember that you can also place general workflows at the project level by copying them to `.clinerules/workflows/` instead.
+
+#### Set Up Project-Specific Rules and Workflows:
+
+For Documentation Projects:
+
+```bash
+mkdir -p .clinerules/workflows
+cp templates/docsite-workspace/rules/* .clinerules/
+cp templates/docsite-workspace/workflows/* .clinerules/workflows/
+```
