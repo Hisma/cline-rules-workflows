@@ -139,16 +139,17 @@ grep -r "^```$" . --include="*.md"
 
 **Fix by adding language labels:**
 
-```text
-# Wrong
+- **Wrong**
+<!-- markdownlint-disable MD040 -->
 ```
 code here
 ```
+<!-- markdownlint-enable MD040 -->
 
-# Correct
+- **Correct**
+
 ```bash
 code here
-```
 ```
 
 ### MD001 - Heading Hierarchy

@@ -90,6 +90,7 @@ puppeteer_evaluate: "document.querySelector('.version-info').innerText"
 // Extract feature lists
 puppeteer_evaluate: "Array.from(document.querySelectorAll('.feature-list li')).map(li => li.textContent)"
 ```
+
 ### Research Workflow Integration
 
 - **Search First**: Use Brave Search for current Cline capabilities and best practices
