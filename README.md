@@ -14,8 +14,6 @@ Cline uses rules and workflows to guide its behavior and provide structured appr
 ```text
 ├── README.md                   # This file
 ├── cline-rules-workflows.code-workspace  # VS Code workspace file
-├── docs/                       # Documentation directory
-│   └── documentation-guide.md  # Comprehensive documentation guide
 ├── templates/                  # Templates for different workspace types
 │   ├── docsite-workspace/      # Documentation site workspace templates
 │   │   └── workflows/          # Workflows for documentation sites
@@ -145,7 +143,6 @@ Project-specific workflows are tailored to particular types of projects:
 
 - **Markdown Linting**: Process for linting markdown files
 - **Project Cleanup**: Steps for cleaning up a documentation site
-- **Validate Documentation**: Steps for validating documentation
 
 ## Quick Start
 
