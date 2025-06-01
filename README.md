@@ -63,13 +63,13 @@ Rules define constraints, standards, and expectations for Cline's behavior. They
 
 Rules inject their entire content into every prompt sent to the LLM. This creates significant noise and token usage if you have multiple rules active simultaneously.
 
-**Best Practice**: Through extensive testing, we've found that the optimal approach is to have **only one global rule enabled at all times** (the collaboration-rules.md), and handle everything else with workflows as needed. This provides the best balance between guidance and performance.
-
 ### Global Rules
 
-Global rules apply to all workspaces and provide foundational guidance for Cline:
+Global rules apply to all workspaces and provide foundational guidance for Cline.
 
-- **Collaboration Rules**: Guidelines for effective collaboration
+**Best Practice**: Through extensive testing, we've found that the optimal approach is to have **only one global rule enabled at all times** (the `collaboration-rules.md` rule), and handle everything else with workflows as needed. This provides the best balance between guidance and performance.
+
+- This global rule establishes how you and Cline work together effectively. It's designed to be the one rule you keep enabled for most tasks, as it focuses on human-in-the-loop collaboration patterns rather than technical specifics.
 
 ## Workflows
 
