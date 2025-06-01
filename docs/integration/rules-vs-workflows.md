@@ -165,7 +165,7 @@ your-project/
 
 ### Rule Example (coding-standards.md)
 
-# Coding Standards
+## Coding Standards
 
 ## General Principles
 - Write clean, readable code
@@ -179,11 +179,11 @@ your-project/
 
 ### Workflow Example (pr-review.md)
 
-# PR Review Workflow
+## PR Review Workflow
 
 You have access to the `gh` terminal command. Please review the PR that I specify.
 
-## Steps:
+## Steps
 1. Get PR information: `gh pr view <PR-number> --json title,body,comments`
 2. Get the diff: `gh pr diff <PR-number>`
 3. Analyze changes and provide feedback

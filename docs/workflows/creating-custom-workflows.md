@@ -19,8 +19,7 @@ Let's create a simple workflow to get started:
 
 ### Example: Code Cleanup Workflow
 
-
-# Code Cleanup Workflow
+## Code Cleanup Workflow
 
 This workflow helps clean up and organize code before committing.
 
@@ -61,15 +60,14 @@ This workflow helps clean up and organize code before committing.
 - Tests pass
 - Build succeeds
 - Code is properly formatted
-```
+
 ## Workflow Structure Patterns
 
 ### Basic Structure
 
 Every workflow should have these core elements:
 
-
-# Workflow Title
+## Workflow Title
 
 Brief description of what this workflow does.
 
@@ -83,13 +81,12 @@ Brief description of what this workflow does.
 
 ## Success Criteria
 - How to know the workflow completed successfully
-```
+
 ### Advanced Structure
 
 For more complex workflows, consider adding:
 
-
-# Advanced Workflow Title
+## Advanced Workflow Title
 
 Detailed description and when to use this workflow.
 
@@ -112,15 +109,15 @@ Detailed description and when to use this workflow.
    - Troubleshooting
 
 ### Phase 2: Execution
-2. **Step 2**
-   - Actions
-   - Expected results
-   - Error handling
+- **Step 2**
+  - Actions
+  - Expected results
+  - Error handling
 
 ### Phase 3: Verification
-3. **Step 3**
-   - Validation steps
-   - Success indicators
+- **Step 3**
+  - Validation steps
+  - Success indicators
 
 ## Troubleshooting
 ### Common Issue 1
@@ -133,17 +130,16 @@ Detailed description and when to use this workflow.
 ## Success Criteria
 - Detailed success indicators
 - What should be different after completion
-```
+
 ## Workflow Types and Examples
 
 ### 1. Development Workflows
 
 **Code Review Workflow:**
 
+## Code Review Workflow
 
-# Code Review Workflow
-
-## Steps
+### Steps
 1. **Analyze Changes**
    - Review git diff: `git diff main...feature-branch`
    - Identify modified files and their purposes
@@ -163,11 +159,10 @@ Detailed description and when to use this workflow.
    - Document specific issues found
    - Suggest improvements
    - Approve or request changes
-```
+
 **Dependency Update Workflow:**
 
-
-# Update Dependencies Workflow
+## Update Dependencies Workflow
 
 ## Steps
 1. **Check Current State**
@@ -189,13 +184,12 @@ Detailed description and when to use this workflow.
    - Update CHANGELOG.md
    - Note any breaking changes
    - Commit dependency updates
-```
+
 ### 2. Deployment Workflows
 
 **Production Deployment:**
 
-
-# Deploy to Production Workflow
+## Deploy to Production Workflow
 
 ## Prerequisites
 - All tests passing
@@ -223,13 +217,12 @@ Detailed description and when to use this workflow.
    - Monitor error rates for 30 minutes
    - Update deployment log
    - Notify stakeholders of completion
-```
+
 ### 3. Maintenance Workflows
 
 **Rules and Workflows Maintenance:**
 
-
-# Update Rules & Workflows Workflow
+## Update Rules & Workflows Workflow
 
 ## Steps
 1. **Project Assessment**
@@ -246,12 +239,10 @@ Detailed description and when to use this workflow.
    - Review and update workflows as needed
    - Fix outdated procedures and tool references
    - Verify workflows align with current processes
-```
 
 **Database Maintenance:**
 
-
-# Database Maintenance Workflow
+## Database Maintenance Workflow
 
 ## Steps
 1. **Backup Database**
@@ -273,13 +264,12 @@ Detailed description and when to use this workflow.
    - Run database health checks
    - Test critical queries
    - Monitor performance metrics
-```
+
 ## Advanced Workflow Techniques
 
 ### Conditional Logic
 
 Handle different scenarios within workflows:
-
 
 ## Steps
 
@@ -299,11 +289,10 @@ Handle different scenarios within workflows:
    - Configure based on environment determined above
    - Apply appropriate security settings
    - Set correct API endpoints
-```
+
 ### Workflow Composition
 
 Reference other workflows to build complex processes:
-
 
 ## Steps
 
@@ -316,26 +305,25 @@ Reference other workflows to build complex processes:
    - Run deployment workflow: `/deploy-production.md`
    - Execute post-deployment workflow: `/verify-deployment.md`
    - Document release completion
-```
+
 ### Error Handling and Recovery
 
 Include robust error handling:
 
+- **Deploy Application**
+  - Execute deployment script: `./deploy.sh production`
+  - Monitor deployment progress
+  - **If deployment fails:**
+    - Check deployment logs: `tail -f /var/log/deploy.log`
+    - Verify server connectivity: `ping production-server.com`
+    - **If critical failure:**
+      - Execute rollback: `/rollback-deployment.md`
+      - Notify incident response team
+      - Document failure for post-mortem
+    - **If minor failure:**
+      - Retry deployment with fixes
+      - Continue monitoring
 
-3. **Deploy Application**
-   - Execute deployment script: `./deploy.sh production`
-   - Monitor deployment progress
-   - **If deployment fails:**
-     - Check deployment logs: `tail -f /var/log/deploy.log`
-     - Verify server connectivity: `ping production-server.com`
-     - **If critical failure:**
-       - Execute rollback: `/rollback-deployment.md`
-       - Notify incident response team
-       - Document failure for post-mortem
-     - **If minor failure:**
-       - Retry deployment with fixes
-       - Continue monitoring
-```
 ## Testing Your Workflows
 
 ### Dry Run Testing
@@ -346,11 +334,11 @@ Include robust error handling:
    - Time how long each step takes
    - Document any issues encountered
 
-2. **Cline Testing**
-   - Invoke workflow with `/workflow-name.md`
-   - Observe how Cline interprets each step
-   - Note any confusion or misinterpretation
-   - Refine instructions based on results
+- **Cline Testing**
+  - Invoke workflow with `/workflow-name.md`
+  - Observe how Cline interprets each step
+  - Note any confusion or misinterpretation
+  - Refine instructions based on results
 
 ### Validation Checklist
 
@@ -383,8 +371,7 @@ Include robust error handling:
 
 Track workflow evolution:
 
-
-# Workflow Name
+## Workflow Name
 
 <!-- 
 Version: 2.1
@@ -394,7 +381,7 @@ Changelog:
 - v2.0: Updated to use new deployment tool
 - v1.0: Initial version
 -->
-```
+
 ## Integration with Rules
 
 Workflows work best when combined with rules:
@@ -405,32 +392,29 @@ Rules provide context that workflows can reference:
 
 **Rule (in coding-standards.md):**
 
-
 ## Testing Standards
 - Minimum 80% code coverage required
 - All tests must pass before deployment
 - Integration tests required for API changes
-```
-**Workflow (in deploy-staging.md):**
 
+**Workflow (in deploy-staging.md):**
 
 1. **Verify Test Requirements**
    - Run coverage report: `npm run coverage`
    - Ensure coverage meets project standard (check coding-standards.md)
    - Verify all tests pass: `npm test`
    - Run integration tests if API changed
-```
+
 ### Workflows Enforce Rules
 
 Workflows can ensure rules are followed:
 
+- **Code Quality Check**
+  - Verify code follows project standards (see coding-standards.md)
+  - Check for proper error handling
+  - Ensure documentation is updated
+  - Validate security requirements are met
 
-2. **Code Quality Check**
-   - Verify code follows project standards (see coding-standards.md)
-   - Check for proper error handling
-   - Ensure documentation is updated
-   - Validate security requirements are met
-```
 ## Common Pitfalls and Solutions
 
 ### Overly Complex Workflows
@@ -439,17 +423,13 @@ Workflows can ensure rules are followed:
 **Solution:** Break into smaller, focused workflows
 
 **Instead of:**
+- Deploy, Test, and Document Everything Workflow
 
-
-# Deploy, Test, and Document Everything Workflow
-```
 **Use:**
+- Deploy to Staging Workflow
+- Run Integration Tests Workflow  
+- Update Documentation Workflow
 
-
-# Deploy to Staging Workflow
-# Run Integration Tests Workflow  
-# Update Documentation Workflow
-```
 ### Vague Instructions
 
 **Problem:** Steps are too general
@@ -457,32 +437,29 @@ Workflows can ensure rules are followed:
 
 **Instead of:**
 
+- **Test the application**
+  - Make sure everything works
 
-1. **Test the application**
-   - Make sure everything works
-```
 **Use:**
 
+- **Run Test Suite**
+  - Execute: `npm test`
+  - Verify: All tests pass (0 failures)
+  - Check: Coverage above 80%
 
-1. **Run Test Suite**
-   - Execute: `npm test`
-   - Verify: All tests pass (0 failures)
-   - Check: Coverage above 80%
-```
 ### Missing Error Handling
 
 **Problem:** No guidance when things go wrong
 **Solution:** Include troubleshooting and recovery steps
 
+- **Build Application**
+  - Run: `npm run build`
+  - **If build fails:**
+    - Check for TypeScript errors
+    - Verify all dependencies installed
+    - Clear cache: `npm run clean`
+    - Retry build
 
-2. **Build Application**
-   - Run: `npm run build`
-   - **If build fails:**
-     - Check for TypeScript errors
-     - Verify all dependencies installed
-     - Clear cache: `npm run clean`
-     - Retry build
-```
 ## Best Practices Summary
 
 1. **Start Simple** - Begin with basic workflows and add complexity gradually

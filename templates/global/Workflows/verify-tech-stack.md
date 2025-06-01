@@ -58,7 +58,6 @@ This workflow ensures you're using the latest framework and API documentation wh
 
 **For each technology, record:**
 
-
 ## [Technology Name] Verification
 
 **Library ID**: [Context7 library ID]
@@ -176,14 +175,13 @@ This workflow ensures you're using the latest framework and API documentation wh
 ```
 ### Step 4: Document Findings
 
-
 ## React Verification
 
 **Library ID**: /facebook/react
 **Latest Version**: 18.3.1
 **Last Verified**: 2025-05-31
 **Key Changes**: Server Components stable, new use() hook
-**Documentation URL**: https://react.dev
+**Documentation URL**: <https://react.dev>
 
 ### Current Best Practices
 - Use function components with hooks

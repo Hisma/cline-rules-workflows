@@ -25,41 +25,37 @@ Every step should be specific and executable:
 
 **✅ Good:**
 
-
 1. **Run Test Suite**
    - Execute `npm test` in project root
    - Verify all tests pass (0 failures)
    - Check test coverage is above 80%
-```
-**❌ Avoid:**
 
+**❌ Avoid:**
 
 1. **Test Everything**
    - Make sure tests work
    - Check coverage
-```
+
 ### 3. Include Prerequisites
 
 Always specify what needs to be ready before starting:
-
 
 ## Prerequisites
 - Node.js 18+ installed
 - All dependencies installed (`npm install`)
 - Database running on localhost:5432
 - Environment variables configured
-```
+
 ### 4. Add Verification Steps
 
 Include checks to ensure each step completed successfully:
 
+- **Build Application**
+  - Run `npm run build`
+  - Verify build directory created
+  - Check for build errors in output
+  - Confirm bundle size is reasonable
 
-2. **Build Application**
-   - Run `npm run build`
-   - Verify build directory created
-   - Check for build errors in output
-   - Confirm bundle size is reasonable
-```
 ## Workflow Organization
 
 ### Global vs Project Workflows
@@ -112,7 +108,8 @@ Use descriptive, action-oriented names:
 
 One approach is to organize workflows by category when you have many:
 
-```.clinerules/workflows/
+```tree
+.clinerules/workflows/
 ├── deployment/
 │   ├── deploy-staging.md
 │   ├── deploy-production.md
@@ -134,7 +131,7 @@ One approach is to organize workflows by category when you have many:
 
 Here's one pattern you can use for consistent workflow structure:
 
-
+```text
 # Workflow Name
 
 Brief description of what this workflow accomplishes.
@@ -170,6 +167,7 @@ Brief description of what this workflow accomplishes.
 - How to know the workflow completed successfully
 - What should be different after completion
 ```
+
 *This is just one template approach - feel free to adapt or create your own structure that works better for your needs.*
 
 ### Language and Tone
@@ -193,16 +191,15 @@ Brief description of what this workflow accomplishes.
 
 Consider including guidance for when things go wrong:
 
+- **Deploy Application**
+  - Run deployment script: `./scripts/deploy.sh staging`
+  - Monitor deployment logs for errors
+  - **If deployment fails:**
+    - Check server connectivity: `ping staging.example.com`
+    - Verify credentials are current
+    - Review deployment logs in `/var/log/deploy.log`
+    - Consider rolling back: `./scripts/rollback.sh`
 
-3. **Deploy Application**
-   - Run deployment script: `./scripts/deploy.sh staging`
-   - Monitor deployment logs for errors
-   - **If deployment fails:**
-     - Check server connectivity: `ping staging.example.com`
-     - Verify credentials are current
-     - Review deployment logs in `/var/log/deploy.log`
-     - Consider rolling back: `./scripts/rollback.sh`
-```
 ## Workflow Maintenance
 
 ### Regular Review
@@ -225,7 +222,7 @@ Consider scheduling periodic reviews of your workflows:
 
 One approach is to track workflow changes:
 
-
+```text
 # Deploy to Production
 
 Last updated: 2024-01-15
@@ -236,6 +233,7 @@ Version: 2.1
 - v2.0: Updated to use new deployment tool
 - v1.0: Initial version
 ```
+
 ### Testing Workflows
 
 Regularly test your workflows:
@@ -245,10 +243,10 @@ Regularly test your workflows:
    - Note any unclear or outdated instructions
    - Time how long each step takes
 
-2. **Usage Testing**
-   - Use workflows in real scenarios
-   - Collect feedback on clarity and completeness
-   - Update based on actual usage patterns
+- **Usage Testing**
+  - Use workflows in real scenarios
+  - Collect feedback on clarity and completeness
+  - Update based on actual usage patterns
 
 ## Advanced Patterns
 
@@ -256,38 +254,38 @@ Regularly test your workflows:
 
 Handle different scenarios within workflows:
 
+- **Determine Deployment Target**
+  - Check current branch: `git branch --show-current`
+  - **If branch is 'main':**
+    - Deploy to production environment
+    - Require manual approval before proceeding
+  - **If branch is 'develop':**
+    - Deploy to staging environment
+    - Run full test suite first
+  - **Otherwise:**
+    - Deploy to development environment
+    - Skip approval requirements
 
-2. **Determine Deployment Target**
-   - Check current branch: `git branch --show-current`
-   - **If branch is 'main':**
-     - Deploy to production environment
-     - Require manual approval before proceeding
-   - **If branch is 'develop':**
-     - Deploy to staging environment
-     - Run full test suite first
-   - **Otherwise:**
-     - Deploy to development environment
-     - Skip approval requirements
-```
 ### Workflow Dependencies
 
 Reference other workflows when appropriate:
-
 
 1. **Pre-deployment Setup**
    - First, run the code review workflow: `/code-review.md`
    - Ensure all tests pass: `/run-full-test-suite.md`
    - Only proceed if both workflows complete successfully
-```
+
 ### Environment-Specific Workflows
 
 Create variations for different environments:
 
-```workflows/
+```tree
+workflows/
 ├── deploy-development.md
 ├── deploy-staging.md
 └── deploy-production.md
 ```
+
 Each with environment-specific steps and requirements.
 
 ## Common Workflow Patterns
@@ -296,7 +294,7 @@ These are example patterns you might find useful:
 
 ### Deployment Workflow Pattern
 
-
+```text
 # Deploy to [Environment]
 
 ## Prerequisites
@@ -311,9 +309,10 @@ These are example patterns you might find useful:
 4. **Post-deployment Verification**
 5. **Notification and Documentation**
 ```
+
 ### Testing Workflow Pattern
 
-
+```text
 # Run [Test Type] Tests
 
 ## Prerequisites
@@ -328,9 +327,10 @@ These are example patterns you might find useful:
 4. **Generate Reports**
 5. **Cleanup**
 ```
+
 ### Maintenance Workflow Pattern
 
-
+```text
 # [Maintenance Task]
 
 ## Prerequisites
@@ -347,7 +347,7 @@ These are example patterns you might find useful:
 
 ### Rules and Workflows Maintenance Pattern
 
-
+```text
 # Update Rules & Workflows
 
 ## Prerequisites
@@ -388,20 +388,18 @@ Workflows give step-by-step guidance for:
 
 **Rule (coding-standards.md):**
 
-
 ## Testing Requirements
 - Minimum 80% code coverage
 - All tests must pass before deployment
 - Integration tests required for API changes
-```
-**Workflow (deploy-staging.md):**
 
+**Workflow (deploy-staging.md):**
 
 1. **Verify Test Coverage**
    - Run coverage report: `npm run coverage`
    - Ensure coverage meets project standard (80%+)
    - All tests must pass (0 failures)
-```
+
 ## Troubleshooting Common Issues
 
 ### Workflows Not Executing

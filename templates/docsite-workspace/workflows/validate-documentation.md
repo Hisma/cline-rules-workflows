@@ -70,7 +70,7 @@ This workflow helps you validate and update existing documentation to ensure acc
 
 **Create a validation report:**
 
-
+```text
 # Validation Report: [Document Name]
 
 ## Date: [Current Date]
@@ -95,4 +95,5 @@ This workflow helps you validate and update existing documentation to ensure acc
 ## Next Review Date
 [Date 3 months from now]
 ```
+
 This workflow ensures documentation stays current and accurate over time.

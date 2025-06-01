@@ -41,7 +41,7 @@ Create these foundational files:
 
 **~/Documents/Cline/.clinerules/coding-standards.md**
 
-
+```text
 # Coding Standards
 
 ## General Principles
@@ -56,9 +56,10 @@ Create these foundational files:
 - Avoid deep nesting
 - Write self-documenting code
 ```
+
 **~/Documents/Cline/.clinerules/documentation.md**
 
-
+```text
 # Documentation Requirements
 
 ## Code Documentation

@@ -34,17 +34,17 @@ This workflow provides a systematic approach to researching topics and creating 
 
 **Step 2: Prepare Research Framework**
 
-
+```text
 # Research Template
 ## Topic: [Topic Name]
 ## Objective: [What you want to achieve]
 ## Target Audience: [Who will use this information]
-## Key Questions:
+## Key Questions
 - [Question 1]
 - [Question 2]
 - [Question 3]
 
-## Sources to Investigate:
+## Sources to Investigate
 - Official documentation
 - Community resources
 - Best practice guides
@@ -57,7 +57,7 @@ This workflow provides a systematic approach to researching topics and creating 
 
 Use Brave Search MCP server for comprehensive web research:
 
-
+```text
 # Search Strategy
 1. Start with broad searches: "[Topic] best practices 2024"
 2. Narrow to specific aspects: "[Topic] setup guide"
@@ -104,11 +104,11 @@ If applicable, use Context7 for framework-specific research:
 - [ ] Gather integration patterns
 - [ ] Note version-specific information
 
-### Phase 3: Information Synthesis
+## Phase 3: Information Synthesis
 
 **Step 6: Organize Research Findings**
 
-
+```text
 # Research Summary Template
 ## Key Findings
 - [Finding 1 with source]
@@ -149,7 +149,7 @@ Cross-reference findings across multiple sources:
 
 **Step 9: Structure Planning**
 
-
+```text
 # Documentation Outline
 1. Overview/Introduction
 2. Prerequisites
@@ -172,7 +172,7 @@ Follow markdown standards (see [Markdown Standards](../rules/05-markdown-standar
 
 **Step 11: Source Citation**
 
-
+```text
 # Citation Format
 ## References
 - [Source Title](URL) - Accessed [Date]
@@ -268,7 +268,7 @@ git commit -m "Add comprehensive guide for [Topic] based on MCP research"
 
 ### Brave Search Strategies
 
-
+```text
 # Effective Search Patterns
 - "[Technology] official documentation"
 - "[Technology] best practices [current year]"
@@ -277,7 +277,7 @@ git commit -m "Add comprehensive guide for [Topic] based on MCP research"
 - "[Technology] vs alternatives comparison"
 ```
 
-### Puppeteer Extraction Patterns
+## Puppeteer Extraction Patterns
 
 ```javascript
 // Common extraction patterns

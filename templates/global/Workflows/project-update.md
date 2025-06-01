@@ -40,7 +40,6 @@ This workflow guides you through updating an existing project to ensure it stays
 
 **Document Current State:**
 
-
 ## Project Update Assessment - [Date]
 
 ### Current Tech Stack
@@ -57,7 +56,7 @@ This workflow guides you through updating an existing project to ensure it stays
 ### Update Goals
 - [What you want to achieve with this update]
 - [Priority level: Critical/High/Medium/Low]
-```
+
 ### 2. Framework Documentation (if applicable)
 
 **For projects using frameworks/libraries (React, Vue, Express, etc.):**
@@ -119,7 +118,6 @@ This workflow guides you through updating an existing project to ensure it stays
 
 **Document your update strategy:**
 
-
 ## Update Plan - [Date]
 
 ### Phase 1: Preparation
@@ -152,16 +150,16 @@ This workflow guides you through updating an existing project to ensure it stays
 - [ ] Document changes made
 - [ ] Update deployment instructions
 
-### Breaking Changes to Address:
+### Breaking Changes to Address
 - [List specific breaking changes found]
 - [Migration steps for each]
 - [Testing requirements for each]
 
-### Rollback Plan:
+### Rollback Plan
 - [How to revert if updates fail]
 - [Backup restoration process]
 - [Communication plan for rollback]
-```
+
 ### 5. Execute Updates
 
 **Follow your plan systematically:**
@@ -192,7 +190,6 @@ This workflow guides you through updating an existing project to ensure it stays
 
 **Comprehensive testing approach:**
 
-
 ## Testing Checklist
 
 ### Automated Tests
@@ -219,7 +216,7 @@ This workflow guides you through updating an existing project to ensure it stays
 - [ ] Memory usage reasonable
 - [ ] Database queries optimized
 - [ ] Bundle sizes reasonable
-```
+
 ### 7. Documentation Updates
 
 **Update all relevant documentation:**
@@ -237,26 +234,24 @@ This workflow guides you through updating an existing project to ensure it stays
    - Update troubleshooting guides
 
 3. **Change Documentation**
-
-   
    ## Update Log - [Date]
-   
+
    ### Updated Components
    - [Framework]: [old version] → [new version]
    - [Library]: [old version] → [new version]
-   
+
    ### Breaking Changes Addressed
    - [Change 1]: [How it was addressed]
    - [Change 2]: [How it was addressed]
-   
+
    ### New Features Available
    - [Feature 1]: [Description and usage]
    - [Feature 2]: [Description and usage]
-   
+
    ### Deprecated Features Removed
    - [Feature 1]: [Replacement or alternative]
    - [Feature 2]: [Replacement or alternative]
-   ```
+
 ### 8. Deployment and Monitoring
 
 **Careful deployment process:**

@@ -41,8 +41,7 @@ mkdir -p ~/Documents/Cline/.clinerules/workflows
 
 **~/Documents/Cline/.clinerules/workflows/code-review.md**
 
-
-# Code Review Workflow
+## Code Review Workflow
 
 This workflow guides you through performing a comprehensive code review.
 
@@ -72,13 +71,12 @@ This workflow guides you through performing a comprehensive code review.
    - Provide specific feedback
    - Suggest improvements
    - Approve or request changes
-```
+
 ### 3. Create Additional Global Workflows
 
 **~/Documents/Cline/.clinerules/workflows/project-setup.md**
 
-
-# Project Setup Workflow
+## Project Setup Workflow
 
 This workflow helps you set up a new project with proper structure and configuration.
 
@@ -108,15 +106,16 @@ This workflow helps you set up a new project with proper structure and configura
    - Create initial commit
    - Set up CI/CD pipeline basics
    - Document setup process
-```
+
 ## MCP-Powered Workflows
 
 Advanced workflows can leverage MCP servers for research-driven development:
 
-**~/Documents/Cline/.clinerules/workflows/research-and-document.md**
+```bash
+~/Documents/Cline/.clinerules/workflows/research-and-document.md
+```
 
-
-# Research and Document Workflow
+## Research and Document Workflow
 
 This workflow uses MCP servers to research and create accurate documentation.
 
@@ -141,11 +140,12 @@ This workflow uses MCP servers to research and create accurate documentation.
    - Review for accuracy and completeness
    - Test all provided examples
    - Schedule regular re-verification
+
+```bash
+~/Documents/Cline/.clinerules/workflows/verify-tech-stack.md
 ```
-**~/Documents/Cline/.clinerules/workflows/verify-tech-stack.md**
 
-
-# Tech Stack Verification Workflow
+## Tech Stack Verification Workflow
 
 This workflow verifies and updates technology stack information.
 
@@ -170,12 +170,11 @@ This workflow verifies and updates technology stack information.
    - Update version numbers and compatibility info
    - Add migration notes if needed
    - Document verification date and sources
+```bash
+~/Documents/Cline/.clinerules/workflows/update-rules-workflows.md
 ```
 
-**~/Documents/Cline/.clinerules/workflows/update-rules-workflows.md**
-
-
-# Update Rules & Workflows
+## Update Rules & Workflows
 
 This workflow guides you through updating your project's .clinerules/ files to ensure they remain aligned with your project's current state and needs.
 
@@ -195,7 +194,7 @@ This workflow guides you through updating your project's .clinerules/ files to e
    - Review and update workflows as needed
    - Fix outdated procedures and tool references
    - Verify workflows align with current processes
-```
+
 ## Setting Up Project-Specific Workflows
 
 Project workflows are specific to individual projects and handle project-unique processes.
@@ -209,10 +208,11 @@ mkdir .clinerules/workflows
 ```
 ### 2. Create Project-Specific Workflows
 
-**your-project/.clinerules/workflows/deploy-staging.md**
+```bash
+your-project/.clinerules/workflows/deploy-staging.md
+```
 
-
-# Deploy to Staging Workflow
+## Deploy to Staging Workflow
 
 This workflow handles deployment to the staging environment.
 
@@ -247,14 +247,15 @@ This workflow handles deployment to the staging environment.
    - Notify team of deployment
    - Update deployment tracking
    - Document any issues
-```
+
 ## Using Workflows
 
 ### Invoking Workflows
 
 Workflows are invoked using slash commands in Cline:
 
-```/code-review.md          # Global workflow
+```text
+/code-review.md          # Global workflow
 /deploy-staging.md       # Project workflow
 ```
 ### Workflow Best Practices
@@ -309,8 +310,7 @@ Workflows are invoked using slash commands in Cline:
 
 Create workflows that adapt based on project context:
 
-
-# Conditional Deploy Workflow
+## Conditional Deploy Workflow
 
 ## Steps
 
@@ -323,13 +323,12 @@ Create workflows that adapt based on project context:
    - Production: require manual approval
    - Staging: run full test suite
    - Development: quick deployment
-```
+
 ### Workflow Chaining
 
 Create workflows that can call other workflows:
 
-
-# Full Release Workflow
+## Full Release Workflow
 
 ## Steps
 
@@ -340,7 +339,7 @@ Create workflows that can call other workflows:
 2. **Release**
    - Run `/deploy-production.md` workflow
    - Run `/post-deploy-verification.md` workflow
-```
+
 ## Workflow Evolution
 
 ### Track What Works
